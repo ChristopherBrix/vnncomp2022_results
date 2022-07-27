@@ -85,7 +85,7 @@ def is_correct_counterexample(ce_path, cat, net, prop):
     content = read_ce_file(ce_path)
 
     if len(content) < 2:
-        print(f"Warning: no counter example provided in {ce_path}")
+        print(f"Note: no counter example provided in {ce_path}")
         return False
 
     #print(f"CE CONTENT:\n{content}")
@@ -140,7 +140,7 @@ def is_correct_counterexample(ce_path, cat, net, prop):
         rv = is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol)
 
         if not rv:
-            print("Warning: counterexample did not obey spec file and so was invalid!")
+            print("Note: counterexample in file did not violate the specification and so was invalid!")
 
     return rv
 

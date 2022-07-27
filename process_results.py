@@ -449,13 +449,13 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         ToolResult.num_violated[tool_name] += 1
 
         is_falsified = True
-    elif num_holds > 0 and res == "violated" and not correct_violations[tool_name]:
+    #elif num_holds > 0 and res == "violated" and not correct_violations[tool_name]:
         # Rule: If a witness is not provided, for the purposes of scoring if there are
         # mismatches between tools we will count the tool without the witness as incorrect.
-        score = -100
-        ToolResult.incorrect_results[tool_name] += 1
-        print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
-    elif res == "violated" and not valid_ce:
+    #    score = -100
+    #    ToolResult.incorrect_results[tool_name] += 1
+    #    print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
+    elif res == "violated" and num_holds > 0 and not valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
     elif res == "holds" and valid_ce:
