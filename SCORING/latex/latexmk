@@ -1,0 +1,7 @@
+#!/bin/bash
+ 
+# makre sure you install latexmk and xelatex first
+ 
+#latexmk -pvc -pdf -xelatex -interaction=nonstopmode main.tex
+
+latexmk -pvc -pdf -interaction=nonstopmode main.tex

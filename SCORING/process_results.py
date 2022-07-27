@@ -47,7 +47,6 @@ class ToolResult:
         self.cpu_overhead = np.inf # if using separate overhead for cpu
         
         self.max_prepare = 0.0
-        self.had_error = False
 
         self.load(csv_path)
 
@@ -85,9 +84,6 @@ class ToolResult:
             for row in csv.reader(csvfile):
                 # rename results
 
-                #if row[0] == "errored":
-                #    had_error = True
-                #    continue
                 
                 #print(f"{csv_path}: {row}")
                 
@@ -148,7 +144,7 @@ class ToolResult:
     def delete_empty_categories(self):
         """delete categories without successful measurements"""
 
-        to_remove = ['acasxu', 'cifar2020'] # benchmarks to skip
+        to_remove = [] # ['acasxu', 'cifar2020'] # benchmarks to skip
 
         for key in self.category_to_list.keys():
             rows = self.category_to_list[key]
@@ -253,9 +249,9 @@ def compare_results(result_list, single_overhead):
                     net = Path(row[ToolResult.NETWORK]).stem
                     prop = Path(row[ToolResult.PROP]).stem
 
-                    ce_path = f"./{t.tool_name}/{cat}/{net}_{prop}.counterexample.gz"
+                    ce_path = f"../{t.tool_name}/{cat}/{net}_{prop}.counterexample.gz"
 
-                    assert Path(ce_path).is_file()
+                    assert Path(ce_path).is_file(), f"CE path not found: {ce_path}"
                     tup = ce_path, cat, net, prop
                     counterexamples_violated.append(tup)
 
@@ -362,7 +358,7 @@ def compare_results(result_list, single_overhead):
 
     res_list = []
 
-    print(f"\nTotal Score (single_overhead={single_overhead}):")
+    print("\n%Total Score:")
 
     print_table_header("Overall Score", "tab:score", ["\\# ~", "Tool", "Score"])
     
@@ -421,6 +417,8 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         If two tools have runtimes within 0.2 seconds, we will consider them the same runtime.
     """
 
+    penalize_no_ce = True
+
     is_verified = False
     is_falsified = False
     is_fastest = False
@@ -449,12 +447,12 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         ToolResult.num_violated[tool_name] += 1
 
         is_falsified = True
-    #elif num_holds > 0 and res == "violated" and not correct_violations[tool_name]:
+    elif penalize_no_ce and num_holds > 0 and res == "violated" and not correct_violations[tool_name]:
         # Rule: If a witness is not provided, for the purposes of scoring if there are
         # mismatches between tools we will count the tool without the witness as incorrect.
-    #    score = -100
-    #    ToolResult.incorrect_results[tool_name] += 1
-    #    print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
+        score = -100
+        ToolResult.incorrect_results[tool_name] += 1
+        print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
     elif res == "violated" and num_holds > 0 and not valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
@@ -496,9 +494,9 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
 def print_stats(result_list):
     """print stats about measurements"""
 
-    print('\n------- Stats ----------')
+    print('\n%%%%%%%%%% Stats %%%%%%%%%%%')
 
-    print("\nOverhead:")
+    print("\n% Overhead:")
     olist = []
 
     for r in result_list:
@@ -511,15 +509,15 @@ def print_stats(result_list):
         cpu_overhead = "-" if n[1] == np.inf else round(n[1], 1)
         
         #print(f"{i+1} & {n[2]} & {round(n[0], 1)} & {cpu_overhead} \\\\")
-        print(f"{i+1} & {n[2]} & {round(n[0], 1)} \\\\")
+        print(f"{i+1} & {latex_tool_name(n[2])} & {round(n[0], 1)} \\\\")
 
     print_table_footer()
 
     items = [("Num Benchmarks Participated", ToolResult.num_categories),
              ("Num Instances Verified", ToolResult.num_verified),
-             ("Num Violated", ToolResult.num_violated),
-             ("Num Holds", ToolResult.num_holds),
-             ("Mismatched (Incorrect) Results", ToolResult.incorrect_results),
+             ("Num SAT", ToolResult.num_violated),
+             ("Num UNSAT", ToolResult.num_holds),
+             ("Incorrect Results (or Missing CE)", ToolResult.incorrect_results),
              ]
 
     for index, (label, d) in enumerate(items):
@@ -543,8 +541,19 @@ def print_stats(result_list):
 def latex_tool_name(tool):
     """get latex version of tool name"""
 
-    if tool == 'a-b-CROWN':
-        tool = '$\\alpha$,$\\beta$-CROWN'
+    subs = [('alpha_beta_crown', '$\\alpha$,$\\beta$-CROWN'),
+            ('mn_bab', 'MN BaB')]
+
+    found = False
+
+    for old, new in subs:
+        if tool == old:
+            tool = new
+            found = True
+            break
+
+    if not found:
+        tool = tool.capitalize()
 
     return tool
 
@@ -558,10 +567,10 @@ def main():
 
     #####################################3
     #csv_list = glob.glob("results_csv/*.csv")
-    csv_list = glob.glob("*/results.csv")
+    csv_list = glob.glob("../*/results.csv")
     csv_list.sort()
     
-    tool_list = [c.split('/')[0] for c in csv_list]
+    tool_list = [c.split('/')[1] for c in csv_list]
     result_list = []
 
     cpu_benchmarks = {x: [] for x in tool_list}
@@ -572,27 +581,17 @@ def main():
         pass
         #cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
 
-    had_error = False
-
     for csv_path, tool_name in zip(csv_list, tool_list):
         tr = ToolResult(tool_name, csv_path, cpu_benchmarks[tool_name], skip_benchmarks[tool_name])
         result_list.append(tr)
-
-        if tr.had_error:
-            had_error = True
 
     # compare results across tools
     compare_results(result_list, single_overhead)
 
     print_stats(result_list)
 
-    print("\nTODO: Delete acasxu and cifar2020")
+    print("\nTODO: Delete acasxu and cifar2020 (line 151)")
     print("TODO: cgdtest had prepare_instance_timeout, set as timeout on line 100")
-
-    if had_error:
-        print("WARNING: some tools had errors that were ignored")
-    else:
-        print("Success. No tools had errors.")
 
 if __name__ == "__main__":
     main()

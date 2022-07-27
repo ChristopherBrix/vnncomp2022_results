@@ -200,15 +200,15 @@ def is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol):
 def test():
     """test code"""
 
-    #ce_filename = "test_ce.txt"
-    #cat = "cifar100_tinyimagenet_resnet"
-    #net = "TinyImageNet_resnet_medium"
-    #prop = "TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039"
+    ce_filename = "test_ce.txt"
+    cat = "cifar100_tinyimagenet_resnet"
+    net = "TinyImageNet_resnet_medium"
+    prop = "TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039"
 
-    ce_filename = "mnist-net_256x2_prop_1_0.03.counterexample.gz"
-    net = "mnist-net_256x2"
-    prop = "prop_1_0.03"
-    cat = "mnist_fc"
+    #ce_filename = "mnist-net_256x2_prop_1_0.03.counterexample.gz"
+    #net = "mnist-net_256x2"
+    #prop = "prop_1_0.03"
+    #cat = "mnist_fc"
     
     res = is_correct_counterexample(ce_filename, cat, net, prop)
 

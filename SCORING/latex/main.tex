@@ -1,0 +1,187 @@
+ 
+% easychair.tex,v 3.5 2017/03/15
+
+\documentclass{easychair}
+%\documentclass[EPiC]{easychair}
+%\documentclass[EPiCempty]{easychair}
+%\documentclass[debug]{easychair}
+%\documentclass[verbose]{easychair}
+%\documentclass[notimes]{easychair}
+%\documentclass[withtimes]{easychair}
+%\documentclass[a4paper]{easychair}
+%\documentclass[letterpaper]{easychair}
+
+\usepackage{xcolor}
+
+\usepackage{doc}
+
+\usepackage{cite}
+
+% pretty tables defined with data files
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{pgfplotstable}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{cleveref}
+
+\pgfplotsset{compat=1.16}
+
+
+% long table macro for pgfplotstable
+% see https://tex.stackexchange.com/questions/66504/pgfplotstable-longtable-with-caption-and-repeating-header
+\pgfkeysifdefined{/pgfplots/table/output empty row/.@cmd}{
+    % upcoming releases offer this more convenient option:
+    \pgfplotstableset{
+        empty header/.style={
+          every head row/.style={output empty row},
+        }
+    }
+}{
+    % versions up to and including 1.5.1 need this:
+    \pgfplotstableset{
+        empty header/.style={
+            typeset cell/.append code={%
+                \ifnum\pgfplotstablerow=-1 %
+                    \pgfkeyssetvalue{/pgfplots/table/@cell content}{}%
+                \fi
+            }
+        }
+    }
+}
+%%%-----------------------------------------------
+
+% use this if you have a long article and want to create an index
+% \usepackage{makeidx}
+
+% In order to save space or manage large tables or figures in a
+% landcape-like text, you can use the rotating and pdflscape
+% packages. Uncomment the desired from the below.
+%
+% \usepackage{rotating}
+% \usepackage{pdflscape}
+
+% Some of our commands for this guide.
+%
+\newcommand{\easychair}{\textsf{easychair}}
+\newcommand{\miktex}{MiK{\TeX}}
+\newcommand{\texniccenter}{{\TeX}nicCenter}
+\newcommand{\makefile}{\texttt{Makefile}}
+\newcommand{\latexeditor}{LEd}
+
+\newcommand{\todoForParticipants}[1]{\textcolor{red}{TODO-PARTICIPANTS: #1}}
+
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+
+\titlespacing*{\paragraph}
+{0pt}{2pt}{5pt}
+%\makeindex
+
+%% Front Matter
+%%
+% Regular title as in the article class.
+%
+\title{The Third International Verification of Neural Networks Competition (VNN-COMP 2022): Summary and Results%
+%\thanks{Other people who contributed to this document include Maria Voronkov   (Imperial College and EasyChair) and Graham Gough (The University of Manchester).}
+}
+
+% Authors are joined by \and. Their affiliations are given by \inst, which indexes
+% into the list defined using \institute
+%
+\author{Stanley Bak\thanks{S. Bak is with Stony Brook University, \tt stanley.bak@stonybrook.edu.}, Changliu Liu\thanks{C. Liu is with Carnegie Mellon University, \tt cliu6@andrew.cmu.edu.}, Taylor Johnson\thanks{T. Johnson is with Vanderbilt University, \tt taylor.johnson@vanderbilt.edu.}
+%Serguei A. Mokhov\inst{1}\thanks{Designed and implemented the class style}
+%\and
+%    Geoff Sutcliffe\inst{2}\thanks{Did numerous tests and provided a lot of suggestions}
+%\and
+%   Andrei Voronkov\inst{3}\inst{4}\inst{5}\thanks{Masterminded EasyChair and created versions
+%     3.0--3.5 of the class style}
+}
+
+% Institutes for affiliations are also joined by \and,
+\institute{
+%  Concordia University,
+%  Montreal, Quebec, Canada\\
+%  \email{mokhov@cse.concordia.ca}
+%\and
+%   University of Miami,
+%   Miami, Florida, U.S.A.\\
+%   \email{geoff@cs.miami.edu}\\
+%\and
+%   University of Manchester,
+%   Manchester, U.K.\\
+%   \email{andrei@voronkov.com}\\
+%\and
+%   Chalmers University of Technology,
+%   Gothenburg, Sweden
+%\and
+%   EasyChair
+ }
+
+%  \authorrunning{} has to be set for the shorter version of the authors' names;
+% otherwise a warning will be rendered in the running heads. When processed by
+% EasyChair, this command is mandatory: a document without \authorrunning
+% will be rejected by EasyChair
+
+\authorrunning{}
+\date{\phantom{date}\\}
+% \titlerunning{} has to be set to either the main title or its shorter
+% version for the running heads. When processed by
+% EasyChair, this command is mandatory: a document without \titlerunning
+% will be rejected by EasyChair
+\titlerunning{VNN-COMP 2022 Report}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report summarizes the third International Verification of Neural Networks Competition (VNN-COMP 2021), held as a part of the 5th Workshop on Formal Methods for ML-Enabled Autonomous Systems (FOMLAS) that was collocated with the 34th International Conference on Computer-Aided Verification (CAV).
+%
+%Twelve teams participated in this competition.
+%
+The goal of the competition is to provide an objective comparison of the state-of-the-art methods in neural network verification, in terms of scalability and speed.
+%
+Along this line, we used standard formats (ONNX for neural networks and VNNLIB for specifications), standard hardware (all tools are run by the organizers on AWS), and tool parameters provided by the tool authors.
+%
+This report summarizes the rules, benchmarks, participating tools, results, and lessons learned from this competition.
+\end{abstract}
+
+
+
+%------------------------------------------------------------------------------
+\input{tables}
+
+%\input{introduction}
+
+%\input{rules}
+
+%\input{participants}
+
+%\input{benchmarks}
+
+%\input{results}
+
+%\input{conclusion}
+
+%\input{acks}
+
+%\label{sect:bib}
+
+%\bibliographystyle{plain}
+%\bibliographystyle{alpha}
+%\bibliographystyle{unsrt}
+%\bibliographystyle{abbrv}
+%\bibliography{bib/nnv,bib/nnenum,bib/peregriNN,bib/verinet,bib/oval,bib/venus,bib/MIPVerify, bib/ERAN, bib/alpha-beta-CROWN,bib/debona,bib/dnnf,bib/nvjl,bib/nn4sys,bib/Marabou,bib/RPM}
+
+
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+% Index
+%\printindex
+
+%------------------------------------------------------------------------------
+\end{document}
+
