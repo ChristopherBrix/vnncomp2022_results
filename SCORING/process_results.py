@@ -144,7 +144,7 @@ class ToolResult:
     def delete_empty_categories(self):
         """delete categories without successful measurements"""
 
-        to_remove = [] # ['acasxu', 'cifar2020'] # benchmarks to skip
+        to_remove = ['acasxu', 'cifar2020'] # benchmarks to skip
 
         for key in self.category_to_list.keys():
             rows = self.category_to_list[key]
@@ -417,7 +417,7 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         If two tools have runtimes within 0.2 seconds, we will consider them the same runtime.
     """
 
-    penalize_no_ce = True
+    penalize_no_ce = False
 
     is_verified = False
     is_falsified = False
@@ -578,8 +578,8 @@ def main():
     #skip_benchmarks['RPM'] = ['mnistfc']
     
     if not single_overhead: # Define a dict with the cpu_only benchmarks for each tool
-        pass
-        #cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
+        #pass
+        cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
 
     for csv_path, tool_name in zip(csv_list, tool_list):
         tr = ToolResult(tool_name, csv_path, cpu_benchmarks[tool_name], skip_benchmarks[tool_name])
