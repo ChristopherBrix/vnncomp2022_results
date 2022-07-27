@@ -41,7 +41,7 @@ def read_ce_file(ce_path):
 def is_correct_counterexample(ce_path, cat, net, prop):
     """is the counterexample correct?"""
 
-    print(f"Checking {Path(ce_path).stem}")
+    print(f"Checking ce path: {ce_path}")
 
     benchmark_repo = "/home/stan/repositories/vnncomp2022_benchmarks"
     tol = 1e-4
@@ -53,7 +53,9 @@ def is_correct_counterexample(ce_path, cat, net, prop):
         # try unzipping
         gz_path = f"{onnx_filename}.gz"
 
-        if Path(gz_path).is_file():
+        if not Path(gz_path).is_file():
+            print(f"WARNING: onnx and gz path don't exist: {gz_path}")
+        else:
             print(f"extracting from {gz_path} to {onnx_filename}")
             
             with gzip.open(gz_path, 'rb') as f:
@@ -85,6 +87,8 @@ def is_correct_counterexample(ce_path, cat, net, prop):
     if len(content) < 2:
         print(f"Warning: no counter example provided in {ce_path}")
         return False
+
+    #print(f"CE CONTENT:\n{content}")
     
     assert content[0] == '(' and content[-1] == ')'
     content = content[1:-1]
@@ -94,10 +98,11 @@ def is_correct_counterexample(ce_path, cat, net, prop):
 
     parts = content.split(')')
     for part in parts:
+        part = part.strip()
+                
         if not part:
             continue
-
-        part = part.strip()
+        
         assert part[0] == '('
         part = part[1:]
 
@@ -112,15 +117,9 @@ def is_correct_counterexample(ce_path, cat, net, prop):
             y_list.append(float(num))
 
     onnx_model = onnx.load(onnx_filename)
-    input_shapes = [[d.dim_value for d in _input.type.tensor_type.shape.dim] for _input in onnx_model.graph.input]
-    assert len(input_shapes) == 1, "multiple inputs?: {input_shapes}"
-    
-    input_shape = [i if i != 0 else 1 for i in input_shapes[0]] # change 0 to 1
 
-    input_type = onnx_model.graph.input[0].type.tensor_type.elem_type
-    input_dtype = np.float32 if input_type == onnx.TensorProto.FLOAT else np.float64
-
-    print(f"input shape: {input_shape}, input_dtype: {input_dtype}")
+    inp, _out, input_dtype = get_io_nodes(onnx_model)
+    input_shape = tuple(d.dim_value if d.dim_value != 0 else 1 for d in inp.type.tensor_type.shape.dim)
 
     x_in = np.array(x_list, dtype=input_dtype)
     flatten_order = 'C'
@@ -148,7 +147,7 @@ def is_correct_counterexample(ce_path, cat, net, prop):
 def is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol):
     """check that the spec file was obeyed"""
 
-    inp, out, inp_dtype = get_io_nodes(onnx_model)
+    inp, out, _ = get_io_nodes(onnx_model)
 
     inp_shape = tuple(d.dim_value if d.dim_value != 0 else 1 for d in inp.type.tensor_type.shape.dim)
     out_shape = tuple(d.dim_value if d.dim_value != 0 else 1 for d in out.type.tensor_type.shape.dim)
@@ -178,7 +177,7 @@ def is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol):
                 break
 
         if inside_input_box:
-            print(f"input was inside box {i}")
+            print(f"CE input X was inside box #{i}")
             
             # check spec
             violated = False
@@ -188,7 +187,7 @@ def is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol):
                 sat = np.all(vec <= prop_rhs + tol)
 
                 if sat:
-                    print(f"prop #{j}:\n{vec - prop_rhs}")
+                    print(f"prop #{j} violated:\n{vec - prop_rhs}")
                     violated = True
                     break
 
@@ -201,11 +200,17 @@ def is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol):
 def test():
     """test code"""
 
-    cat = "cifar100_tinyimagenet_resnet"
-    net = "TinyImageNet_resnet_medium"
-    prop = "TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039"
+    #ce_filename = "test_ce.txt"
+    #cat = "cifar100_tinyimagenet_resnet"
+    #net = "TinyImageNet_resnet_medium"
+    #prop = "TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039"
+
+    ce_filename = "mnist-net_256x2_prop_1_0.03.counterexample.gz"
+    net = "mnist-net_256x2"
+    prop = "prop_1_0.03"
+    cat = "mnist_fc"
     
-    res = is_correct_counterexample("test_ce.txt", cat, net, prop)
+    res = is_correct_counterexample(ce_filename, cat, net, prop)
 
     if res:
         print("counter example is correct")

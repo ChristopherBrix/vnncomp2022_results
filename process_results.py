@@ -12,7 +12,7 @@ from pathlib import Path
 from collections import defaultdict
 import numpy as np
 
-import gzip
+from counterexamples import is_correct_counterexample
 
 class ToolResult:
     """Tool's result"""
@@ -175,7 +175,7 @@ class ToolResult:
 
         ToolResult.num_categories[self.tool_name] = len(self.category_to_list)
 
-def compare_results(result_list, resolve_conflicts, single_overhead):
+def compare_results(result_list, single_overhead):
     """compare results across tools"""
 
     min_percent = 0 # minimum percent for total score
@@ -222,6 +222,7 @@ def compare_results(result_list, resolve_conflicts, single_overhead):
             times_violated = []
             tools_violated = []
             counterexamples_violated = []
+            correct_violations = {}
             
             table_row = []
             table_rows.append(table_row)
@@ -250,7 +251,7 @@ def compare_results(result_list, resolve_conflicts, single_overhead):
                     # construct counterexample path
                     row = t.category_to_list[cat][index]
                     net = Path(row[ToolResult.NETWORK]).stem
-                    prop = Path(row[ToolResult.PROP].stem
+                    prop = Path(row[ToolResult.PROP]).stem
 
                     ce_path = f"./{t.tool_name}/{cat}/{net}_{prop}.counterexample.gz"
 
@@ -271,14 +272,13 @@ def compare_results(result_list, resolve_conflicts, single_overhead):
                       f"({tools_violated}), Holds: {len(times_holds)} ({tools_holds})")
                 table_row.append('*multiple results*')
 
-                #check_counterexample(ce_path)
+                for tup, tool in zip(counterexamples_violated, tools_violated):
+                    print(f"\nchecking counterexample for {tool}")
+                    is_correct = is_correct_counterexample(*tup)
 
-                for tup in countedexamples_violated:
-                    pass
-                    #is_correct_counterexample(*tup)
+                    correct_violations[tool] = is_correct
 
-                print(f"multiple results: {counterexamples_violated}")
-                exit(1)
+                print(f"were violated counterexamples valid?: {correct_violations}")
                 
             print(f"Row: {table_row}")
             
@@ -287,7 +287,7 @@ def compare_results(result_list, resolve_conflicts, single_overhead):
                 
                 score, is_verified, is_falsified, is_fastest = get_score(t.tool_name, res, secs, rand_gen_succeeded,
                                                                 times_holds, times_violated,
-                                                                resolve_conflicts=resolve_conflicts)
+                                                                correct_violations)
                 print(f"{index}: {t.tool_name} score: {score}, is_ver: {is_verified}, is_fals: {is_falsified}, " + \
                       f"is_fastest: {is_fastest}")
 
@@ -333,7 +333,7 @@ def compare_results(result_list, resolve_conflicts, single_overhead):
         if not cat_score:
             continue
         
-        print(f"\n% Category {cat} (conflicts={resolve_conflicts}, single_overhead={single_overhead}):")
+        print(f"\n% Category {cat} (single_overhead={single_overhead}):")
         res_list = []
         max_score = max([t[0] for t in cat_score.values()])
 
@@ -362,7 +362,7 @@ def compare_results(result_list, resolve_conflicts, single_overhead):
 
     res_list = []
 
-    print(f"\nTotal Score (conflicts={resolve_conflicts}, single_overhead={single_overhead}):")
+    print(f"\nTotal Score (single_overhead={single_overhead}):")
 
     print_table_header("Overall Score", "tab:score", ["\\# ~", "Tool", "Score"])
     
@@ -406,7 +406,7 @@ def print_table_footer():
 \\end{center}
 \\end{table}\n\n''')
 
-def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violated, resolve_conflicts):
+def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violated, correct_violations):
     """Get the score for the given result
     Actually returns a 4-tuple: score, is_verified, is_falsified, is_fastest
 
@@ -421,11 +421,6 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         If two tools have runtimes within 0.2 seconds, we will consider them the same runtime.
     """
 
-    # how to resolve conflicts (some tools output holds others output violated)
-    # "voting": majority rules, tie = ighore
-    # "odd_one_out": only if single tool has mismatch, assume it's wrong
-    # "ignore": ignore all conflicts
-    assert resolve_conflicts in ["voting", "odd_one_out", "ignore"]
     is_verified = False
     is_falsified = False
     is_fastest = False
@@ -433,11 +428,18 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
     num_holds = len(times_holds)
     num_violated = len(times_violated)
 
-    if res not in ["holds", "violated"] or num_holds == num_violated:
-        score = 0
-    elif resolve_conflicts == "ignore" and num_holds > 0 and num_violated > 0:
-        score = 0
-    elif resolve_conflicts == "odd_one_out" and num_holds > 1 and num_violated > 1:
+    #print(f"tool: {tool_name} {res}")
+
+    valid_ce = False
+
+    for is_correct in correct_violations.values():
+        if is_correct:
+            valid_ce = True
+            break
+
+    assert not rand_gen_succeded, "VNNCOMP 2022 didn't use randgen"
+
+    if res not in ["holds", "violated"]:
         score = 0
     elif rand_gen_succeded:
         assert res == "violated"
@@ -447,10 +449,16 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         ToolResult.num_violated[tool_name] += 1
 
         is_falsified = True
-    elif num_holds > num_violated and res == "violated":
+    elif num_holds > 0 and res == "violated" and not correct_violations[tool_name]:
+        # Rule: If a witness is not provided, for the purposes of scoring if there are
+        # mismatches between tools we will count the tool without the witness as incorrect.
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
-    elif num_violated > num_holds and res == "holds":
+        print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
+    elif res == "violated" and not valid_ce:
+        score = -100
+        ToolResult.incorrect_results[tool_name] += 1
+    elif res == "holds" and valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
     else:
@@ -548,14 +556,6 @@ def main():
     single_overhead = True
     print(f"using single_overhead={single_overhead}")
 
-    # how to resolve conflicts (some tools output holds others output violated)
-    # "voting": majority rules, tie = ighore
-    # "odd_one_out": only if single tool has mismatch, assume it's wrong
-    # "ignore": ignore all conflicts
-    # resolve_conflicts = "odd_one_out"
-    resolve_conflicts = "odd_one_out"
-    print(f"using resolve_conflicts={resolve_conflicts}")
-
     #####################################3
     #csv_list = glob.glob("results_csv/*.csv")
     csv_list = glob.glob("*/results.csv")
@@ -582,7 +582,7 @@ def main():
             had_error = True
 
     # compare results across tools
-    compare_results(result_list, resolve_conflicts, single_overhead)
+    compare_results(result_list, single_overhead)
 
     print_stats(result_list)
 
