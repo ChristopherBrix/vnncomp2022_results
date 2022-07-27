@@ -1,0 +1,13 @@
+*~
+*.pyc
+.directory
+.coverage*
+TAGS
+\#*\#
+.\#*
+*_flymake.py
+.pytest_cache
+.cache
+__pycache__
+*.mypy_cache
+.coverage
