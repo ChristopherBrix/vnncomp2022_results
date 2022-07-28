@@ -13,12 +13,19 @@ class Settings:
     BENCHMARK_REPO = "/home/stan/repositories/vnncomp2022_benchmarks"
     COUNTEREXAMPLE_TOL = 1e-4
 
-    TOOL_NAME_SUBS = [
+    TOOL_NAME_SUBS_LATEX = [
             ('alpha_beta_crown', '$\\alpha$,$\\beta$-CROWN'),
             ('mn_bab', 'MN BaB')
             ]
 
+    TOOL_NAME_SUBS_GNUPLOT = [
+        ('alpha_beta_crown', 'AB-CROWN'),
+        ('mn_bab', 'MN BaB')
+        ]
+
     SKIP_TOOLS = [] #['marabou', 'verapak', 'cgdtest']
+
+    PLOTS_DIR = "./plots"
 
     CSV_SUBSTITUTIONS = [('unsat', 'holds'),
                          ('sat', 'violated'),

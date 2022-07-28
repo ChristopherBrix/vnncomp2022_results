@@ -184,13 +184,18 @@ class ToolResult:
 
         ToolResult.num_categories[self.tool_name] = len(self.category_to_list)
 
-def compare_results(result_list, single_overhead):
+def compare_results(all_tool_names, result_list, single_overhead):
     """compare results across tools"""
 
     min_percent = 0 # minimum percent for total score
 
     total_score = defaultdict(int)
     all_cats = {}
+
+    tool_times = {}
+
+    for tool in all_tool_names:
+        tool_times[tool] = []
 
     for cat in sorted(ToolResult.all_categories):
         print(f"\nCategory {cat}:")
@@ -330,14 +335,24 @@ def compare_results(result_list, single_overhead):
         num_holds = 0
         num_violated = 0
         num_unknown = 0
+
+        # for each tool, make a list of [(times)]
         
+
         for i, (row_times, result) in enumerate(zip(all_times, all_results)):
+            assert len(row_times) == len(tool_names)
+
             if result is None:
                 num_unknown += 1
-            elif result == 'V':
-                num_violated += 1
-            elif result == 'H':
-                num_holds += 1
+            else:
+                for t, tool in zip(row_times, tool_names):
+                    if t is not None:
+                        tool_times[tool].append(t)
+                
+                if result == 'V':
+                    num_violated += 1
+                elif result == 'H':
+                    num_holds += 1
         
         print(f"Total Violated: {num_violated}")
         print(f"Total Holds: {num_holds}")
@@ -365,6 +380,8 @@ def compare_results(result_list, single_overhead):
     print("### Summary ###")
     print("###############")
 
+    sorted_tools = []
+
     with open(Settings.TOTAL_SCORE_LATEX, 'w', encoding='utf-8') as f:
         tee(f, "\n%Total Score:")
         res_list = []
@@ -375,13 +392,41 @@ def compare_results(result_list, single_overhead):
             tool_latex = latex_tool_name(tool)
             desc = f"{tool_latex} & {round(score, 1)} \\\\"
 
-            res_list.append((score, desc))
+            res_list.append((score, desc, tool))
 
         for i, s in enumerate(reversed(sorted(res_list))):
+            sorted_tools.append(s[2])
             
             tee(f, f"{i+1} & {s[1]}")
 
         print_table_footer(f)
+
+    #######
+
+    print("--------------------")
+
+    for tool in all_tool_names:
+        times_list = tool_times[tool]
+        times_list.sort()
+
+        with open(Settings.PLOTS_DIR + f"/accumulated-all-{tool}.txt", 'w', encoding='utf-8') as f:
+            for i, t in enumerate(times_list):
+                f.write(f"{t}\t{i+1}\n")
+
+    with open(Settings.PLOTS_DIR + "/generated.gnuplot", 'w', encoding='utf-8') as f:
+        f.write("input_list = \"'")
+
+        for tool in sorted_tools:
+            f.write(f"all-{tool} ")
+
+        f.write("'\"\n\n")
+
+        f.write("pretty_input_list = \"\\\"")
+        for tool in sorted_tools:
+            f.write(f"'{gnuplot_tool_name(tool)}' ")
+
+        f.write("\\\"\"\n")
+
 
     #######
 
@@ -600,7 +645,25 @@ def print_stats(result_list):
 def latex_tool_name(tool):
     """get latex version of tool name"""
 
-    subs = Settings.TOOL_NAME_SUBS
+    subs = Settings.TOOL_NAME_SUBS_LATEX
+
+    found = False
+
+    for old, new in subs:
+        if tool == old:
+            tool = new
+            found = True
+            break
+
+    if not found:
+        tool = tool.capitalize()
+
+    return tool
+
+def gnuplot_tool_name(tool):
+    """get fnuplot version of tool name"""
+
+    subs = Settings.TOOL_NAME_SUBS_GNUPLOT
 
     found = False
 
@@ -656,7 +719,7 @@ def main():
     cpu_benchmarks = {x: [] for x in tool_list}
     skip_benchmarks = {x: [] for x in tool_list}
     #skip_benchmarks['RPM'] = ['mnistfc']
-       
+
     if not single_overhead: # Define a dict with the cpu_only benchmarks for each tool
         #pass
         cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
@@ -670,7 +733,7 @@ def main():
             result_list.append(tr)
 
         # compare results across tools
-        compare_results(result_list, single_overhead)
+        compare_results(tool_list, result_list, single_overhead)
 
         if scored:
             print_stats(result_list)

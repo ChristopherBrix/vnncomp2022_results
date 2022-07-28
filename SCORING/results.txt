@@ -3650,6 +3650,7 @@ verinet: 1486 (100.0%)
 \end{table}
 
 
+--------------------
 
 % Category acasxu (single_overhead=True):
 
@@ -16234,6 +16235,7 @@ verinet: 60 (34.09%)
 \end{table}
 
 
+--------------------
 
 % Category carvana_unet_2022 (single_overhead=True):
 
