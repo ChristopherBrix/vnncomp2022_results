@@ -117,6 +117,11 @@ class ToolResult:
                 prepare_time = float(row[ToolResult.PREPARE_TIME])
                 run_time = float(row[ToolResult.RUN_TIME])
 
+                # workaround to drop convBigRELU from cifar2020
+                if cat == 'cifar2020':
+                    if 'convBigRELU' in network:
+                        result = row[ToolResult.RESULT] = "unknown"
+
                 if cat in self.skip_benchmarks or \
                         (scored and cat in Settings.UNSCORED_CATEGORIES) or \
                         (not scored and cat not in Settings.UNSCORED_CATEGORIES):
@@ -218,6 +223,8 @@ def compare_results(result_list, single_overhead):
         tool_names = [t.tool_name for t in participating_tools]
         print(f"{len(participating_tools)} participating tools: {tool_names}")
         table_rows = []
+        all_times = []
+        all_results = []
 
         for index in range(num_rows):
             rand_gen_succeeded = False
@@ -285,6 +292,10 @@ def compare_results(result_list, single_overhead):
                 print(f"were violated counterexamples valid?: {correct_violations}")
                 
             print(f"Row: {table_row}")
+
+            row_times = []
+            all_times.append(row_times)
+            all_results.append(None)
             
             for t in participating_tools:
                 res, secs = t.single_result(cat, index)
@@ -294,6 +305,12 @@ def compare_results(result_list, single_overhead):
                                                                 correct_violations)
                 print(f"{index}: {t.tool_name} score: {score}, is_ver: {is_verified}, is_fals: {is_falsified}, " + \
                       f"is_fastest: {is_fastest}")
+
+                if is_verified or is_falsified:
+                    all_results[-1] = 'H' if is_verified else 'V'
+                    row_times.append(secs)
+                else:
+                    row_times.append(None)
 
                 if t.tool_name in cat_score:
                     tool_score_tup = cat_score[t.tool_name]
@@ -308,6 +325,23 @@ def compare_results(result_list, single_overhead):
                 tool_score_tup[3] += 1 if is_fastest else 0
                 tool_score_tup[4] += 1 if is_error else 0
                 tool_score_tup = None
+
+        print("--------------------")
+        num_holds = 0
+        num_violated = 0
+        num_unknown = 0
+        
+        for i, (row_times, result) in enumerate(zip(all_times, all_results)):
+            if result is None:
+                num_unknown += 1
+            elif result == 'V':
+                num_violated += 1
+            elif result == 'H':
+                num_holds += 1
+        
+        print(f"Total Violated: {num_violated}")
+        print(f"Total Holds: {num_holds}")
+        print(f"Total Unknown: {num_unknown}")
 
         print("--------------------")
         print(", ".join(tool_names))

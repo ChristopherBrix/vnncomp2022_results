@@ -1,5 +1,5 @@
 using single_overhead=True
-Loaded alpha_beta_crown, default-overhead (gpu): 6.7s,cpu-overhead: infs, prepare time: 36.3s
+Loaded alpha_beta_crown, default-overhead (gpu): 6.7s,cpu-overhead: infs, prepare time: 33.6s
 Loaded averinn, default-overhead (gpu): infs,cpu-overhead: infs, prepare time: 0.0s
 Loaded cgdtest, default-overhead (gpu): 1.3s,cpu-overhead: infs, prepare time: 6.4s
 Loaded debona, default-overhead (gpu): 2.0s,cpu-overhead: infs, prepare time: 0.0s
@@ -1200,6 +1200,10 @@ Row: ['ACASXU_run2a_4_5_batch_2000-prop_10', '4.0 (h)', '1.0 (h)', '23.2 (h)', '
 185: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 185: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 185: nnenum score: 12, is_ver: True, is_fals: False, is_fastest: True
+--------------------
+Total Violated: 47
+Total Holds: 139
+Total Unknown: 0
 --------------------
 alpha_beta_crown, cgdtest, mn_bab, nnenum
 ACASXU_run2a_1_1_batch_2000-prop_1, 2.3 (h), 1.0 (h), 28.1 (h), 1.0 (h)
@@ -2735,908 +2739,594 @@ Row: ['cifar10_8_255_simplified-cifar10_spec_idx_99_eps_0.03137_n1', '1.5 (v)', 
 137: verapak score: 10, is_ver: False, is_fals: True, is_fastest: False
 137: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
 
-WARNING: multiple results for index 138. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_1_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_1_eps_0.00784', '1.1 (h)', '29.9 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-138: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-138: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_1_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+138: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+138: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 138: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 138: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 138: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 138: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-138: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+138: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 139. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_2_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_2_eps_0.00784', '1.1 (h)', '28.7 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-139: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-139: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_2_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+139: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+139: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 139: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 139: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 139: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 139: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-139: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+139: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 140. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_3_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_3_eps_0.00784', '3.6 (h)', '28.6 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-140: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-140: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_3_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+140: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+140: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 140: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 140: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 140: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 140: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-140: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+140: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 141. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_4_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_4_eps_0.00784', '14.5 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-141: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_4_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+141: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 141: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 141: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 141: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 141: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 141: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-141: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+141: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 142. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_5_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_5_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-142: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_5_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+142: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 142: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 142: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 142: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 142: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 142: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-142: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+142: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_9_eps_0.00784', '1.4 (v)', '7.6 (v)', '-', '-', 'error', 'timeout', '1.0 (v)']
-143: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
-143: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_9_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+143: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+143: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 143: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 143: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 143: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 143: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-143: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+143: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 144. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_10_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_10_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-144: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_10_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+144: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 144: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 144: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 144: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 144: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 144: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-144: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+144: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 145. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_11_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_11_eps_0.00784', '4.3 (h)', '29.8 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-145: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-145: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_11_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+145: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+145: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 145: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 145: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 145: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 145: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-145: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+145: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 146. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_13_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_13_eps_0.00784', '1.1 (h)', '29.1 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-146: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-146: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_13_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+146: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+146: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 146: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 146: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 146: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 146: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-146: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+146: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 147. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_14_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_14_eps_0.00784', '60.0 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-147: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_14_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+147: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 147: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 147: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 147: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 147: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 147: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-147: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+147: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 148. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_15_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_15_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-148: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_15_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+148: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 148: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 148: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 148: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 148: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 148: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-148: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+148: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 149. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_18_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_18_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-149: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_18_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+149: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 149: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 149: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 149: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 149: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 149: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-149: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+149: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 150. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_19_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_19_eps_0.00784', '14.5 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-150: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_19_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+150: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 150: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 150: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 150: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 150: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 150: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-150: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+150: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 151. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_20_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_20_eps_0.00784', '21.3 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-151: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_20_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+151: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 151: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 151: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 151: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 151: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 151: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-151: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+151: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 152. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_21_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_21_eps_0.00784', '1.1 (h)', '28.3 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-152: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-152: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_21_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+152: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+152: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 152: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 152: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 152: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 152: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-152: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+152: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 153. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_23_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_23_eps_0.00784', '1.1 (h)', '29.7 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-153: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-153: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_23_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+153: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+153: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 153: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 153: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 153: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 153: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-153: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+153: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_28_eps_0.00784', '1.4 (v)', '7.8 (v)', '-', '-', 'error', 'timeout', '1.0 (v)']
-154: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
-154: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_28_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+154: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+154: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 154: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 154: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 154: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 154: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-154: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+154: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 155. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_29_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_29_eps_0.00784', '3.3 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-155: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_29_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+155: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 155: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 155: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 155: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 155: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 155: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-155: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+155: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 156. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_30_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_30_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-156: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_30_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+156: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 156: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 156: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 156: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 156: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 156: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-156: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+156: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_32_eps_0.00784', '1.4 (v)', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
-157: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_32_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+157: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 157: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 157: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 157: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 157: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 157: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-157: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+157: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_33_eps_0.00784', '1.4 (v)', '9.5 (v)', '-', '-', 'error', 'timeout', '1.0 (v)']
-158: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
-158: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_33_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+158: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+158: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 158: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 158: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 158: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 158: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-158: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+158: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 159. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_34_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_34_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-159: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_34_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+159: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 159: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 159: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 159: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 159: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 159: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-159: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+159: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 160. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_37_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_37_eps_0.00784', '1.1 (h)', '30.4 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-160: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-160: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_37_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+160: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+160: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 160: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 160: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 160: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 160: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-160: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+160: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 161. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_38_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_38_eps_0.00784', '33.3 (h)', '30.2 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-161: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
-161: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_38_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+161: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+161: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 161: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 161: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 161: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 161: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-161: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+161: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 162. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_39_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_39_eps_0.00784', '27.6 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-162: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_39_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+162: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 162: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 162: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 162: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 162: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 162: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-162: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+162: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_40_eps_0.00784', '1.4 (v)', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
-163: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_40_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+163: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 163: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 163: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 163: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 163: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 163: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-163: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+163: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 164. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_41_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_41_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-164: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_41_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+164: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 164: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 164: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 164: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 164: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 164: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-164: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+164: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 165. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_43_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_43_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-165: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_43_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+165: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 165: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 165: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 165: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 165: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 165: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-165: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+165: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 166. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_44_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_44_eps_0.00784', '1.1 (h)', '28.4 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-166: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-166: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_44_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+166: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+166: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 166: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 166: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 166: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 166: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-166: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+166: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 167. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_45_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_45_eps_0.00784', '1.1 (h)', '30.2 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-167: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-167: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_45_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+167: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+167: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 167: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 167: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 167: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 167: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-167: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+167: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 168. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_50_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_50_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-168: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_50_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+168: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 168: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 168: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 168: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 168: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 168: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-168: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+168: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 169. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_51_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_51_eps_0.00784', '11.4 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-169: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_51_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+169: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 169: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 169: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 169: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 169: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 169: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-169: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+169: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_52_eps_0.00784', '1.4 (v)', '6.2 (v)', '-', '-', 'error', 'timeout', '1.0 (v)']
-170: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
-170: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_52_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+170: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+170: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 170: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 170: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 170: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 170: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-170: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+170: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 171. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_54_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_54_eps_0.00784', '1.1 (h)', '29.9 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-171: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-171: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_54_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+171: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+171: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 171: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 171: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 171: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 171: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-171: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+171: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 172. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_55_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_55_eps_0.00784', '1.1 (h)', '29.7 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-172: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-172: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_55_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+172: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+172: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 172: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 172: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 172: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 172: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-172: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+172: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 173. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_60_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_60_eps_0.00784', '3.4 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-173: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_60_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+173: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 173: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 173: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 173: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 173: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 173: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-173: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+173: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_61_eps_0.00784', '1.4 (v)', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
-174: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_61_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+174: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 174: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 174: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 174: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 174: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 174: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-174: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+174: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 175. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_62_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_62_eps_0.00784', '26.3 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-175: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_62_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+175: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 175: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 175: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 175: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 175: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 175: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-175: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+175: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 176. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_64_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_64_eps_0.00784', '11.5 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-176: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_64_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+176: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 176: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 176: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 176: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 176: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 176: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-176: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+176: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 177. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_66_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_66_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-177: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_66_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+177: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 177: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 177: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 177: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 177: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 177: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-177: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+177: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 178. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_67_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_67_eps_0.00784', '1.1 (h)', '30.8 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-178: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-178: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_67_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+178: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+178: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 178: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 178: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 178: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 178: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-178: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+178: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 179. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_71_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_71_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-179: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_71_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+179: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 179: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 179: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 179: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 179: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 179: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-179: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+179: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 180. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_72_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_72_eps_0.00784', '1.1 (h)', '29.1 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-180: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-180: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_72_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+180: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+180: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 180: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 180: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 180: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 180: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-180: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+180: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 181. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_73_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_73_eps_0.00784', '1.1 (h)', '28.6 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-181: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-181: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_73_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+181: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+181: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 181: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 181: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 181: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 181: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-181: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+181: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 182. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_75_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_75_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-182: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_75_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+182: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 182: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 182: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 182: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 182: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 182: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-182: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+182: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 183. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_76_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_76_eps_0.00784', '58.8 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-183: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_76_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+183: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 183: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 183: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 183: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 183: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 183: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-183: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+183: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_78_eps_0.00784', 'timeout', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
+Row: ['convBigRELU__PGD-cifar10_spec_idx_78_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
 184: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 184: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 184: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 184: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 184: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 184: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-184: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+184: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 185. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_79_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_79_eps_0.00784', '1.1 (h)', '30.4 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-185: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-185: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_79_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+185: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+185: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 185: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 185: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 185: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 185: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-185: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+185: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 186. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_80_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_80_eps_0.00784', '1.1 (h)', '29.8 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-186: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-186: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_80_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+186: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+186: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 186: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 186: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 186: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 186: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-186: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+186: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 187. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_81_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_81_eps_0.00784', '1.1 (h)', '29.3 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-187: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-187: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_81_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+187: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+187: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 187: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 187: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 187: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 187: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-187: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+187: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 188. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_82_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_82_eps_0.00784', '1.1 (h)', '28.8 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-188: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-188: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_82_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+188: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+188: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 188: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 188: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 188: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 188: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-188: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+188: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 189. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_83_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_83_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-189: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_83_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+189: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 189: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 189: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 189: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 189: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 189: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-189: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+189: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 190. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_84_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_84_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-190: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_84_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+190: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 190: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 190: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 190: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 190: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 190: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-190: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+190: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 191. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_86_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_86_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-191: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_86_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+191: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 191: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 191: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 191: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 191: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 191: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-191: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+191: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 192. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_88_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_88_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-192: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_88_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+192: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 192: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 192: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 192: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 192: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 192: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-192: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+192: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_89_eps_0.00784', 'timeout', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
+Row: ['convBigRELU__PGD-cifar10_spec_idx_89_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
 193: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 193: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 193: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 193: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 193: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 193: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-193: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+193: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 194. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_90_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_90_eps_0.00784', '1.1 (h)', '28.9 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-194: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-194: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_90_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+194: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+194: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 194: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 194: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 194: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 194: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-194: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+194: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 195. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_92_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_92_eps_0.00784', '1.0 (h)', '30.1 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-195: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-195: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_92_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+195: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+195: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 195: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 195: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 195: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 195: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-195: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+195: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 196. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_93_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_93_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-196: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_93_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+196: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 196: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 196: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 196: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 196: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 196: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-196: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+196: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_94_eps_0.00784', 'timeout', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
+Row: ['convBigRELU__PGD-cifar10_spec_idx_94_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
 197: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 197: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 197: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 197: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 197: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 197: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-197: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+197: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 198. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_95_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_95_eps_0.00784', '24.3 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-198: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_95_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+198: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 198: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 198: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 198: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 198: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 198: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-198: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+198: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 199. Violated: 1 (['verinet']), Holds: 1 (['alpha_beta_crown'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_96_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.359054327011108 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_96_eps_0.00784', '1.1 (h)', '-', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-199: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['convBigRELU__PGD-cifar10_spec_idx_96_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+199: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 199: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 199: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 199: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 199: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 199: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-199: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+199: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_97_eps_0.00784', '1.4 (v)', '7.2 (v)', '-', '-', 'error', 'timeout', '1.0 (v)']
-200: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
-200: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_97_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+200: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+200: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 200: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 200: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 200: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 200: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-200: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+200: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 201. Violated: 1 (['verinet']), Holds: 2 (['alpha_beta_crown', 'cgdtest'])
-
-checking counterexample for verinet
-Checking ce path: ../verinet/cifar2020/convBigRELU__PGD_cifar10_spec_idx_98_eps_0.00784.counterexample.gz
-L-inf norm difference between onnx execution and CE file output: 4.362496614456177 (limit: 0.0001)
-were violated counterexamples valid?: {'verinet': False}
-Row: ['convBigRELU__PGD-cifar10_spec_idx_98_eps_0.00784', '1.1 (h)', '29.9 (h)', '-', '-', 'error', 'timeout', '1.0 (v)', '*multiple results*']
-201: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-201: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['convBigRELU__PGD-cifar10_spec_idx_98_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
+201: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+201: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 201: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 201: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 201: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 201: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-201: verinet score: -100, is_ver: False, is_fals: False, is_fastest: False
+201: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['convBigRELU__PGD-cifar10_spec_idx_99_eps_0.00784', 'timeout', '-', '-', '-', 'error', 'timeout', '1.0 (v)']
+Row: ['convBigRELU__PGD-cifar10_spec_idx_99_eps_0.00784', '-', '-', '-', '-', '-', '-', '-']
 202: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 202: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 202: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 202: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 202: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 202: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
-202: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
+202: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
+--------------------
+Total Violated: 38
+Total Holds: 95
+Total Unknown: 70
 --------------------
 alpha_beta_crown, cgdtest, marabou, mn_bab, nnenum, verapak, verinet
 cifar10_2_255_simplified-cifar10_spec_idx_0_eps_0.00784_n1, 1.6 (v), 28.8 (h), -, 2.0 (v), 160.2 (v), timeout, 1.0 (v), *multiple results*
@@ -3777,80 +3467,80 @@ cifar10_8_255_simplified-cifar10_spec_idx_96_eps_0.03137_n1, 1.5 (v), -, -, time
 cifar10_8_255_simplified-cifar10_spec_idx_97_eps_0.03137_n1, timeout, -, -, timeout, timeout, timeout, 37.0 (v)
 cifar10_8_255_simplified-cifar10_spec_idx_98_eps_0.03137_n1, 1.0 (h), 27.1 (h), 225.8 (h), 1.0 (h), 7.1 (h), timeout, 1.0 (h)
 cifar10_8_255_simplified-cifar10_spec_idx_99_eps_0.03137_n1, 1.5 (v), 8.2 (v), -, 5.8 (v), timeout, 3.6 (v), 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_1_eps_0.00784, 1.1 (h), 29.9 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_2_eps_0.00784, 1.1 (h), 28.7 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_3_eps_0.00784, 3.6 (h), 28.6 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_4_eps_0.00784, 14.5 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_5_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_9_eps_0.00784, 1.4 (v), 7.6 (v), -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_10_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_11_eps_0.00784, 4.3 (h), 29.8 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_13_eps_0.00784, 1.1 (h), 29.1 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_14_eps_0.00784, 60.0 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_15_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_18_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_19_eps_0.00784, 14.5 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_20_eps_0.00784, 21.3 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_21_eps_0.00784, 1.1 (h), 28.3 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_23_eps_0.00784, 1.1 (h), 29.7 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_28_eps_0.00784, 1.4 (v), 7.8 (v), -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_29_eps_0.00784, 3.3 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_30_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_32_eps_0.00784, 1.4 (v), -, -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_33_eps_0.00784, 1.4 (v), 9.5 (v), -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_34_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_37_eps_0.00784, 1.1 (h), 30.4 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_38_eps_0.00784, 33.3 (h), 30.2 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_39_eps_0.00784, 27.6 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_40_eps_0.00784, 1.4 (v), -, -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_41_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_43_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_44_eps_0.00784, 1.1 (h), 28.4 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_45_eps_0.00784, 1.1 (h), 30.2 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_50_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_51_eps_0.00784, 11.4 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_52_eps_0.00784, 1.4 (v), 6.2 (v), -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_54_eps_0.00784, 1.1 (h), 29.9 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_55_eps_0.00784, 1.1 (h), 29.7 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_60_eps_0.00784, 3.4 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_61_eps_0.00784, 1.4 (v), -, -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_62_eps_0.00784, 26.3 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_64_eps_0.00784, 11.5 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_66_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_67_eps_0.00784, 1.1 (h), 30.8 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_71_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_72_eps_0.00784, 1.1 (h), 29.1 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_73_eps_0.00784, 1.1 (h), 28.6 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_75_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_76_eps_0.00784, 58.8 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_78_eps_0.00784, timeout, -, -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_79_eps_0.00784, 1.1 (h), 30.4 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_80_eps_0.00784, 1.1 (h), 29.8 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_81_eps_0.00784, 1.1 (h), 29.3 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_82_eps_0.00784, 1.1 (h), 28.8 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_83_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_84_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_86_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_88_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_89_eps_0.00784, timeout, -, -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_90_eps_0.00784, 1.1 (h), 28.9 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_92_eps_0.00784, 1.0 (h), 30.1 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_93_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_94_eps_0.00784, timeout, -, -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_95_eps_0.00784, 24.3 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_96_eps_0.00784, 1.1 (h), -, -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_97_eps_0.00784, 1.4 (v), 7.2 (v), -, -, error, timeout, 1.0 (v)
-convBigRELU__PGD-cifar10_spec_idx_98_eps_0.00784, 1.1 (h), 29.9 (h), -, -, error, timeout, 1.0 (v), *multiple results*
-convBigRELU__PGD-cifar10_spec_idx_99_eps_0.00784, timeout, -, -, -, error, timeout, 1.0 (v)
+convBigRELU__PGD-cifar10_spec_idx_1_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_2_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_3_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_4_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_5_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_9_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_10_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_11_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_13_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_14_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_15_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_18_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_19_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_20_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_21_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_23_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_28_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_29_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_30_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_32_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_33_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_34_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_37_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_38_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_39_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_40_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_41_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_43_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_44_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_45_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_50_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_51_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_52_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_54_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_55_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_60_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_61_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_62_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_64_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_66_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_67_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_71_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_72_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_73_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_75_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_76_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_78_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_79_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_80_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_81_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_82_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_83_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_84_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_86_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_88_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_89_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_90_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_92_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_93_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_94_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_95_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_96_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_97_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_98_eps_0.00784, -, -, -, -, -, -, -
+convBigRELU__PGD-cifar10_spec_idx_99_eps_0.00784, -, -, -, -, -, -, -
 ---------
 Category cifar2020:
-alpha_beta_crown: 2202 (100.0%)
-cgdtest: 609 (27.66%)
+alpha_beta_crown: 1479 (99.53%)
+cgdtest: 305 (20.52%)
 marabou: -60 (0%)
-mn_bab: 1275 (57.9%)
-nnenum: 850 (38.6%)
-verapak: 152 (6.9%)
-verinet: -3670 (0%)
+mn_bab: 1275 (85.8%)
+nnenum: 850 (57.2%)
+verapak: 152 (10.23%)
+verinet: 1486 (100.0%)
 
 ###############
 ### Summary ###
@@ -3866,12 +3556,12 @@ verinet: -3670 (0%)
 \toprule
 \textbf{\# ~} & \textbf{Tool} & \textbf{Score}\\
 \midrule
-1 & $\alpha$,$\beta$-CROWN & 191.1 \\
-2 & Nnenum & 138.6 \\
-3 & MN BaB & 132.9 \\
-4 & Cgdtest & 58.3 \\
-5 & Verapak & 6.9 \\
-6 & Verinet & 0 \\
+1 & $\alpha$,$\beta$-CROWN & 190.6 \\
+2 & MN BaB & 160.8 \\
+3 & Nnenum & 157.2 \\
+4 & Verinet & 100.0 \\
+5 & Cgdtest & 51.2 \\
+6 & Verapak & 10.2 \\
 7 & Marabou & 0 \\
 \bottomrule
 \end{tabular}
@@ -3913,12 +3603,12 @@ verinet: -3670 (0%)
 \toprule
 \textbf{\# ~} & \textbf{Tool} & \textbf{Verified} & \textbf{Falsified} & \textbf{Fastest} & \textbf{Penalty} & \textbf{Score} & \textbf{Percent}\\
 \midrule
-1 & $\alpha$,$\beta$-CROWN & 148 & 42 & 130 & 0 & 2202 & 100.0\% \\
-2 & MN BaB & 93 & 28 & 26 & 0 & 1275 & 57.9\% \\
-3 & Nnenum & 66 & 19 & 0 & 0 & 850 & 38.6\% \\
-4 & Cgdtest & 86 & 31 & 6 & 6 & 609 & 27.7\% \\
-5 & Verapak & 0 & 15 & 1 & 0 & 152 & 6.9\% \\
-6 & Verinet & 91 & 47 & 121 & 53 & -3670 & 0\% \\
+1 & Verinet & 91 & 35 & 109 & 0 & 1486 & 100.0\% \\
+2 & $\alpha$,$\beta$-CROWN & 95 & 34 & 78 & 0 & 1479 & 99.5\% \\
+3 & MN BaB & 93 & 28 & 26 & 0 & 1275 & 85.8\% \\
+4 & Nnenum & 66 & 19 & 0 & 0 & 850 & 57.2\% \\
+5 & Cgdtest & 63 & 26 & 5 & 6 & 305 & 20.5\% \\
+6 & Verapak & 0 & 15 & 1 & 0 & 152 & 10.2\% \\
 7 & Marabou & 4 & 0 & 0 & 1 & -60 & 0\% \\
 \bottomrule
 \end{tabular}
@@ -4302,6 +3992,10 @@ Row: ['unet_upsample_small-spec_unet_upsample_small_idx_cf89c3220bc4_16_eps_0.00
 71: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 71: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 71: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
+--------------------
+Total Violated: 0
+Total Holds: 39
+Total Unknown: 33
 --------------------
 alpha_beta_crown, mn_bab, verinet
 unet_upsample_small-spec_unet_upsample_small_idx_dc995bf5296a_16_eps_0.00400, 7.5 (h), timeout, error
@@ -5003,6 +4697,10 @@ Row: ['TinyImageNet_resnet_medium-TinyImageNet_resnet_medium_prop_idx_7542_sidx_
 97: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
 97: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 97: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
+--------------------
+Total Violated: 3
+Total Holds: 95
+Total Unknown: 0
 --------------------
 alpha_beta_crown, cgdtest, mn_bab, verinet
 CIFAR100_resnet_small-CIFAR100_resnet_small_prop_idx_7129_sidx_1634_eps_0.0039, 8.9 (h), 32.7 (h), 30.4 (h), 12.8 (h)
@@ -5776,6 +5474,10 @@ Row: ['cifar_bias_field_71-prop_71', '10.4 (h)', '3.4 (h)', '-', 'timeout', 'err
 71: verapak score: 11, is_ver: True, is_fals: False, is_fastest: False
 71: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 --------------------
+Total Violated: 1
+Total Holds: 71
+Total Unknown: 0
+--------------------
 alpha_beta_crown, cgdtest, marabou, mn_bab, nnenum, verapak, verinet
 cifar_bias_field_0-prop_0, 4.9 (h), 3.2 (h), 114.5 (h), 33.6 (h), error, 5.2 (h), 4.7 (h)
 cifar_bias_field_1-prop_1, 6.2 (h), 3.3 (h), 114.2 (h), timeout, error, 5.0 (h), 5.5 (h)
@@ -6482,6 +6184,10 @@ Row: ['NN_rul_full_window_40-monotonicity_CI_shift20_w40', 'timeout', '1.0 (v)',
 61: nnenum score: 12, is_ver: True, is_fals: False, is_fastest: True
 61: peregrinn score: 0, is_ver: False, is_fals: False, is_fastest: False
 61: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
+--------------------
+Total Violated: 45
+Total Holds: 17
+Total Unknown: 0
 --------------------
 alpha_beta_crown, cgdtest, mn_bab, nnenum, peregrinn, verinet
 NN_rul_small_window_20-robustness_2perturbations_delta5_epsilon10_w20, 1.0 (v), 1.0 (v), 1.0 (v), 1.0 (v), 2.8 (v), 3.6 (v)
@@ -7752,6 +7458,10 @@ Row: ['mnist-net_256x6-prop_14_0.05', '127.1 (h)', '8.4 (h)', 'timeout', '-', 't
 89: peregrinn score: 0, is_ver: False, is_fals: False, is_fastest: False
 89: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
 89: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
+--------------------
+Total Violated: 18
+Total Holds: 71
+Total Unknown: 1
 --------------------
 alpha_beta_crown, cgdtest, debona, marabou, mn_bab, nnenum, peregrinn, verapak, verinet
 mnist-net_256x2-prop_0_0.03, 1.0 (h), 7.8 (h), 12.1 (h), 4.5 (h), 1.0 (h), 1.0 (h), 9.6 (h), 1.0 (h), 1.0 (h)
@@ -9242,6 +8952,10 @@ Row: ['mscn_2048d_dual-cardinality_1_11000_2048_dual', '207.2 (h)', 'timeout', '
 151: peregrinn score: 0, is_ver: False, is_fals: False, is_fastest: False
 151: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 --------------------
+Total Violated: 0
+Total Holds: 152
+Total Unknown: 0
+--------------------
 alpha_beta_crown, cgdtest, debona, mn_bab, nnenum, peregrinn, verinet
 lindex-lindex_1, 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h)
 lindex_deep-lindex_1, 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h)
@@ -9739,6 +9453,10 @@ Row: ['cifar_deep_kw-cifar_deep_kw-img4510-eps0.028235294117647063', '14.2 (h)',
 29: peregrinn score: 0, is_ver: False, is_fals: False, is_fastest: False
 29: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 --------------------
+Total Violated: 1
+Total Holds: 29
+Total Unknown: 0
+--------------------
 alpha_beta_crown, cgdtest, marabou, mn_bab, nnenum, peregrinn, verinet
 cifar_base_kw-cifar_base_kw-img8194-eps0.018300653594771243, 8.7 (h), 9.0 (v), -, 82.0 (h), timeout, timeout, 14.9 (h), *multiple results*
 cifar_base_kw-cifar_base_kw-img2578-eps0.021176470588235297, 12.5 (h), 26.4 (h), -, 109.6 (h), timeout, timeout, 29.1 (h)
@@ -10143,6 +9861,10 @@ Row: ['gcas-gcas_11', '2.8 (h)', '-', 'timeout', '8.2 (h)', '1.0 (h)', '1.8 (h)'
 35: nnenum score: 10, is_ver: True, is_fals: False, is_fastest: False
 35: peregrinn score: 10, is_ver: True, is_fals: False, is_fastest: False
 35: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
+--------------------
+Total Violated: 14
+Total Holds: 22
+Total Unknown: 0
 --------------------
 alpha_beta_crown, cgdtest, debona, marabou, mn_bab, nnenum, peregrinn, verinet
 vdp-vdp_0, 1.0 (h), -, timeout, 17.2 (h), 7.6 (h), 1.0 (h), 4.6 (h), 6.2 (h)
@@ -13766,6 +13488,10 @@ Row: ['dubinsrejoin-dubinsrejoin_case_unsafe_95', '1.0 (v)', 'timeout', '1.0 (v)
 295: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
 295: verinet score: 12, is_ver: False, is_fals: True, is_fastest: True
 --------------------
+Total Violated: 103
+Total Holds: 193
+Total Unknown: 0
+--------------------
 alpha_beta_crown, averinn, cgdtest, debona, marabou, mn_bab, nnenum, peregrinn, verapak, verinet
 cartpole-cartpole_case_unsafe_0, 1.0 (h), 4.2 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), timeout, 1.0 (h)
 cartpole-cartpole_case_unsafe_1, 1.0 (h), 3.8 (h), -, 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), 1.0 (h), timeout, 1.0 (h)
@@ -14584,6 +14310,10 @@ Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3998_eps_0.00022'
 71: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 71: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 --------------------
+Total Violated: 12
+Total Holds: 32
+Total Unknown: 28
+--------------------
 alpha_beta_crown, cgdtest, marabou, mn_bab, verinet
 resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1551_eps_0.00198, 3.0 (v), 7.0 (v), -, 1.0 (v), 4.3 (v)
 resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1876_eps_0.00350, timeout, -, -, timeout, timeout
@@ -15367,6 +15097,10 @@ Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8136_eps_0.0
 71: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 71: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 --------------------
+Total Violated: 11
+Total Holds: 61
+Total Unknown: 0
+--------------------
 alpha_beta_crown, cgdtest, marabou, mn_bab, verinet
 resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1551_eps_0.00129, 2.7 (v), 6.1 (v), 23.9 (h), 1.0 (v), 4.4 (v), *multiple results*
 resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1876_eps_0.00350, timeout, 27.9 (h), 24.5 (h), timeout, timeout
@@ -15810,6 +15544,10 @@ Row: ['tllBench_n=2_N=M=64_m=1_instance_7_3-property_N=64_3', '24.6 (h)', '-', '
 31: peregrinn score: 0, is_ver: False, is_fals: False, is_fastest: False
 31: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 --------------------
+Total Violated: 21
+Total Holds: 11
+Total Unknown: 0
+--------------------
 alpha_beta_crown, cgdtest, debona, fastbatllnn, marabou, mn_bab, nnenum, peregrinn, verinet
 tllBench_n=2_N=M=8_m=1_instance_0_0-property_N=8_0, 1.0 (v), -, 1.0 (v), 1.0 (v), 1.0 (v), 1.0 (v), 1.0 (v), 1.0 (v), 2.7 (v)
 tllBench_n=2_N=M=8_m=1_instance_0_1-property_N=8_1, 1.0 (v), 1.0 (v), 1.7 (v), 1.0 (v), 3.1 (v), 1.0 (v), 1.0 (v), 1.0 (v), 4.3 (v)
@@ -16008,6 +15746,10 @@ Row: ['vgg16-7-spec17_hay', '-', 'timeout', '-', 'timeout', 'error']
 17: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: nnenum score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
+--------------------
+Total Violated: 2
+Total Holds: 14
+Total Unknown: 2
 --------------------
 alpha_beta_crown, cgdtest, mn_bab, nnenum, verinet
 vgg16-7-spec0_screw, 7.8 (h), timeout, 1.7 (h), 31.0 (h), 11.0 (h)
