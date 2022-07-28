@@ -627,16 +627,6 @@ def main():
     #csv_list = glob.glob("results_csv/*.csv")
     csv_list = glob.glob(Settings.CSV_GLOB)
     csv_list.sort()
-    
-    tool_list = [c.split('/')[Settings.TOOL_LIST_GLOB_INDEX] for c in csv_list]
-
-    cpu_benchmarks = {x: [] for x in tool_list}
-    skip_benchmarks = {x: [] for x in tool_list}
-    #skip_benchmarks['RPM'] = ['mnistfc']
-    
-    if not single_overhead: # Define a dict with the cpu_only benchmarks for each tool
-        #pass
-        cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
 
     # clear files so we can append to them
     with open(Settings.SCORED_LATEX, 'w', encoding='utf-8') as f:
@@ -644,6 +634,32 @@ def main():
 
     with open(Settings.UNSCORED_LATEX, 'w', encoding='utf-8') as f:
         pass
+
+    if Settings.SKIP_TOOLS:
+        new_csv_list = []
+
+        for csv_file in csv_list:
+            skip_tool = False
+            
+            for skip in Settings.SKIP_TOOLS:
+                if skip in csv_file:
+                    skip_tool = True
+                    break
+
+            if not skip_tool:
+                new_csv_list.append(csv_file)
+
+            csv_list = new_csv_list
+
+    tool_list = [c.split('/')[Settings.TOOL_LIST_GLOB_INDEX] for c in csv_list]
+
+    cpu_benchmarks = {x: [] for x in tool_list}
+    skip_benchmarks = {x: [] for x in tool_list}
+    #skip_benchmarks['RPM'] = ['mnistfc']
+       
+    if not single_overhead: # Define a dict with the cpu_only benchmarks for each tool
+        #pass
+        cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
 
     for scored in [False, True]:
         result_list = []
@@ -658,6 +674,9 @@ def main():
 
         if scored:
             print_stats(result_list)
+
+    if Settings.SKIP_TOOLS:
+        print(f"Note: tools were skipped: {Settings.SKIP_TOOLS}")
 
 if __name__ == "__main__":
     main()

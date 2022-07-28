@@ -18,6 +18,8 @@ class Settings:
             ('mn_bab', 'MN BaB')
             ]
 
+    SKIP_TOOLS = [] #['marabou', 'verapak', 'cgdtest']
+
     CSV_SUBSTITUTIONS = [('unsat', 'holds'),
                          ('sat', 'violated'),
                          ('no_result_in_file', 'unknown'),
