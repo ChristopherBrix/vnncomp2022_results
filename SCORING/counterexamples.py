@@ -42,15 +42,13 @@ def read_ce_file(ce_path):
 
     return content
 
-@cachier(stale_after=datetime.timedelta(days=1))
 def is_correct_counterexample(ce_path, cat, net, prop):
     """is the counterexample correct?"""
 
     print(f"Checking ce path: {ce_path}")
 
     benchmark_repo = Settings.BENCHMARK_REPO
-    tol = Settings.COUNTEREXAMPLE_TOL
-    
+ 
     onnx_filename = f"{benchmark_repo}/benchmarks/{cat}/onnx/{net}.onnx"
     vnnlib_filename = f"{benchmark_repo}/benchmarks/{cat}/vnnlib/{prop}.vnnlib"
 
@@ -85,13 +83,21 @@ def is_correct_counterexample(ce_path, cat, net, prop):
     assert Path(onnx_filename).is_file()
     assert Path(vnnlib_filename).is_file(), f"vnnlib file not found: {vnnlib_filename}"
 
-    ################################################3333
+    ################################################
+
+    res, msg = get_res(onnx_filename, vnnlib_filename, ce_path, Settings.COUNTEREXAMPLE_TOL)
+
+    print(msg)
+    return res
+
+@cachier(stale_after=datetime.timedelta(days=1))
+def get_res(onnx_filename, vnnlib_filename, ce_path, tol):
+    """get difference in execution"""
 
     content = read_ce_file(ce_path)
 
     if len(content) < 2:
-        print(f"Note: no counter example provided in {ce_path}")
-        return False
+        return False, f"Note: no counter example provided in {ce_path}"
 
     #print(f"CE CONTENT:\n{content}")
     
@@ -136,21 +142,28 @@ def is_correct_counterexample(ce_path, cat, net, prop):
     expected_y = np.array(y_list)
     diff = np.linalg.norm(flat_out - expected_y, ord=np.inf)
 
-    print(f"L-inf norm difference between onnx execution and CE file output: {diff} (limit: {tol})")
+    #return diff, tuple(x_list), tuple(y_list)
+
+    #diff, x_tup, y_tup = res
+
+    msg = f"L-inf norm difference between onnx execution and CE file output: {diff} (limit: {tol})"
 
     rv = diff < tol
 
     if rv:
         # output matched onnxruntime, also need to check that the spec file was obeyed
-        rv = is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol)
+        rv = is_spec_violation(onnx_filename, vnnlib_filename, tuple(x_list), tuple(y_list), tol)
 
         if not rv:
-            print("Note: counterexample in file did not violate the specification and so was invalid!")
+            msg += "\nNote: counterexample in file did not violate the specification and so was invalid!"
 
-    return rv
+    return rv, msg
 
-def is_spec_violation(onnx_model, vnnlib_filename, x_list, expected_y, tol):
+@cachier(stale_after=datetime.timedelta(days=1))
+def is_spec_violation(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
     """check that the spec file was obeyed"""
+
+    onnx_model = onnx.load(onnx_filename) 
 
     inp, out, _ = get_io_nodes(onnx_model)
 

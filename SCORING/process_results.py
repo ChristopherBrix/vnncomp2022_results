@@ -174,7 +174,7 @@ class ToolResult:
 
         for key in to_remove:
             if key in self.category_to_list:
-                print(f"deleting {key} in tool {self.tool_name}")
+                #print(f"empty category {key} in tool {self.tool_name}")
                 del self.category_to_list[key]
 
         ToolResult.num_categories[self.tool_name] = len(self.category_to_list)
@@ -190,8 +190,8 @@ def compare_results(result_list, single_overhead):
     for cat in sorted(ToolResult.all_categories):
         print(f"\nCategory {cat}:")
 
-        # maps tool_name -> [score, num_verified, num_falsified, num_fastest]
-        cat_score: Dict[str, List[int, int, int, int]] = {}
+        # maps tool_name -> [score, num_verified, num_falsified, num_fastest, num_errors]
+        cat_score: Dict[str, List[int, int, int, int, int]] = {}
         all_cats[cat] = cat_score
 
         num_rows = 0
@@ -289,7 +289,7 @@ def compare_results(result_list, single_overhead):
             for t in participating_tools:
                 res, secs = t.single_result(cat, index)
                 
-                score, is_verified, is_falsified, is_fastest = get_score(t.tool_name, res, secs, rand_gen_succeeded,
+                score, is_verified, is_falsified, is_fastest, is_error = get_score(t.tool_name, res, secs, rand_gen_succeeded,
                                                                 times_holds, times_violated,
                                                                 correct_violations)
                 print(f"{index}: {t.tool_name} score: {score}, is_ver: {is_verified}, is_fals: {is_falsified}, " + \
@@ -298,7 +298,7 @@ def compare_results(result_list, single_overhead):
                 if t.tool_name in cat_score:
                     tool_score_tup = cat_score[t.tool_name]
                 else:
-                    tool_score_tup = [0, 0, 0, 0]
+                    tool_score_tup = [0, 0, 0, 0, 0]
                     cat_score[t.tool_name] = tool_score_tup
 
                 # [score, num_verified, num_falsified, num_fastest]
@@ -306,6 +306,7 @@ def compare_results(result_list, single_overhead):
                 tool_score_tup[1] += 1 if is_verified else 0
                 tool_score_tup[2] += 1 if is_falsified else 0
                 tool_score_tup[3] += 1 if is_fastest else 0
+                tool_score_tup[4] += 1 if is_error else 0
                 tool_score_tup = None
 
         print("--------------------")
@@ -367,17 +368,17 @@ def compare_results(result_list, single_overhead):
             cat_str = cat.replace('_', '-')
 
             print_table_header(f, f"Benchmark \\texttt{{{cat_str}}}", "tab:cat_{cat}",
-                               ("\\# ~", "Tool", "Verified", "Falsified", "Fastest", "Score", "Percent"),
-                               align='lllllrr')
+                               ("\\# ~", "Tool", "Verified", "Falsified", "Fastest", "Penalty", "Score", "Percent"),
+                               align='llllllrr')
 
             for tool, score_tup in cat_score.items():
-                score, num_verified, num_falsified, num_fastest = score_tup
+                score, num_verified, num_falsified, num_fastest, num_error = score_tup
 
                 percent = max(min_percent, 100 * score / max_score)
                 tool_latex = latex_tool_name(tool)
 
                 #desc = f"{tool}: {score} ({round(percent, 2)}%)"
-                desc = f"{tool_latex} & {num_verified} & {num_falsified} & {num_fastest} & {score} & {round(percent, 1)}\\% \\\\"
+                desc = f"{tool_latex} & {num_verified} & {num_falsified} & {num_fastest} & {num_error} & {score} & {round(percent, 1)}\\% \\\\"
 
                 res_list.append((percent, desc))
 
@@ -441,6 +442,7 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
     is_verified = False
     is_falsified = False
     is_fastest = False
+    is_error = False
 
     num_holds = len(times_holds)
     num_violated = len(times_violated)
@@ -472,12 +474,15 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
         print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
+        is_error = True
     elif res == "violated" and num_holds > 0 and not valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
+        is_error = True
     elif res == "holds" and valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
+        is_error = True
     else:
         # correct result!
 
@@ -508,7 +513,7 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
             if secs < second_time + 0.2:
                 score += 1
 
-    return score, is_verified, is_falsified, is_fastest
+    return score, is_verified, is_falsified, is_fastest, is_error
 
 def print_stats(result_list):
     """print stats about measurements"""
