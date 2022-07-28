@@ -85,13 +85,13 @@ def is_correct_counterexample(ce_path, cat, net, prop):
 
     ################################################
 
-    res, msg = get_res(onnx_filename, vnnlib_filename, ce_path, Settings.COUNTEREXAMPLE_TOL)
+    res, msg = get_ce_diff(onnx_filename, vnnlib_filename, ce_path, Settings.COUNTEREXAMPLE_TOL)
 
     print(msg)
     return res
 
 @cachier(stale_after=datetime.timedelta(days=1))
-def get_res(onnx_filename, vnnlib_filename, ce_path, tol):
+def get_ce_diff(onnx_filename, vnnlib_filename, ce_path, tol):
     """get difference in execution"""
 
     content = read_ce_file(ce_path)
@@ -152,7 +152,9 @@ def get_res(onnx_filename, vnnlib_filename, ce_path, tol):
 
     if rv:
         # output matched onnxruntime, also need to check that the spec file was obeyed
-        rv = is_spec_violation(onnx_filename, vnnlib_filename, tuple(x_list), tuple(y_list), tol)
+        rv, msg2 = is_specification_vio(onnx_filename, vnnlib_filename, tuple(x_list), tuple(y_list), tol)
+
+        msg += "\n" + msg2
 
         if not rv:
             msg += "\nNote: counterexample in file did not violate the specification and so was invalid!"
@@ -160,9 +162,10 @@ def get_res(onnx_filename, vnnlib_filename, ce_path, tol):
     return rv, msg
 
 @cachier(stale_after=datetime.timedelta(days=1))
-def is_spec_violation(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
+def is_specification_vio(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
     """check that the spec file was obeyed"""
 
+    msg = "Checking if spec was actually violated"
     onnx_model = onnx.load(onnx_filename) 
 
     inp, out, _ = get_io_nodes(onnx_model)
@@ -195,7 +198,7 @@ def is_spec_violation(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
                 break
 
         if inside_input_box:
-            print(f"CE input X was inside box #{i}")
+            msg += f"\nCE input X was inside box #{i}"
             
             # check spec
             violated = False
@@ -205,7 +208,7 @@ def is_spec_violation(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
                 sat = np.all(vec <= prop_rhs + tol)
 
                 if sat:
-                    print(f"prop #{j} violated:\n{vec - prop_rhs}")
+                    msg += f"\nprop #{j} violated:\n{vec - prop_rhs}"
                     violated = True
                     break
 
@@ -213,7 +216,7 @@ def is_spec_violation(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
                 rv = True
                 break
                 
-    return rv
+    return rv, msg
 
 def test():
     """test code"""

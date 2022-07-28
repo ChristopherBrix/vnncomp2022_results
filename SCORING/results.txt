@@ -402,10 +402,18 @@ Note: no counter example provided in ../alpha_beta_crown/acasxu/ACASXU_run2a_3_1
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/acasxu/ACASXU_run2a_3_1_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.24660736920002e-09 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.02945958 -0.07906266 -0.02856203 -0.067258  ]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/acasxu/ACASXU_run2a_3_1_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.0978193283081055e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.0043915  -0.05187098 -0.00519772 -0.03497508]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True}
 Row: ['ACASXU_run2a_3_1_batch_2000-prop_2', '1.0 (v)', '1.0 (h)', '1.0 (v)', '1.0 (v)', '*multiple results*']
 63: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -424,6 +432,8 @@ WARNING: multiple results for index 65. Violated: 1 (['cgdtest']), Holds: 2 (['a
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/acasxu/ACASXU_run2a_3_3_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.9802322387695312e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
 Note: counterexample in file did not violate the specification and so was invalid!
 were violated counterexamples valid?: {'cgdtest': False}
 Row: ['ACASXU_run2a_3_3_batch_2000-prop_2', '59.5 (h)', '1.0 (v)', 'timeout', '4.5 (h)', '*multiple results*']
@@ -479,6 +489,8 @@ WARNING: multiple results for index 73. Violated: 1 (['cgdtest']), Holds: 2 (['a
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/acasxu/ACASXU_run2a_4_2_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.2351741790771484e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
 Note: counterexample in file did not violate the specification and so was invalid!
 were violated counterexamples valid?: {'cgdtest': False}
 Row: ['ACASXU_run2a_4_2_batch_2000-prop_2', '54.8 (h)', '1.0 (v)', 'timeout', '4.8 (h)', '*multiple results*']
@@ -520,10 +532,18 @@ Note: no counter example provided in ../alpha_beta_crown/acasxu/ACASXU_run2a_4_7
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/acasxu/ACASXU_run2a_4_7_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.650340335032865e-09 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.04389884 -0.00415127 -0.04335897 -0.00310126]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/acasxu/ACASXU_run2a_4_7_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1175870895385742e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.04407263 -0.00433657 -0.04333227 -0.00332115]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True}
 Row: ['ACASXU_run2a_4_7_batch_2000-prop_2', '1.0 (v)', '1.0 (h)', '1.0 (v)', '1.0 (v)', '*multiple results*']
 78: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -594,10 +614,18 @@ Note: no counter example provided in ../alpha_beta_crown/acasxu/ACASXU_run2a_5_8
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/acasxu/ACASXU_run2a_5_8_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.7234002317189088e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.01411975 -0.05357977 -0.01281828 -0.05145886]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/acasxu/ACASXU_run2a_5_8_batch_2000_prop_2.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.4901161193847656e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.01225623 -0.05163352 -0.01065742 -0.04920536]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True}
 Row: ['ACASXU_run2a_5_8_batch_2000-prop_2', '1.0 (v)', '1.0 (h)', '1.0 (v)', '1.0 (v)', '*multiple results*']
 88: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -1156,6 +1184,8 @@ WARNING: multiple results for index 180. Violated: 1 (['cgdtest']), Holds: 2 (['
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/acasxu/ACASXU_run2a_1_1_batch_2000_prop_5.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.4901161193847656e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
 Note: counterexample in file did not violate the specification and so was invalid!
 were violated counterexamples valid?: {'cgdtest': False}
 Row: ['ACASXU_run2a_1_1_batch_2000-prop_5', '11.2 (h)', '1.0 (v)', 'timeout', '1.0 (h)', '*multiple results*']
@@ -1187,6 +1217,8 @@ WARNING: multiple results for index 184. Violated: 1 (['cgdtest']), Holds: 2 (['
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/acasxu/ACASXU_run2a_3_3_batch_2000_prop_9.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.2351741790771484e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
 Note: counterexample in file did not violate the specification and so was invalid!
 were violated counterexamples valid?: {'cgdtest': False}
 Row: ['ACASXU_run2a_3_3_batch_2000-prop_9', '4.5 (h)', '1.0 (v)', 'timeout', '2.0 (h)', '*multiple results*']
@@ -1412,14 +1444,26 @@ Note: no counter example provided in ../alpha_beta_crown/cifar2020/cifar10_2_255
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_0_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.3794634359243219e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.08594935]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_0_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.08911324]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_0_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.08655977]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True, 'verinet': True}
 Row: ['cifar10_2_255_simplified-cifar10_spec_idx_0_eps_0.00784_n1', '1.6 (v)', '28.8 (h)', '-', '2.0 (v)', '160.2 (v)', 'timeout', '1.0 (v)', '*multiple results*']
 0: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -1655,14 +1699,26 @@ Note: no counter example provided in ../alpha_beta_crown/cifar2020/cifar10_2_255
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_28_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1583520151958737e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #1 violated:
+[-0.5058803]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_28_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #1 violated:
+[-0.54980373]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_28_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1920928955078125e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #1 violated:
+[-0.54344559]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True, 'verinet': True}
 Row: ['cifar10_2_255_simplified-cifar10_spec_idx_28_eps_0.00784_n1', '1.6 (v)', '27.5 (h)', '-', '1.6 (v)', '144.6 (v)', 'timeout', '1.0 (v)', '*multiple results*']
 25: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -1745,14 +1801,26 @@ Note: no counter example provided in ../alpha_beta_crown/cifar2020/cifar10_2_255
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_37_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.4443070348590936e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.18007819]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_37_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.21179199]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar2020/cifar10_2_255_simplified_cifar10_spec_idx_37_eps_0.00784_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.76837158203125e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.23849964]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True, 'verinet': True}
 Row: ['cifar10_2_255_simplified-cifar10_spec_idx_37_eps_0.00784_n1', '1.6 (v)', '26.7 (h)', '-', '2.2 (v)', '128.0 (v)', 'timeout', '1.0 (v)', '*multiple results*']
 33: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -2403,14 +2471,26 @@ Note: no counter example provided in ../cgdtest/cifar2020/cifar10_8_255_simplifi
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar2020/cifar10_8_255_simplified_cifar10_spec_idx_38_eps_0.03137_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 3.88668356166022e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #1 violated:
+[-0.00283269]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/cifar2020/cifar10_8_255_simplified_cifar10_spec_idx_38_eps_0.03137_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #1 violated:
+[-0.00152636]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar2020/cifar10_8_255_simplified_cifar10_spec_idx_38_eps_0.03137_n1.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.76837158203125e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #1 violated:
+[-0.00761056]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': False, 'mn_bab': True, 'nnenum': True, 'verinet': True}
 Row: ['cifar10_8_255_simplified-cifar10_spec_idx_38_eps_0.03137_n1', '1.5 (v)', '7.2 (v)', '222.7 (h)', '1.0 (v)', '58.0 (v)', 'timeout', '1.4 (v)', '*multiple results*']
 103: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -4577,10 +4657,18 @@ WARNING: multiple results for index 82. Violated: 2 (['mn_bab', 'verinet']), Hol
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar100_tinyimagenet_resnet/TinyImageNet_resnet_medium_TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.33514404296875e-05 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #184 violated:
+[-0.00144386]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar100_tinyimagenet_resnet/TinyImageNet_resnet_medium_TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #184 violated:
+[-0.00657463]
 were violated counterexamples valid?: {'mn_bab': True, 'verinet': True}
 Row: ['TinyImageNet_resnet_medium-TinyImageNet_resnet_medium_prop_idx_6461_sidx_2771_eps_0.0039', 'timeout', '106.3 (h)', '1.5 (v)', '5.4 (v)', '*multiple results*']
 82: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
@@ -4599,10 +4687,18 @@ WARNING: multiple results for index 84. Violated: 2 (['mn_bab', 'verinet']), Hol
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar100_tinyimagenet_resnet/TinyImageNet_resnet_medium_TinyImageNet_resnet_medium_prop_idx_4931_sidx_3891_eps_0.0039.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.52587890625e-05 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #37 violated:
+[-0.08406925]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar100_tinyimagenet_resnet/TinyImageNet_resnet_medium_TinyImageNet_resnet_medium_prop_idx_4931_sidx_3891_eps_0.0039.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.33514404296875e-05 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #37 violated:
+[-0.09212685]
 were violated counterexamples valid?: {'mn_bab': True, 'verinet': True}
 Row: ['TinyImageNet_resnet_medium-TinyImageNet_resnet_medium_prop_idx_4931_sidx_3891_eps_0.0039', 'timeout', '107.4 (h)', '1.2 (v)', '4.7 (v)', '*multiple results*']
 84: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
@@ -4627,10 +4723,18 @@ WARNING: multiple results for index 87. Violated: 2 (['mn_bab', 'verinet']), Hol
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar100_tinyimagenet_resnet/TinyImageNet_resnet_medium_TinyImageNet_resnet_medium_prop_idx_3243_sidx_5299_eps_0.0039.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #64 violated:
+[-0.00063419]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar100_tinyimagenet_resnet/TinyImageNet_resnet_medium_TinyImageNet_resnet_medium_prop_idx_3243_sidx_5299_eps_0.0039.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.33514404296875e-05 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #64 violated:
+[-0.00095177]
 were violated counterexamples valid?: {'mn_bab': True, 'verinet': True}
 Row: ['TinyImageNet_resnet_medium-TinyImageNet_resnet_medium_prop_idx_3243_sidx_5299_eps_0.0039', 'timeout', '105.9 (h)', '1.6 (v)', '4.9 (v)', '*multiple results*']
 87: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
@@ -4893,10 +4997,18 @@ Note: no counter example provided in ../alpha_beta_crown/cifar_biasfield/cifar_b
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/cifar_biasfield/cifar_bias_field_8_prop_8.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.7220458984375e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #3 violated:
+[-0.0119698]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/cifar_biasfield/cifar_bias_field_8_prop_8.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.9073486328125e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #3 violated:
+[-0.07701957]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'verinet': True}
 Row: ['cifar_bias_field_8-prop_8', '1.0 (v)', '3.6 (h)', '-', '1.2 (v)', 'error', '14.6 (h)', '4.3 (v)', '*multiple results*']
 8: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -5772,14 +5884,26 @@ Note: no counter example provided in ../alpha_beta_crown/collins_rul_cnn/NN_rul_
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/collins_rul_cnn/NN_rul_small_window_20_if_then_9levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.951282575480718e-05 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[ -23.43737692 -157.56262308]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/collins_rul_cnn/NN_rul_small_window_20_if_then_9levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[  -2.90711212 -178.09288788]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/collins_rul_cnn/NN_rul_small_window_20_if_then_9levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.62939453125e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[  -3.06281662 -177.93718338]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True, 'verinet': True}
 Row: ['NN_rul_small_window_20-if_then_9levels_w20', '1.1 (v)', '4.5 (h)', '2.2 (v)', '1.0 (v)', 'timeout', '3.6 (v)', '*multiple results*']
 21: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -5974,10 +6098,18 @@ Note: no counter example provided in ../alpha_beta_crown/collins_rul_cnn/NN_rul_
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/collins_rul_cnn/NN_rul_full_window_20_if_then_7levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 3.814697265625e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[ -3.54840088 -85.45159912]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/collins_rul_cnn/NN_rul_full_window_20_if_then_7levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[ -3.02540588 -85.97459412]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True}
 Row: ['NN_rul_full_window_20-if_then_7levels_w20', '10.1 (v)', '4.6 (h)', '2.1 (v)', '3.9 (v)', 'timeout', 'timeout', '*multiple results*']
 41: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
@@ -5996,10 +6128,18 @@ Note: no counter example provided in ../alpha_beta_crown/collins_rul_cnn/NN_rul_
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/collins_rul_cnn/NN_rul_full_window_20_if_then_9levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 3.814697265625e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[  -5.98248291 -175.01751709]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/collins_rul_cnn/NN_rul_full_window_20_if_then_9levels_w20.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[  -2.955616 -178.044384]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True}
 Row: ['NN_rul_full_window_20-if_then_9levels_w20', '1.0 (v)', '5.5 (h)', '1.7 (v)', '2.7 (v)', 'timeout', 'timeout', '*multiple results*']
 42: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -6285,26 +6425,50 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x2_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.470348358154297e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.50924128]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x2_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.979761926646951e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[1.99840144e-15]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x2_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.705022122377997e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.31467938]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/mnist_fc/mnist-net_256x2_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.7136335372924805e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.05248386]
 
 checking counterexample for peregrinn
 Checking ce path: ../peregrinn/mnist_fc/mnist-net_256x2_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.9371509552001953e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.2661207]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x2_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.7881393432617188e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.43387026]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'nnenum': True, 'peregrinn': True, 'verinet': True}
 Row: ['mnist-net_256x2-prop_1_0.03', '1.0 (v)', '-', '1.0 (v)', '4.4 (v)', '1.0 (v)', '6.4 (v)', '1.6 (v)', '1.0 (h)', '1.0 (v)', '*multiple results*']
 1: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -6326,26 +6490,50 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x2_prop_2_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.7881393432617188e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.43338874]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x2_prop_2_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.144909258156474e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.35805626]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x2_prop_2_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.828921516101929e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.38635873]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/mnist_fc/mnist-net_256x2_prop_2_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.172325134277344e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.15631041]
 
 checking counterexample for peregrinn
 Checking ce path: ../peregrinn/mnist_fc/mnist-net_256x2_prop_2_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.960464477539063e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.24684164]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x2_prop_2_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.7881393432617188e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.45593664]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'nnenum': True, 'peregrinn': True, 'verinet': True}
 Row: ['mnist-net_256x2-prop_2_0.03', '2.6 (v)', '8.2 (h)', '1.0 (v)', '4.6 (v)', '1.0 (v)', '2.1 (v)', '9.0 (v)', '1.0 (h)', '1.0 (v)', '*multiple results*']
 2: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
@@ -6499,26 +6687,50 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x2_prop_0_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.748603820800781e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.20860693]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x2_prop_0_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.202279699887072e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.39248849]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x2_prop_0_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.858513554753754e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.44819244]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/mnist_fc/mnist-net_256x2_prop_0_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.341104507446289e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.3451281]
 
 checking counterexample for peregrinn
 Checking ce path: ../peregrinn/mnist_fc/mnist-net_256x2_prop_0_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.960464477539063e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.8614365]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x2_prop_0_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.450580596923828e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.11979754]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'nnenum': True, 'peregrinn': True, 'verinet': True}
 Row: ['mnist-net_256x2-prop_0_0.05', '4.7 (v)', '7.8 (h)', '1.0 (v)', '4.7 (v)', '1.0 (v)', '1.3 (v)', '1.9 (v)', 'timeout', '1.3 (v)', '*multiple results*']
 15: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
@@ -6573,26 +6785,50 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x2_prop_4_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.748603820800781e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.05784005]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x2_prop_4_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.3276406770623694e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[9.99200722e-16]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x2_prop_4_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.944600995258284e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.03796282]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/mnist_fc/mnist-net_256x2_prop_4_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1324882507324219e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.15613341]
 
 checking counterexample for peregrinn
 Checking ce path: ../peregrinn/mnist_fc/mnist-net_256x2_prop_4_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.450580596923828e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.03216657]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x2_prop_4_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.748603820800781e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.11870047]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'nnenum': True, 'peregrinn': True, 'verinet': True}
 Row: ['mnist-net_256x2-prop_4_0.05', '1.0 (v)', '8.2 (h)', '1.0 (v)', '6.1 (v)', '1.0 (v)', '40.7 (v)', '1.8 (v)', 'timeout', '1.5 (v)', '*multiple results*']
 19: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -6735,18 +6971,34 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x4_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.980232238769531e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.13351333]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x4_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.495648095459437e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[9.99200722e-16]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x4_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.384185791015625e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.01050016]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x4_prop_1_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 6.854534149169922e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.27321669]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'verinet': True}
 Row: ['mnist-net_256x4-prop_1_0.03', '1.0 (v)', '-', '1.0 (v)', '18.6 (v)', '1.0 (v)', 'timeout', 'timeout', '1.0 (h)', '1.1 (v)', '*multiple results*']
 31: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -6977,18 +7229,34 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x4_prop_6_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1920928955078125e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.66513464]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x4_prop_6_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.219808448253538e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[9.99200722e-16]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x4_prop_6_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.642673492431641e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.26706824]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x4_prop_6_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.9802322387695312e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.63259485]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'verinet': True}
 Row: ['mnist-net_256x4-prop_6_0.05', '1.0 (v)', '8.2 (h)', '1.0 (v)', '52.9 (v)', '1.0 (v)', 'timeout', 'timeout', 'timeout', '1.8 (v)', '*multiple results*']
 51: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -7021,14 +7289,26 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x4_prop_8_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.8477439880371094e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.03462204]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x4_prop_8_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.115964889526367e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.01453026]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x4_prop_8_0.05.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.0978193283081055e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.07441889]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'mn_bab': True, 'verinet': True}
 Row: ['mnist-net_256x4-prop_8_0.05', '1.0 (v)', '8.0 (h)', '1.0 (v)', '-', '1.0 (v)', 'timeout', 'timeout', 'timeout', '1.0 (v)', '*multiple results*']
 53: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -7182,18 +7462,34 @@ Note: no counter example provided in ../alpha_beta_crown/mnist_fc/mnist-net_256x
 checking counterexample for debona
 Checking ce path: ../debona/mnist_fc/mnist-net_256x6_prop_6_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 2.4139881134033203e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[-0.0099394]
 
 checking counterexample for marabou
 Checking ce path: ../marabou/mnist_fc/mnist-net_256x6_prop_6_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.7420607239249097e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #7 violated:
+[2.99760217e-15]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/mnist_fc/mnist-net_256x6_prop_6_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.6391277313232422e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #3 violated:
+[-0.04906327]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/mnist_fc/mnist-net_256x6_prop_6_0.03.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.842877388000488e-08 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.05799812]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'debona': True, 'marabou': True, 'mn_bab': True, 'verinet': True}
 Row: ['mnist-net_256x6-prop_6_0.03', '1.0 (v)', '-', '1.0 (v)', '102.7 (v)', '1.0 (v)', 'timeout', 'timeout', '1.0 (h)', '1.1 (v)', '*multiple results*']
 66: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -7971,6 +8267,8 @@ WARNING: multiple results for index 44. Violated: 1 (['cgdtest']), Holds: 3 (['a
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/nn4sys/mscn_128d_dual_cardinality_1_1_128_dual.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1920928955078125e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
 Note: counterexample in file did not violate the specification and so was invalid!
 were violated counterexamples valid?: {'cgdtest': False}
 Row: ['mscn_128d_dual-cardinality_1_1_128_dual', '2.4 (h)', '1.0 (v)', '-', '1.4 (h)', 'error', 'error', '1.0 (h)', '*multiple results*']
@@ -8581,6 +8879,8 @@ WARNING: multiple results for index 111. Violated: 1 (['cgdtest']), Holds: 3 (['
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/nn4sys/mscn_2048d_dual_cardinality_1_1_2048_dual.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
 Note: counterexample in file did not violate the specification and so was invalid!
 were violated counterexamples valid?: {'cgdtest': False}
 Row: ['mscn_2048d_dual-cardinality_1_1_2048_dual', '3.9 (h)', '2.6 (v)', '-', '2.3 (h)', 'error', 'error', '1.1 (h)', '*multiple results*']
@@ -9276,14 +9576,26 @@ Note: no counter example provided in ../alpha_beta_crown/oval21/cifar_wide_kw_ci
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/oval21/cifar_wide_kw_cifar_wide_kw-img1909-eps0.0033986928104575162.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.173896157613541e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.00256975]
 
 checking counterexample for nnenum
 Checking ce path: ../nnenum/oval21/cifar_wide_kw_cifar_wide_kw-img1909-eps0.0033986928104575162.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 0.0 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.0026052]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/oval21/cifar_wide_kw_cifar_wide_kw-img1909-eps0.0033986928104575162.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.364418029785156e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.00278831]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'nnenum': True, 'verinet': True}
 Row: ['cifar_wide_kw-cifar_wide_kw-img1909-eps0.0033986928104575162', '1.2 (v)', '-', '6.0 (h)', '1.0 (v)', '14.3 (v)', 'timeout', '3.7 (v)', '*multiple results*']
 14: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14408,14 +14720,26 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.2516975402832031e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.04466486]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 3.6239583778296947e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.19389912]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.152557373046875e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.19501543]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': True, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1551_eps_0.00129', '2.7 (v)', '6.1 (v)', '23.9 (h)', '1.0 (v)', '4.4 (v)', '*multiple results*']
 0: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14440,14 +14764,26 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1324882507324219e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.00051749]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.374967834397392e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.31332075]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.5497207641601562e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.3176918]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': True, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2219_eps_0.00228', '3.4 (v)', '6.4 (v)', '24.0 (h)', '1.0 (v)', '4.6 (v)', '*multiple results*']
 2: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14507,14 +14843,26 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.05090189]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.0096277458515601e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.22969868]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.76837158203125e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #0 violated:
+[-0.23681593]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': True, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9149_eps_0.00350', '3.4 (v)', '6.6 (v)', '23.9 (h)', '1.0 (v)', '4.4 (v)', '*multiple results*']
 9: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14560,10 +14908,18 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_972_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.073956185266184e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.0074023]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_972_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.7881393432617188e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.01527596]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_972_eps_0.00350', '3.4 (v)', '-', '24.0 (h)', '1.0 (v)', '4.9 (v)', '*multiple results*']
 14: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14627,10 +14983,18 @@ Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.556611488126805e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.17253323]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #8 violated:
+[-0.18673849]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': False, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7280_eps_0.00350', '3.4 (v)', '6.1 (v)', '23.8 (h)', '1.0 (v)', '5.3 (v)', '*multiple results*']
 21: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14659,10 +15023,18 @@ Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 4.5582163132884546e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #6 violated:
+[-0.38021907]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.0132789611816406e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #6 violated:
+[-0.40246701]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': False, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6190_eps_0.00350', '3.5 (v)', '6.4 (v)', '24.1 (h)', '1.0 (v)', '5.1 (v)', '*multiple results*']
 23: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14698,10 +15070,18 @@ Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 7.47599872674698e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.19722466]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.0728836059570312e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.28000855]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': False, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8792_eps_0.00350', '3.4 (v)', '6.3 (v)', '24.0 (h)', '1.0 (v)', '4.6 (v)', '*multiple results*']
 26: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14719,14 +15099,26 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.5497207641601562e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.01791978]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.199383712577003e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.11221898]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.960464477539062e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.11192858]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': True, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7881_eps_0.00134', '3.1 (v)', '5.1 (v)', '23.8 (h)', '1.0 (v)', '4.4 (v)', '*multiple results*']
 27: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14884,14 +15276,26 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.1324882507324219e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.04708529]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.038055989700865e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.07542819]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #4 violated:
+[-0.07587409]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': True, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6283_eps_0.00055', '3.0 (v)', '6.1 (v)', '23.9 (h)', '1.0 (v)', '4.5 (v)', '*multiple results*']
 48: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -14965,14 +15369,26 @@ Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2
 checking counterexample for cgdtest
 Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 8.940696716308594e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #5 violated:
+[-0.08929431]
 
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 9.911017708752468e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #5 violated:
+[-0.30032667]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.3113021850585938e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #5 violated:
+[-0.32098627]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': True, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3168_eps_0.00350', '3.4 (v)', '5.7 (v)', '23.8 (h)', '1.0 (v)', '4.9 (v)', '*multiple results*']
 57: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
@@ -15085,10 +15501,18 @@ Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup
 checking counterexample for mn_bab
 Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 1.092868435970118e-06 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.19382044]
 
 checking counterexample for verinet
 Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
 L-inf norm difference between onnx execution and CE file output: 5.960464477539062e-07 (limit: 0.0001)
+Checking if spec was actually violated
+CE input X was inside box #0
+prop #2 violated:
+[-0.26475656]
 were violated counterexamples valid?: {'alpha_beta_crown': False, 'cgdtest': False, 'mn_bab': True, 'verinet': True}
 Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8136_eps_0.00350', '3.5 (v)', '5.8 (v)', '23.8 (h)', '1.0 (v)', '4.7 (v)', '*multiple results*']
 71: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
