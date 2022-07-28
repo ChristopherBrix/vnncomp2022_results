@@ -13,6 +13,7 @@ from collections import defaultdict
 import numpy as np
 
 from counterexamples import is_correct_counterexample
+from settings import Settings
 
 class ToolResult:
     """Tool's result"""
@@ -35,7 +36,7 @@ class ToolResult:
 
     num_categories = defaultdict(int)
 
-    def __init__(self, tool_name, csv_path, cpu_benchmarks, skip_benchmarks):
+    def __init__(self, scored, tool_name, csv_path, cpu_benchmarks, skip_benchmarks):
         assert "csv" in csv_path
 
         self.tool_name = tool_name
@@ -48,7 +49,21 @@ class ToolResult:
         
         self.max_prepare = 0.0
 
-        self.load(csv_path)
+        self.load(scored, csv_path)
+
+    @staticmethod
+    def reset():
+        """reset static variables"""
+
+        ToolResult.all_categories = set()
+
+        # stats
+        ToolResult.num_verified = defaultdict(int) # number of benchmarks verified
+        ToolResult.num_violated = defaultdict(int) 
+        ToolResult.num_holds = defaultdict(int)
+        ToolResult.incorrect_results = defaultdict(int)
+
+        ToolResult.num_categories = defaultdict(int)
 
     def result_instance_str(self, cat, index):
         """get a string representation of the instance for the given category and index"""
@@ -75,7 +90,7 @@ class ToolResult:
 
         return res, t
 
-    def load(self, csv_path):
+    def load(self, scored, csv_path):
         """load data from file"""
 
         unexpected_results = set()
@@ -83,21 +98,12 @@ class ToolResult:
         with open(csv_path, newline='') as csvfile:
             for row in csv.reader(csvfile):
                 # rename results
-
                 
                 #print(f"{csv_path}: {row}")
                 
                 row[ToolResult.RESULT] = row[ToolResult.RESULT].lower()
 
-                substitutions = [('unsat', 'holds'),
-                                 ('sat', 'violated'),
-                                 ('no_result_in_file', 'unknown'),
-                                 ('prepare_instance_error_', 'unknown'),
-                                 ('run_instance_timeout', 'timeout'),
-                                 ('prepare_instance_timeout', 'timeout'),
-                                 ('error_exit_code_', 'error'),
-                                 ('error_nonmaximal', 'unknown'),
-                                 ]
+                substitutions = Settings.CSV_SUBSTITUTIONS
 
                 for from_prefix, to_str in substitutions:
                     if row[ToolResult.RESULT] == '': # don't use '' as prefix
@@ -111,7 +117,9 @@ class ToolResult:
                 prepare_time = float(row[ToolResult.PREPARE_TIME])
                 run_time = float(row[ToolResult.RUN_TIME])
 
-                if cat in self.skip_benchmarks:
+                if cat in self.skip_benchmarks or \
+                        (scored and cat in Settings.UNSCORED_CATEGORIES) or \
+                        (not scored and cat not in Settings.UNSCORED_CATEGORIES):
                     result = row[ToolResult.RESULT] = "unknown"
 
                 if result.startswith('timeout'):
@@ -144,7 +152,7 @@ class ToolResult:
     def delete_empty_categories(self):
         """delete categories without successful measurements"""
 
-        to_remove = ['acasxu', 'cifar2020'] # benchmarks to skip
+        to_remove = [] #['acasxu', 'cifar2020'] # benchmarks to skip
 
         for key in self.category_to_list.keys():
             rows = self.category_to_list[key]
@@ -299,7 +307,6 @@ def compare_results(result_list, single_overhead):
                 tool_score_tup[2] += 1 if is_falsified else 0
                 tool_score_tup[3] += 1 if is_fastest else 0
                 tool_score_tup = None
-                
 
         print("--------------------")
         print(", ".join(tool_names))
@@ -323,57 +330,69 @@ def compare_results(result_list, single_overhead):
     print("### Summary ###")
     print("###############")
 
+    with open(Settings.TOTAL_SCORE_LATEX, 'w', encoding='utf-8') as f:
+        tee(f, "\n%Total Score:")
+        res_list = []
+
+        print_table_header(f, "Overall Score", "tab:score", ["\\# ~", "Tool", "Score"])
+
+        for tool, score in total_score.items():
+            tool_latex = latex_tool_name(tool)
+            desc = f"{tool_latex} & {round(score, 1)} \\\\"
+
+            res_list.append((score, desc))
+
+        for i, s in enumerate(reversed(sorted(res_list))):
+            
+            tee(f, f"{i+1} & {s[1]}")
+
+        print_table_footer(f)
+
+    #######
+
     for cat in sorted(all_cats.keys()):
         cat_score = all_cats[cat]
 
         if not cat_score:
             continue
+
+        filename = Settings.UNSCORED_LATEX if cat in Settings.UNSCORED_CATEGORIES else Settings.SCORED_LATEX
+
+        with open(filename, 'a', encoding='utf-8') as f:
         
-        print(f"\n% Category {cat} (single_overhead={single_overhead}):")
-        res_list = []
-        max_score = max([t[0] for t in cat_score.values()])
+            tee(f, f"\n% Category {cat} (single_overhead={single_overhead}):")
+            res_list = []
+            max_score = max([t[0] for t in cat_score.values()])
 
-        cat_str = cat.replace('_', '-')
-        
-        print_table_header(f"Benchmark \\texttt{{{cat_str}}}", "tab:cat_{cat}",
-                           ("\\# ~", "Tool", "Verified", "Falsified", "Fastest", "Score", "Percent"),
-                           align='lllllrr')
-                
-        for tool, score_tup in cat_score.items():
-            score, num_verified, num_falsified, num_fastest = score_tup
-            
-            percent = max(min_percent, 100 * score / max_score)
-            tool_latex = latex_tool_name(tool)
-            
-            #desc = f"{tool}: {score} ({round(percent, 2)}%)"
-            desc = f"{tool_latex} & {num_verified} & {num_falsified} & {num_fastest} & {score} & {round(percent, 1)}\\% \\\\"
+            cat_str = cat.replace('_', '-')
 
-            res_list.append((percent, desc))
+            print_table_header(f, f"Benchmark \\texttt{{{cat_str}}}", "tab:cat_{cat}",
+                               ("\\# ~", "Tool", "Verified", "Falsified", "Fastest", "Score", "Percent"),
+                               align='lllllrr')
 
-        for i, s in enumerate(reversed(sorted(res_list))):
-            #print(f"{i+1}. {s[1]}")
-            print(f"{i+1} & {s[1]}")
+            for tool, score_tup in cat_score.items():
+                score, num_verified, num_falsified, num_fastest = score_tup
 
-        print_table_footer()
+                percent = max(min_percent, 100 * score / max_score)
+                tool_latex = latex_tool_name(tool)
 
-    res_list = []
+                #desc = f"{tool}: {score} ({round(percent, 2)}%)"
+                desc = f"{tool_latex} & {num_verified} & {num_falsified} & {num_fastest} & {score} & {round(percent, 1)}\\% \\\\"
 
-    print("\n%Total Score:")
+                res_list.append((percent, desc))
 
-    print_table_header("Overall Score", "tab:score", ["\\# ~", "Tool", "Score"])
+            for i, s in enumerate(reversed(sorted(res_list))):
+                tee(f, f"{i+1} & {s[1]}")
+
+            print_table_footer(f)
+
+def tee(fout, line):
+    """print to temrinal and a file"""
     
-    for tool, score in total_score.items():
-        tool_latex = latex_tool_name(tool)
-        desc = f"{tool_latex} & {round(score, 1)} \\\\"
+    print(line)
+    fout.write(line + "\n")
 
-        res_list.append((score, desc))
-
-    for i, s in enumerate(reversed(sorted(res_list))):
-        print(f"{i+1} & {s[1]}")
-
-    print_table_footer()
-
-def print_table_header(title, label, columns, align=None):
+def print_table_header(f, title, label, columns, align=None):
     """print latex table header"""
 
     bold_columns = ["\\textbf{" + c + "}" for c in columns]
@@ -383,20 +402,20 @@ def print_table_header(title, label, columns, align=None):
     else:
         assert len(columns) == len(align)
 
-    print('\n\\begin{table}[h]')
-    print('\\begin{center}')
-    print('\\caption{' + title + '} \\label{' + label + '}')
-    print('{\\setlength{\\tabcolsep}{2pt}')
-    print('\\begin{tabular}[h]{@{}' + align + '@{}}')
-    print('\\toprule')
-    print(' & '.join(bold_columns) + "\\\\")
+    tee(f, '\n\\begin{table}[h]')
+    tee(f, '\\begin{center}')
+    tee(f, '\\caption{' + title + '} \\label{' + label + '}')
+    tee(f, '{\\setlength{\\tabcolsep}{2pt}')
+    tee(f, '\\begin{tabular}[h]{@{}' + align + '@{}}')
+    tee(f, '\\toprule')
+    tee(f, ' & '.join(bold_columns) + "\\\\")
     #\textbf{\# ~} & \textbf{Tool} & \textbf{Score}  \\
-    print('\\midrule')
+    tee(f, '\\midrule')
 
-def print_table_footer():
+def print_table_footer(f):
     """print latex table footer"""
 
-    print('''\\bottomrule
+    tee(f, '''\\bottomrule
 \\end{tabular}
 }
 \\end{center}
@@ -494,55 +513,55 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
 def print_stats(result_list):
     """print stats about measurements"""
 
-    print('\n%%%%%%%%%% Stats %%%%%%%%%%%')
+    with open(Settings.STATS_LATEX, 'w', encoding='utf-8') as f:
+        tee(f, '\n%%%%%%%%%% Stats %%%%%%%%%%%')
 
-    print("\n% Overhead:")
-    olist = []
+        tee(f, "\n% Overhead:")
+        olist = []
 
-    for r in result_list:
-        olist.append((r.gpu_overhead, r.cpu_overhead, r.tool_name))
+        for r in result_list:
+            olist.append((r.gpu_overhead, r.cpu_overhead, r.tool_name))
 
-    #print_table_header("Overhead", "tab:overhead", ["\\# ~", "Tool", "Seconds", "~~CPU Mode"], align='llrr')
-    print_table_header("Overhead", "tab:overhead", ["\\# ~", "Tool", "Seconds"], align='llr')
-        
-    for i, n in enumerate(sorted(olist)):
-        cpu_overhead = "-" if n[1] == np.inf else round(n[1], 1)
-        
-        #print(f"{i+1} & {n[2]} & {round(n[0], 1)} & {cpu_overhead} \\\\")
-        print(f"{i+1} & {latex_tool_name(n[2])} & {round(n[0], 1)} \\\\")
+        #print_table_header("Overhead", "tab:overhead", ["\\# ~", "Tool", "Seconds", "~~CPU Mode"], align='llrr')
+        print_table_header(f, "Overhead", "tab:overhead", ["\\# ~", "Tool", "Seconds"], align='llr')
 
-    print_table_footer()
+        for i, n in enumerate(sorted(olist)):
+            #cpu_overhead = "-" if n[1] == np.inf else round(n[1], 1)
 
-    items = [("Num Benchmarks Participated", ToolResult.num_categories),
-             ("Num Instances Verified", ToolResult.num_verified),
-             ("Num SAT", ToolResult.num_violated),
-             ("Num UNSAT", ToolResult.num_holds),
-             ("Incorrect Results (or Missing CE)", ToolResult.incorrect_results),
-             ]
+            #print(f"{i+1} & {n[2]} & {round(n[0], 1)} & {cpu_overhead} \\\\")
+            tee(f, f"{i+1} & {latex_tool_name(n[2])} & {round(n[0], 1)} \\\\")
 
-    for index, (label, d) in enumerate(items):
-        print(f"\n% {label}:")
+        print_table_footer(f)
 
-        tab_label = f"tab:stats{index}"
-        print_table_header(label, tab_label, ["\\# ~", "Tool", "Count"], align='llr')
+        items = [("Num Benchmarks Participated", ToolResult.num_categories),
+                 ("Num Instances Verified", ToolResult.num_verified),
+                 ("Num SAT", ToolResult.num_violated),
+                 ("Num UNSAT", ToolResult.num_holds),
+                 ("Incorrect Results (or Missing CE)", ToolResult.incorrect_results),
+                 ]
 
-        l = []
+        for index, (label, d) in enumerate(items):
+            tee(f, f"\n% {label}:")
 
-        for tool, count in d.items():
-            tool_latex = latex_tool_name(tool)
-            
-            l.append((count, tool_latex))
-        
-        for i, s in enumerate(reversed(sorted(l))):
-            print(f"{i+1} & {s[1]} & {s[0]} \\\\")
+            tab_label = f"tab:stats{index}"
+            print_table_header(f, label, tab_label, ["\\# ~", "Tool", "Count"], align='llr')
 
-        print_table_footer()
+            l = []
+
+            for tool, count in d.items():
+                tool_latex = latex_tool_name(tool)
+
+                l.append((count, tool_latex))
+
+            for i, s in enumerate(reversed(sorted(l))):
+                tee(f, f"{i+1} & {s[1]} & {s[0]} \\\\")
+
+            print_table_footer(f)
 
 def latex_tool_name(tool):
     """get latex version of tool name"""
 
-    subs = [('alpha_beta_crown', '$\\alpha$,$\\beta$-CROWN'),
-            ('mn_bab', 'MN BaB')]
+    subs = Settings.TOOL_NAME_SUBS
 
     found = False
 
@@ -567,11 +586,10 @@ def main():
 
     #####################################3
     #csv_list = glob.glob("results_csv/*.csv")
-    csv_list = glob.glob("../*/results.csv")
+    csv_list = glob.glob(Settings.CSV_GLOB)
     csv_list.sort()
     
-    tool_list = [c.split('/')[1] for c in csv_list]
-    result_list = []
+    tool_list = [c.split('/')[Settings.TOOL_LIST_GLOB_INDEX] for c in csv_list]
 
     cpu_benchmarks = {x: [] for x in tool_list}
     skip_benchmarks = {x: [] for x in tool_list}
@@ -581,17 +599,26 @@ def main():
         #pass
         cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
 
-    for csv_path, tool_name in zip(csv_list, tool_list):
-        tr = ToolResult(tool_name, csv_path, cpu_benchmarks[tool_name], skip_benchmarks[tool_name])
-        result_list.append(tr)
+    # clear files so we can append to them
+    with open(Settings.SCORED_LATEX, 'w', encoding='utf-8') as f:
+        pass
 
-    # compare results across tools
-    compare_results(result_list, single_overhead)
+    with open(Settings.UNSCORED_LATEX, 'w', encoding='utf-8') as f:
+        pass
 
-    print_stats(result_list)
+    for scored in [False, True]:
+        result_list = []
+        ToolResult.reset()
 
-    print("\nTODO: Delete acasxu and cifar2020 (line 151)")
-    print("TODO: cgdtest had prepare_instance_timeout, set as timeout on line 100")
+        for csv_path, tool_name in zip(csv_list, tool_list):
+            tr = ToolResult(scored, tool_name, csv_path, cpu_benchmarks[tool_name], skip_benchmarks[tool_name])
+            result_list.append(tr)
+
+        # compare results across tools
+        compare_results(result_list, single_overhead)
+
+        if scored:
+            print_stats(result_list)
 
 if __name__ == "__main__":
     main()

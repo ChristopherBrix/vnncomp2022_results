@@ -5,7 +5,6 @@ Stanley Bak
 June 2021
 '''
 
-from functools import lru_cache
 from copy import deepcopy
 import re
 
@@ -13,6 +12,9 @@ import numpy as np
 
 import onnxruntime as ort
 import onnx
+
+from cachier import cachier
+import datetime
 
 def read_statements(vnnlib_filename):
     '''process vnnlib and return a list of strings (statements)
@@ -168,7 +170,7 @@ def get_num_inputs_outputs(onnx_filename):
     for n in out_shape:
         num_outputs *= n
 
-@lru_cache(maxsize=None)
+@cachier(stale_after=datetime.timedelta(days=1))
 def read_vnnlib_simple(vnnlib_filename, num_inputs, num_outputs):
     '''process in a vnnlib file. You can get num_inputs and num_outputs using get_num_inputs_outputs().
 

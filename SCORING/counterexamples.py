@@ -4,12 +4,16 @@ code related to checking for counterexamples
 
 from pathlib import Path
 import gzip
+import datetime
 
 import numpy as np
 import onnx
 import onnxruntime as ort
 
 from vnnlib import read_vnnlib_simple, get_io_nodes
+
+from cachier import cachier
+from settings import Settings
 
 def predict_with_onnxruntime(model_def, *inputs):
     'run an onnx model'
@@ -38,13 +42,14 @@ def read_ce_file(ce_path):
 
     return content
 
+@cachier(stale_after=datetime.timedelta(days=1))
 def is_correct_counterexample(ce_path, cat, net, prop):
     """is the counterexample correct?"""
 
     print(f"Checking ce path: {ce_path}")
 
-    benchmark_repo = "/home/stan/repositories/vnncomp2022_benchmarks"
-    tol = 1e-4
+    benchmark_repo = Settings.BENCHMARK_REPO
+    tol = Settings.COUNTEREXAMPLE_TOL
     
     onnx_filename = f"{benchmark_repo}/benchmarks/{cat}/onnx/{net}.onnx"
     vnnlib_filename = f"{benchmark_repo}/benchmarks/{cat}/vnnlib/{prop}.vnnlib"
@@ -116,7 +121,7 @@ def is_correct_counterexample(ce_path, cat, net, prop):
             assert int(name[2:]) == len(y_list)
             y_list.append(float(num))
 
-    onnx_model = onnx.load(onnx_filename)
+    onnx_model = onnx.load(onnx_filename) 
 
     inp, _out, input_dtype = get_io_nodes(onnx_model)
     input_shape = tuple(d.dim_value if d.dim_value != 0 else 1 for d in inp.type.tensor_type.shape.dim)
