@@ -197,6 +197,11 @@ def compare_results(all_tool_names, result_list, single_overhead):
 
     tool_times = {}
 
+    ### TODO: if you have time later, allow for multiple gnuplot categories
+    # you probably still will need to manually provide plot settings
+    # also: the sorting of tools in gnuplot is based on total score, not category score
+    gnuplot_cat = 'all'
+
     for tool in all_tool_names:
         tool_times[tool] = []
 
@@ -339,18 +344,16 @@ def compare_results(all_tool_names, result_list, single_overhead):
         num_violated = 0
         num_unknown = 0
 
-        # for each tool, make a list of [(times)]
-        
-
         for i, (row_times, result) in enumerate(zip(all_times, all_results)):
             assert len(row_times) == len(tool_names)
 
             if result is None:
                 num_unknown += 1
             else:
-                for t, tool in zip(row_times, tool_names):
-                    if t is not None:
-                        tool_times[tool].append(t)
+                if gnuplot_cat == 'all' or gnuplot_cat == cat:
+                    for t, tool in zip(row_times, tool_names):
+                        if t is not None:
+                            tool_times[tool].append(t)
                 
                 if result == 'V':
                     num_violated += 1
