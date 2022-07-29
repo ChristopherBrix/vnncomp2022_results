@@ -42,8 +42,18 @@ def read_ce_file(ce_path):
 
     return content
 
+class CounterexampleResult:
+    """enum for return value of is_correct_counterexample"""
+
+    CORRECT = "correct"
+    NO_CE = "no_ce"
+    EXEC_DOESNT_MATCH = "exec_doesnt_match"
+    SPEC_NOT_VIOLATED = "spec_not_violated"
+
 def is_correct_counterexample(ce_path, cat, net, prop):
-    """is the counterexample correct?"""
+    """is the counterexample correct? returns a 
+
+    """
 
     print(f"Checking ce path: {ce_path}")
 
@@ -87,7 +97,8 @@ def is_correct_counterexample(ce_path, cat, net, prop):
 
     res, msg = get_ce_diff(onnx_filename, vnnlib_filename, ce_path, Settings.COUNTEREXAMPLE_TOL)
 
-    print(msg)
+    print(f"{res}: {msg}")
+    
     return res
 
 @cachier(stale_after=datetime.timedelta(days=1))
@@ -97,7 +108,7 @@ def get_ce_diff(onnx_filename, vnnlib_filename, ce_path, tol):
     content = read_ce_file(ce_path)
 
     if len(content) < 2:
-        return False, f"Note: no counter example provided in {ce_path}"
+        return CounterexampleResult.NO_CE, f"Note: no counter example provided in {ce_path}"
 
     #print(f"CE CONTENT:\n{content}")
     
@@ -147,17 +158,19 @@ def get_ce_diff(onnx_filename, vnnlib_filename, ce_path, tol):
     #diff, x_tup, y_tup = res
 
     msg = f"L-inf norm difference between onnx execution and CE file output: {diff} (limit: {tol})"
+    rv = CounterexampleResult.CORRECT
 
-    rv = diff < tol
-
-    if rv:
+    if diff > tol:
+        rv = CounterexampleResult.EXEC_DOESNT_MATCH
+    else:
         # output matched onnxruntime, also need to check that the spec file was obeyed
-        rv, msg2 = is_specification_vio(onnx_filename, vnnlib_filename, tuple(x_list), tuple(y_list), tol)
+        is_vio, msg2 = is_specification_vio(onnx_filename, vnnlib_filename, tuple(x_list), tuple(y_list), tol)
 
         msg += "\n" + msg2
 
-        if not rv:
+        if not is_vio:
             msg += "\nNote: counterexample in file did not violate the specification and so was invalid!"
+            rv = CounterexampleResult.SPEC_NOT_VIOLATED
 
     return rv, msg
 

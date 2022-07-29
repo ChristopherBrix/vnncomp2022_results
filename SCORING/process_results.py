@@ -12,7 +12,7 @@ from pathlib import Path
 from collections import defaultdict
 import numpy as np
 
-from counterexamples import is_correct_counterexample
+from counterexamples import is_correct_counterexample, CounterexampleResult
 from settings import Settings
 
 class ToolResult:
@@ -35,6 +35,7 @@ class ToolResult:
     incorrect_results = defaultdict(int)
 
     num_categories = defaultdict(int)
+    toolerror_counts = defaultdict(int)
 
     def __init__(self, scored, tool_name, csv_path, cpu_benchmarks, skip_benchmarks):
         assert "csv" in csv_path
@@ -64,6 +65,8 @@ class ToolResult:
         ToolResult.incorrect_results = defaultdict(int)
 
         ToolResult.num_categories = defaultdict(int)
+
+        ToolResult.toolerror_counts = defaultdict(int)
 
     def result_instance_str(self, cat, index):
         """get a string representation of the instance for the given category and index"""
@@ -290,9 +293,9 @@ def compare_results(all_tool_names, result_list, single_overhead):
 
                 for tup, tool in zip(counterexamples_violated, tools_violated):
                     print(f"\nchecking counterexample for {tool}")
-                    is_correct = is_correct_counterexample(*tup)
+                    res = is_correct_counterexample(*tup)
 
-                    correct_violations[tool] = is_correct
+                    correct_violations[tool] = res
 
                 print(f"were violated counterexamples valid?: {correct_violations}")
                 
@@ -501,7 +504,7 @@ def print_table_footer(f):
 \\end{center}
 \\end{table}\n\n''')
 
-def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violated, correct_violations):
+def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violated, ce_results):
     """Get the score for the given result
     Actually returns a 4-tuple: score, is_verified, is_falsified, is_fastest
 
@@ -530,8 +533,8 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
 
     valid_ce = False
 
-    for is_correct in correct_violations.values():
-        if is_correct:
+    for ce_valid_res in ce_results.values():
+        if ce_valid_res == CounterexampleResult.CORRECT:
             valid_ce = True
             break
 
@@ -547,21 +550,27 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
         ToolResult.num_violated[tool_name] += 1
 
         is_falsified = True
-    elif penalize_no_ce and num_holds > 0 and res == "violated" and not correct_violations[tool_name]:
+    elif penalize_no_ce and num_holds > 0 and res == "violated" and not ce_results[tool_name]:
         # Rule: If a witness is not provided, for the purposes of scoring if there are
         # mismatches between tools we will count the tool without the witness as incorrect.
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
         print(f"tool {tool_name} did not produce a valid counterexample and there are mismatching results")
+
+        ToolResult.toolerror_counts[f'{tool_name}_no-ce-but-required'] += 1
         is_error = True
     elif res == "violated" and num_holds > 0 and not valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
         is_error = True
+
+        ToolResult.toolerror_counts[f'{tool_name}_{ce_results[tool_name]}'] += 1
     elif res == "holds" and valid_ce:
         score = -100
         ToolResult.incorrect_results[tool_name] += 1
         is_error = True
+
+        ToolResult.toolerror_counts[f'{tool_name}_incorrect_unsat'] += 1
     else:
         # correct result!
 
@@ -641,6 +650,8 @@ def print_stats(result_list):
                 tee(f, f"{i+1} & {s[1]} & {s[0]} \\\\")
 
             print_table_footer(f)
+
+    print(ToolResult.toolerror_counts)            
 
 def latex_tool_name(tool):
     """get latex version of tool name"""
@@ -742,4 +753,7 @@ def main():
         print(f"Note: tools were skipped: {Settings.SKIP_TOOLS}")
 
 if __name__ == "__main__":
+    #from counterexamples import get_ce_diff
+    #get_ce_diff.clear_cache()
+    #exit(1)
     main()
