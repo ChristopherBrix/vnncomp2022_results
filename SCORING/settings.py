@@ -25,6 +25,8 @@ class Settings:
 
     SKIP_TOOLS = [] #['marabou', 'verapak', 'cgdtest']
 
+    SKIP_BENCHMARK_TUPLES = [('marabou', 'sri_resnet_a'), ('marabou', 'sri_resnet_b')]
+
     PLOTS_DIR = "./plots"
 
     CSV_SUBSTITUTIONS = [('unsat', 'holds'),

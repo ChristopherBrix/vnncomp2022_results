@@ -155,6 +155,10 @@ class ToolResult:
               f"cpu-overhead: {round(self.cpu_overhead, 1)}s, " + \
               f"prepare time: {round(self.max_prepare, 1)}s")
 
+        for skip_benchmark in self.skip_benchmarks:
+            assert skip_benchmark in self.category_to_list, f"skip benchmark '{skip_benchmark}' not found in cat " + \
+                f"list: {list(self.category_to_list.keys())}"
+
         self.delete_empty_categories()
 
     def delete_empty_categories(self):
@@ -733,6 +737,10 @@ def main():
     cpu_benchmarks = {x: [] for x in tool_list}
     skip_benchmarks = {x: [] for x in tool_list}
     #skip_benchmarks['RPM'] = ['mnistfc']
+
+    for tool, benchmark in Settings.SKIP_BENCHMARK_TUPLES:
+        assert tool in tool_list, f"{tool} not in tool list: {tool_list}"
+        skip_benchmarks[tool].append(benchmark)
 
     if not single_overhead: # Define a dict with the cpu_only benchmarks for each tool
         #pass

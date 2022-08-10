@@ -31,7 +31,9 @@ set style line 20 lc rgb "#808080" lw 2.0 pt 13 ps 0.8 dt 2
 set logscale y
 #set format x "10^{%L}"
 
-outputs = 'all.pdf rl_benchmarks.pdf'
+#outputs = 'all.pdf rl_benchmarks.pdf'
+outputs = 'all.pdf'
+
     
 ##########
 load 'generated.gnuplot'

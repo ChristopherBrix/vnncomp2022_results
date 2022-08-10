@@ -7166,7 +7166,7 @@ Row: ['mnist-net_256x4-prop_0_0.05', '38.9 (h)', '7.8 (h)', 'timeout', '-', '163
 45: verapak score: 0, is_ver: False, is_fals: False, is_fastest: False
 45: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['mnist-net_256x4-prop_1_0.05', '1.0 (v)', '-', '1.0 (v)', '17.3 (v)', '1.0 (v)', 'timeout', 'timeout', 'timeout', '1.0 (v)']
+Row: ['mnist-net_256x4-prop_1_0.05', '1.0 (v)', '-', '1.0 (v)', '17.2 (v)', '1.0 (v)', 'timeout', 'timeout', 'timeout', '1.0 (v)']
 46: alpha_beta_crown score: 12, is_ver: False, is_fals: True, is_fastest: True
 46: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
 46: debona score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -7807,7 +7807,7 @@ mnist-net_256x4-prop_12_0.03, 1.0 (h), -, 12.4 (h), 6.7 (h), 1.0 (h), 2.5 (h), 6
 mnist-net_256x4-prop_13_0.03, 1.0 (h), 7.6 (h), 12.5 (h), 6.4 (h), 1.0 (h), 1.0 (h), 14.2 (h), 1.0 (h), 1.0 (h)
 mnist-net_256x4-prop_14_0.03, 1.0 (h), 7.7 (h), 1.0 (h), 6.1 (h), 1.0 (h), 1.0 (h), 13.7 (h), 1.0 (h), 1.0 (h)
 mnist-net_256x4-prop_0_0.05, 38.9 (h), 7.8 (h), timeout, -, 163.6 (h), timeout, timeout, timeout, 62.2 (h)
-mnist-net_256x4-prop_1_0.05, 1.0 (v), -, 1.0 (v), 17.3 (v), 1.0 (v), timeout, timeout, timeout, 1.0 (v)
+mnist-net_256x4-prop_1_0.05, 1.0 (v), -, 1.0 (v), 17.2 (v), 1.0 (v), timeout, timeout, timeout, 1.0 (v)
 mnist-net_256x4-prop_2_0.05, timeout, 8.0 (h), timeout, -, timeout, timeout, timeout, timeout, timeout
 mnist-net_256x4-prop_3_0.05, 14.2 (h), 8.4 (h), 16.5 (h), 25.8 (h), 58.2 (h), 15.7 (h), timeout, timeout, 6.6 (h)
 mnist-net_256x4-prop_4_0.05, 105.3 (h), 8.0 (h), timeout, -, timeout, timeout, timeout, timeout, timeout
@@ -14117,509 +14117,437 @@ verinet: 3547 (99.86%)
 
 Category sri_resnet_a:
 Category sri_resnet_a has 72 (from alpha_beta_crown)
-5 participating tools: ['alpha_beta_crown', 'cgdtest', 'marabou', 'mn_bab', 'verinet']
+4 participating tools: ['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1551_eps_0.00198', '3.0 (v)', '7.0 (v)', '-', '1.0 (v)', '4.3 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1551_eps_0.00198', '3.0 (v)', '7.0 (v)', '1.0 (v)', '4.3 (v)']
 0: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 0: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-0: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 0: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 0: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1876_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1876_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 1: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 1: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-1: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 1: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 1: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2219_eps_0.00350', '3.4 (v)', '-', '-', '1.0 (v)', '4.5 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2219_eps_0.00350', '3.4 (v)', '-', '1.0 (v)', '4.5 (v)']
 2: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 2: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-2: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 2: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 2: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2806_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2806_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 3: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 3: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-3: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 3: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 3: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3684_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3684_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 4: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 4: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-4: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 4: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 4: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6817_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6817_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 5: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 5: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-5: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 5: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 5: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5807_eps_0.00350', 'timeout', '26.8 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5807_eps_0.00350', 'timeout', '26.8 (h)', 'timeout', 'timeout']
 6: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 6: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-6: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 6: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 6: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5190_eps_0.00350', 'timeout', '26.6 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5190_eps_0.00350', 'timeout', '26.6 (h)', 'timeout', 'timeout']
 7: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 7: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-7: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 7: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 7: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3882_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3882_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 8: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 8: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-8: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 8: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 8: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9149_eps_0.00350', 'timeout', '26.9 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9149_eps_0.00350', 'timeout', '26.9 (h)', 'timeout', 'timeout']
 9: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 9: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-9: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 9: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 9: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3197_eps_0.00350', 'timeout', '27.3 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3197_eps_0.00350', 'timeout', '27.3 (h)', 'timeout', 'timeout']
 10: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 10: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-10: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 10: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 10: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5645_eps_0.00350', '3.4 (v)', '-', '-', '1.0 (v)', '4.7 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5645_eps_0.00350', '3.4 (v)', '-', '1.0 (v)', '4.7 (v)']
 11: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 11: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-11: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 11: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 11: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1916_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1916_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 12: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 12: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-12: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 12: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 12: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5611_eps_0.00039', '2.7 (v)', '-', '-', '1.0 (v)', '4.5 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5611_eps_0.00039', '2.7 (v)', '-', '1.0 (v)', '4.5 (v)']
 13: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 13: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-13: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 13: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 13: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6501_eps_0.00350', 'timeout', '27.0 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6501_eps_0.00350', 'timeout', '27.0 (h)', 'timeout', 'timeout']
 14: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 14: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-14: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 14: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 14: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9384_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9384_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 15: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 15: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-15: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 15: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 15: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4711_eps_0.00350', '2.6 (h)', '27.5 (h)', '181.9 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4711_eps_0.00350', '2.6 (h)', '27.5 (h)', '1.0 (h)', '4.3 (h)']
 16: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 16: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-16: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 16: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 16: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9886_eps_0.00350', 'timeout', '26.9 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9886_eps_0.00350', 'timeout', '26.9 (h)', 'timeout', 'timeout']
 17: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-17: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_411_eps_0.00350', '3.4 (v)', '6.6 (v)', '-', '1.0 (v)', '4.3 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_411_eps_0.00350', '3.4 (v)', '6.6 (v)', '1.0 (v)', '4.3 (v)']
 18: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 18: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-18: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 18: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 18: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4836_eps_0.00350', '8.4 (h)', '-', '-', '18.5 (h)', '6.1 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4836_eps_0.00350', '8.4 (h)', '-', '18.5 (h)', '6.1 (h)']
 19: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 19: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-19: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 19: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 19: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6502_eps_0.00350', 'timeout', '27.2 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6502_eps_0.00350', 'timeout', '27.2 (h)', 'timeout', 'timeout']
 20: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 20: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-20: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 20: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 20: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8356_eps_0.00350', '2.6 (h)', '27.1 (h)', '-', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8356_eps_0.00350', '2.6 (h)', '27.1 (h)', '1.0 (h)', '4.3 (h)']
 21: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 21: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-21: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 21: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 21: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7280_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7280_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 22: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 22: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-22: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 22: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 22: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9613_eps_0.00350', '3.4 (v)', '-', '-', '1.0 (v)', '4.7 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9613_eps_0.00350', '3.4 (v)', '-', '1.0 (v)', '4.7 (v)']
 23: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 23: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-23: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 23: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 23: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2809_eps_0.00290', '3.4 (v)', '6.0 (v)', '-', '1.0 (v)', '4.7 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2809_eps_0.00290', '3.4 (v)', '6.0 (v)', '1.0 (v)', '4.7 (v)']
 24: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 24: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-24: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 24: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 24: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5209_eps_0.00350', '19.5 (h)', '27.1 (h)', '-', '126.2 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5209_eps_0.00350', '19.5 (h)', '27.1 (h)', '126.2 (h)', 'timeout']
 25: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 25: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-25: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 25: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 25: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8968_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8968_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 26: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 26: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-26: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 26: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 26: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8792_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8792_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 27: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 27: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-27: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 27: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 27: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7881_eps_0.00305', '3.4 (v)', '5.9 (v)', '-', '1.0 (v)', '4.8 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7881_eps_0.00305', '3.4 (v)', '5.9 (v)', '1.0 (v)', '4.8 (v)']
 28: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 28: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-28: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 28: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 28: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8284_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8284_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 29: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 29: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-29: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 29: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 29: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9101_eps_0.00350', '22.2 (h)', '26.2 (h)', '-', '120.8 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9101_eps_0.00350', '22.2 (h)', '26.2 (h)', '120.8 (h)', 'timeout']
 30: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 30: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-30: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 30: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 30: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9274_eps_0.00350', '3.4 (v)', '6.2 (v)', '-', '1.0 (v)', '4.4 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9274_eps_0.00350', '3.4 (v)', '6.2 (v)', '1.0 (v)', '4.4 (v)']
 31: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 31: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-31: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 31: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 31: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6004_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6004_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 32: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 32: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-32: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 32: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 32: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_270_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_270_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 33: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 33: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-33: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 33: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 33: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5676_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5676_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 34: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 34: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-34: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 34: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 34: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_629_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_629_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 35: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 35: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-35: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 35: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 35: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3140_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3140_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 36: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 36: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-36: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 36: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 36: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_304_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_304_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 37: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 37: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-37: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 37: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 37: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4587_eps_0.00350', 'timeout', '26.9 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4587_eps_0.00350', 'timeout', '26.9 (h)', 'timeout', 'timeout']
 38: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 38: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-38: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 38: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 38: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6689_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6689_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 39: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 39: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-39: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 39: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 39: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7727_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7727_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 40: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 40: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-40: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 40: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 40: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2019_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2019_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 41: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 41: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-41: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 41: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 41: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8311_eps_0.00350', '2.6 (h)', '-', '-', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8311_eps_0.00350', '2.6 (h)', '-', '1.0 (h)', '4.3 (h)']
 42: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 42: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-42: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 42: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 42: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2748_eps_0.00350', '2.6 (h)', '27.3 (h)', '196.6 (h)', '1.0 (h)', '4.2 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2748_eps_0.00350', '2.6 (h)', '27.3 (h)', '1.0 (h)', '4.2 (h)']
 43: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 43: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-43: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 43: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 43: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9382_eps_0.00350', '7.8 (h)', '27.2 (h)', '-', '5.2 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9382_eps_0.00350', '7.8 (h)', '27.2 (h)', '5.2 (h)', '4.3 (h)']
 44: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
 44: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-44: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 44: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 44: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7486_eps_0.00350', '2.3 (h)', '27.3 (h)', '179.3 (h)', '1.0 (h)', '4.2 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7486_eps_0.00350', '2.3 (h)', '27.3 (h)', '1.0 (h)', '4.2 (h)']
 45: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 45: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-45: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 45: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 45: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3612_eps_0.00350', '54.5 (h)', '-', '-', '237.5 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3612_eps_0.00350', '54.5 (h)', '-', '237.5 (h)', 'timeout']
 46: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 46: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-46: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 46: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 46: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6272_eps_0.00350', '3.4 (v)', '-', '-', '1.0 (v)', '4.9 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6272_eps_0.00350', '3.4 (v)', '-', '1.0 (v)', '4.9 (v)']
 47: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 47: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-47: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 47: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 47: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5594_eps_0.00350', '19.6 (h)', '26.7 (h)', '-', '58.9 (h)', '35.8 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5594_eps_0.00350', '19.6 (h)', '26.7 (h)', '58.9 (h)', '35.8 (h)']
 48: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 48: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-48: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 48: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 48: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2724_eps_0.00350', '2.6 (h)', '27.9 (h)', '-', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2724_eps_0.00350', '2.6 (h)', '27.9 (h)', '1.0 (h)', '4.3 (h)']
 49: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 49: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-49: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 49: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 49: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6685_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6685_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 50: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 50: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-50: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 50: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 50: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6283_eps_0.00350', '3.5 (v)', '-', '-', '1.0 (v)', '4.9 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6283_eps_0.00350', '3.5 (v)', '-', '1.0 (v)', '4.9 (v)']
 51: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 51: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-51: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 51: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 51: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7327_eps_0.00350', 'timeout', '27.3 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7327_eps_0.00350', 'timeout', '27.3 (h)', 'timeout', 'timeout']
 52: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 52: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-52: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 52: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 52: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3100_eps_0.00350', '20.0 (h)', '27.5 (h)', '-', '32.0 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3100_eps_0.00350', '20.0 (h)', '27.5 (h)', '32.0 (h)', 'timeout']
 53: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 53: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-53: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 53: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 53: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_232_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_232_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 54: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 54: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-54: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 54: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 54: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3667_eps_0.00350', '27.2 (h)', '26.8 (h)', '-', '129.7 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3667_eps_0.00350', '27.2 (h)', '26.8 (h)', '129.7 (h)', 'timeout']
 55: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 55: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-55: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 55: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 55: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5696_eps_0.00350', '21.5 (h)', '-', '-', '36.0 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5696_eps_0.00350', '21.5 (h)', '-', '36.0 (h)', 'timeout']
 56: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 56: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-56: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 56: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 56: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9079_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9079_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 57: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 57: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-57: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 57: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 57: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9595_eps_0.00350', 'timeout', '27.2 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9595_eps_0.00350', 'timeout', '27.2 (h)', 'timeout', 'timeout']
 58: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 58: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-58: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 58: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 58: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4904_eps_0.00350', '127.5 (h)', '26.8 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4904_eps_0.00350', '127.5 (h)', '26.8 (h)', 'timeout', 'timeout']
 59: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 59: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-59: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 59: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 59: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3518_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3518_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 60: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 60: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-60: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 60: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 60: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3168_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3168_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 61: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 61: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-61: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 61: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 61: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4091_eps_0.00350', '7.8 (h)', '27.1 (h)', '-', '4.9 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4091_eps_0.00350', '7.8 (h)', '27.1 (h)', '4.9 (h)', '4.3 (h)']
 62: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
 62: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-62: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 62: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 62: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3803_eps_0.00350', '7.8 (h)', '27.2 (h)', '-', '5.0 (h)', '4.4 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3803_eps_0.00350', '7.8 (h)', '27.2 (h)', '5.0 (h)', '4.4 (h)']
 63: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
 63: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-63: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 63: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 63: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4909_eps_0.00350', 'timeout', '27.2 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4909_eps_0.00350', 'timeout', '27.2 (h)', 'timeout', 'timeout']
 64: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 64: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-64: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 64: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 64: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_865_eps_0.00350', '136.5 (h)', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_865_eps_0.00350', '136.5 (h)', '-', 'timeout', 'timeout']
 65: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 65: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-65: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 65: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 65: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9201_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9201_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 66: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 66: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-66: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 66: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 66: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8029_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8029_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 67: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 67: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-67: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 67: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 67: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5702_eps_0.00350', 'timeout', '-', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5702_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 68: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 68: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-68: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 68: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 68: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1864_eps_0.00350', '2.6 (h)', '-', '-', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1864_eps_0.00350', '2.6 (h)', '-', '1.0 (h)', '4.3 (h)']
 69: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 69: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-69: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 69: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 69: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9937_eps_0.00350', 'timeout', '27.1 (h)', '-', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9937_eps_0.00350', 'timeout', '27.1 (h)', 'timeout', 'timeout']
 70: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 70: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
-70: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 70: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 70: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3998_eps_0.00022', '3.0 (v)', '5.8 (v)', '-', '1.0 (v)', '4.4 (v)']
+Row: ['resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3998_eps_0.00022', '3.0 (v)', '5.8 (v)', '1.0 (v)', '4.4 (v)']
 71: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 71: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-71: marabou score: 0, is_ver: False, is_fals: False, is_fastest: False
 71: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 71: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 --------------------
@@ -14627,985 +14555,605 @@ Total Violated: 12
 Total Holds: 32
 Total Unknown: 28
 --------------------
-alpha_beta_crown, cgdtest, marabou, mn_bab, verinet
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1551_eps_0.00198, 3.0 (v), 7.0 (v), -, 1.0 (v), 4.3 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1876_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2219_eps_0.00350, 3.4 (v), -, -, 1.0 (v), 4.5 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2806_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3684_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6817_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5807_eps_0.00350, timeout, 26.8 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5190_eps_0.00350, timeout, 26.6 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3882_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9149_eps_0.00350, timeout, 26.9 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3197_eps_0.00350, timeout, 27.3 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5645_eps_0.00350, 3.4 (v), -, -, 1.0 (v), 4.7 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1916_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5611_eps_0.00039, 2.7 (v), -, -, 1.0 (v), 4.5 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6501_eps_0.00350, timeout, 27.0 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9384_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4711_eps_0.00350, 2.6 (h), 27.5 (h), 181.9 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9886_eps_0.00350, timeout, 26.9 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_411_eps_0.00350, 3.4 (v), 6.6 (v), -, 1.0 (v), 4.3 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4836_eps_0.00350, 8.4 (h), -, -, 18.5 (h), 6.1 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6502_eps_0.00350, timeout, 27.2 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8356_eps_0.00350, 2.6 (h), 27.1 (h), -, 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7280_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9613_eps_0.00350, 3.4 (v), -, -, 1.0 (v), 4.7 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2809_eps_0.00290, 3.4 (v), 6.0 (v), -, 1.0 (v), 4.7 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5209_eps_0.00350, 19.5 (h), 27.1 (h), -, 126.2 (h), timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8968_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8792_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7881_eps_0.00305, 3.4 (v), 5.9 (v), -, 1.0 (v), 4.8 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8284_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9101_eps_0.00350, 22.2 (h), 26.2 (h), -, 120.8 (h), timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9274_eps_0.00350, 3.4 (v), 6.2 (v), -, 1.0 (v), 4.4 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6004_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_270_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5676_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_629_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3140_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_304_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4587_eps_0.00350, timeout, 26.9 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6689_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7727_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2019_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8311_eps_0.00350, 2.6 (h), -, -, 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2748_eps_0.00350, 2.6 (h), 27.3 (h), 196.6 (h), 1.0 (h), 4.2 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9382_eps_0.00350, 7.8 (h), 27.2 (h), -, 5.2 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7486_eps_0.00350, 2.3 (h), 27.3 (h), 179.3 (h), 1.0 (h), 4.2 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3612_eps_0.00350, 54.5 (h), -, -, 237.5 (h), timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6272_eps_0.00350, 3.4 (v), -, -, 1.0 (v), 4.9 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5594_eps_0.00350, 19.6 (h), 26.7 (h), -, 58.9 (h), 35.8 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2724_eps_0.00350, 2.6 (h), 27.9 (h), -, 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6685_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6283_eps_0.00350, 3.5 (v), -, -, 1.0 (v), 4.9 (v)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7327_eps_0.00350, timeout, 27.3 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3100_eps_0.00350, 20.0 (h), 27.5 (h), -, 32.0 (h), timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_232_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3667_eps_0.00350, 27.2 (h), 26.8 (h), -, 129.7 (h), timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5696_eps_0.00350, 21.5 (h), -, -, 36.0 (h), timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9079_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9595_eps_0.00350, timeout, 27.2 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4904_eps_0.00350, 127.5 (h), 26.8 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3518_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3168_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4091_eps_0.00350, 7.8 (h), 27.1 (h), -, 4.9 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3803_eps_0.00350, 7.8 (h), 27.2 (h), -, 5.0 (h), 4.4 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4909_eps_0.00350, timeout, 27.2 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_865_eps_0.00350, 136.5 (h), -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9201_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8029_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5702_eps_0.00350, timeout, -, -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1864_eps_0.00350, 2.6 (h), -, -, 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9937_eps_0.00350, timeout, 27.1 (h), -, timeout, timeout
-resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3998_eps_0.00022, 3.0 (v), 5.8 (v), -, 1.0 (v), 4.4 (v)
+alpha_beta_crown, cgdtest, mn_bab, verinet
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1551_eps_0.00198, 3.0 (v), 7.0 (v), 1.0 (v), 4.3 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1876_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2219_eps_0.00350, 3.4 (v), -, 1.0 (v), 4.5 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2806_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3684_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6817_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5807_eps_0.00350, timeout, 26.8 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5190_eps_0.00350, timeout, 26.6 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3882_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9149_eps_0.00350, timeout, 26.9 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3197_eps_0.00350, timeout, 27.3 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5645_eps_0.00350, 3.4 (v), -, 1.0 (v), 4.7 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1916_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5611_eps_0.00039, 2.7 (v), -, 1.0 (v), 4.5 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6501_eps_0.00350, timeout, 27.0 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9384_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4711_eps_0.00350, 2.6 (h), 27.5 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9886_eps_0.00350, timeout, 26.9 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_411_eps_0.00350, 3.4 (v), 6.6 (v), 1.0 (v), 4.3 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4836_eps_0.00350, 8.4 (h), -, 18.5 (h), 6.1 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6502_eps_0.00350, timeout, 27.2 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8356_eps_0.00350, 2.6 (h), 27.1 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7280_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9613_eps_0.00350, 3.4 (v), -, 1.0 (v), 4.7 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2809_eps_0.00290, 3.4 (v), 6.0 (v), 1.0 (v), 4.7 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5209_eps_0.00350, 19.5 (h), 27.1 (h), 126.2 (h), timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8968_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8792_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7881_eps_0.00305, 3.4 (v), 5.9 (v), 1.0 (v), 4.8 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8284_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9101_eps_0.00350, 22.2 (h), 26.2 (h), 120.8 (h), timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9274_eps_0.00350, 3.4 (v), 6.2 (v), 1.0 (v), 4.4 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6004_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_270_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5676_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_629_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3140_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_304_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4587_eps_0.00350, timeout, 26.9 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6689_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7727_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2019_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8311_eps_0.00350, 2.6 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2748_eps_0.00350, 2.6 (h), 27.3 (h), 1.0 (h), 4.2 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9382_eps_0.00350, 7.8 (h), 27.2 (h), 5.2 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7486_eps_0.00350, 2.3 (h), 27.3 (h), 1.0 (h), 4.2 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3612_eps_0.00350, 54.5 (h), -, 237.5 (h), timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6272_eps_0.00350, 3.4 (v), -, 1.0 (v), 4.9 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5594_eps_0.00350, 19.6 (h), 26.7 (h), 58.9 (h), 35.8 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_2724_eps_0.00350, 2.6 (h), 27.9 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6685_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_6283_eps_0.00350, 3.5 (v), -, 1.0 (v), 4.9 (v)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_7327_eps_0.00350, timeout, 27.3 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3100_eps_0.00350, 20.0 (h), 27.5 (h), 32.0 (h), timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_232_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3667_eps_0.00350, 27.2 (h), 26.8 (h), 129.7 (h), timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5696_eps_0.00350, 21.5 (h), -, 36.0 (h), timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9079_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9595_eps_0.00350, timeout, 27.2 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4904_eps_0.00350, 127.5 (h), 26.8 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3518_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3168_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4091_eps_0.00350, 7.8 (h), 27.1 (h), 4.9 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3803_eps_0.00350, 7.8 (h), 27.2 (h), 5.0 (h), 4.4 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_4909_eps_0.00350, timeout, 27.2 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_865_eps_0.00350, 136.5 (h), -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9201_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_8029_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_5702_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_1864_eps_0.00350, 2.6 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_9937_eps_0.00350, timeout, 27.1 (h), timeout, timeout
+resnet_3b2_bn_mixup_adv_4.0_bs128_lr-1-cifar10_spec_idx_3998_eps_0.00022, 3.0 (v), 5.8 (v), 1.0 (v), 4.4 (v)
 ---------
 Category sri_resnet_a:
 alpha_beta_crown: 356 (100.0%)
 cgdtest: 352 (98.88%)
-marabou: 30 (8.43%)
 mn_bab: 343 (96.35%)
 verinet: 248 (69.66%)
 
 Category sri_resnet_b:
 Category sri_resnet_b has 72 (from alpha_beta_crown)
-5 participating tools: ['alpha_beta_crown', 'cgdtest', 'marabou', 'mn_bab', 'verinet']
+4 participating tools: ['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']
 
-WARNING: multiple results for index 0. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.2516975402832031e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.04466486]
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 3.6239583778296947e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.19389912]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_1551_eps_0.00129.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 7.152557373046875e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.19501543]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'correct', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1551_eps_0.00129', '2.7 (v)', '6.1 (v)', '23.9 (h)', '1.0 (v)', '4.4 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1551_eps_0.00129', '2.7 (v)', '6.1 (v)', '1.0 (v)', '4.4 (v)']
 0: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 0: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-0: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 0: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 0: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1876_eps_0.00350', 'timeout', '27.9 (h)', '24.5 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1876_eps_0.00350', 'timeout', '27.9 (h)', 'timeout', 'timeout']
 1: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-1: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-1: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+1: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 1: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 1: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 2. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.1324882507324219e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.00051749]
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 4.374967834397392e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.31332075]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_2219_eps_0.00228.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.5497207641601562e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.3176918]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'correct', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2219_eps_0.00228', '3.4 (v)', '6.4 (v)', '24.0 (h)', '1.0 (v)', '4.6 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2219_eps_0.00228', '3.4 (v)', '6.4 (v)', '1.0 (v)', '4.6 (v)']
 2: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 2: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-2: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 2: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 2: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2806_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2806_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 3: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 3: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-3: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 3: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 3: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3684_eps_0.00350', '20.2 (h)', '-', '24.1 (h)', '106.9 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3684_eps_0.00350', '20.2 (h)', '-', '106.9 (h)', 'timeout']
 4: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 4: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-4: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
-4: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
+4: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 4: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6817_eps_0.00350', '51.2 (h)', '26.7 (h)', '24.1 (h)', '152.2 (h)', 'timeout']
-5: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
-5: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-5: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6817_eps_0.00350', '51.2 (h)', '26.7 (h)', '152.2 (h)', 'timeout']
+5: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
+5: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 5: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 5: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5807_eps_0.00350', '46.3 (h)', '27.2 (h)', '24.3 (h)', 'timeout', 'timeout']
-6: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
-6: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-6: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5807_eps_0.00350', '46.3 (h)', '27.2 (h)', 'timeout', 'timeout']
+6: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
+6: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 6: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 6: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5190_eps_0.00350', '20.7 (h)', '26.8 (h)', '24.1 (h)', '143.8 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5190_eps_0.00350', '20.7 (h)', '26.8 (h)', '143.8 (h)', 'timeout']
 7: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-7: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-7: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
+7: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
 7: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 7: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3882_eps_0.00350', 'timeout', '-', '23.8 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3882_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 8: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 8: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-8: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 8: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 8: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 9. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #0 violated:
-[-0.05090189]
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.0096277458515601e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #0 violated:
-[-0.22969868]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_9149_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 4.76837158203125e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #0 violated:
-[-0.23681593]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'correct', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9149_eps_0.00350', '3.4 (v)', '6.6 (v)', '23.9 (h)', '1.0 (v)', '4.4 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9149_eps_0.00350', '3.4 (v)', '6.6 (v)', '1.0 (v)', '4.4 (v)']
 9: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 9: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-9: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 9: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 9: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3197_eps_0.00350', 'timeout', '-', '24.5 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3197_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 10: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 10: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-10: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 10: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 10: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1916_eps_0.00350', 'timeout', '-', '24.3 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1916_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 11: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 11: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-11: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 11: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 11: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6501_eps_0.00350', '8.3 (h)', '26.9 (h)', '24.1 (h)', '6.4 (h)', '5.0 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6501_eps_0.00350', '8.3 (h)', '26.9 (h)', '6.4 (h)', '5.0 (h)']
 12: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
 12: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-12: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 12: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 12: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9384_eps_0.00350', 'timeout', '-', '24.1 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9384_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 13: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 13: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-13: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 13: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 13: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 14. Violated: 3 (['alpha_beta_crown', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_972_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_972_eps_0.00350.counterexample.gz
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_972_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 7.073956185266184e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #4 violated:
-[-0.0074023]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_972_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.7881393432617188e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #4 violated:
-[-0.01527596]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_972_eps_0.00350', '3.4 (v)', '-', '24.0 (h)', '1.0 (v)', '4.9 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_972_eps_0.00350', '3.4 (v)', '-', '1.0 (v)', '4.9 (v)']
 14: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 14: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-14: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 14: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 14: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4711_eps_0.00350', '2.7 (h)', '-', '24.4 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4711_eps_0.00350', '2.7 (h)', '-', '1.0 (h)', '4.3 (h)']
 15: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 15: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-15: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 15: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 15: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9886_eps_0.00350', 'timeout', '27.1 (h)', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9886_eps_0.00350', 'timeout', '27.1 (h)', 'timeout', 'timeout']
 16: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-16: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-16: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+16: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 16: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 16: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_411_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_411_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 17: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-17: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 17: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 17: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4836_eps_0.00350', '19.4 (h)', '-', '24.0 (h)', '23.8 (h)', '20.5 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4836_eps_0.00350', '19.4 (h)', '-', '23.8 (h)', '20.5 (h)']
 18: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 18: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-18: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 18: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 18: verinet score: 11, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6502_eps_0.00350', 'timeout', '27.0 (h)', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6502_eps_0.00350', 'timeout', '27.0 (h)', 'timeout', 'timeout']
 19: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-19: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-19: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+19: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 19: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 19: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8356_eps_0.00350', '2.7 (h)', '27.2 (h)', '24.2 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8356_eps_0.00350', '2.7 (h)', '27.2 (h)', '1.0 (h)', '4.3 (h)']
 20: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 20: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-20: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 20: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 20: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 21. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 4.556611488126805e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #8 violated:
-[-0.17253323]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7280_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #8 violated:
-[-0.18673849]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'no_ce', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7280_eps_0.00350', '3.4 (v)', '6.1 (v)', '23.8 (h)', '1.0 (v)', '5.3 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7280_eps_0.00350', '3.4 (v)', '6.1 (v)', '1.0 (v)', '5.3 (v)']
 21: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 21: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-21: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 21: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 21: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2809_eps_0.00350', 'timeout', '-', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2809_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 22: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 22: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-22: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 22: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 22: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 23. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 4.5582163132884546e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #6 violated:
-[-0.38021907]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6190_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.0132789611816406e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #6 violated:
-[-0.40246701]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'no_ce', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6190_eps_0.00350', '3.5 (v)', '6.4 (v)', '24.1 (h)', '1.0 (v)', '5.1 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6190_eps_0.00350', '3.5 (v)', '6.4 (v)', '1.0 (v)', '5.1 (v)']
 23: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 23: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-23: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 23: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 23: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5209_eps_0.00350', '19.5 (h)', '27.1 (h)', '24.0 (h)', '30.9 (h)', '12.9 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5209_eps_0.00350', '19.5 (h)', '27.1 (h)', '30.9 (h)', '12.9 (h)']
 24: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 24: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-24: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 24: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 24: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8968_eps_0.00350', 'timeout', '-', '24.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8968_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 25: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 25: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-25: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 25: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 25: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 26. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 7.47599872674698e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.19722466]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8792_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.0728836059570312e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.28000855]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'no_ce', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8792_eps_0.00350', '3.4 (v)', '6.3 (v)', '24.0 (h)', '1.0 (v)', '4.6 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8792_eps_0.00350', '3.4 (v)', '6.3 (v)', '1.0 (v)', '4.6 (v)']
 26: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 26: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-26: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 26: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 26: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-WARNING: multiple results for index 27. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.5497207641601562e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.01791978]
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 9.199383712577003e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.11221898]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_7881_eps_0.00134.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 5.960464477539062e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.11192858]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'correct', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7881_eps_0.00134', '3.1 (v)', '5.1 (v)', '23.8 (h)', '1.0 (v)', '4.4 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7881_eps_0.00134', '3.1 (v)', '5.1 (v)', '1.0 (v)', '4.4 (v)']
 27: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 27: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-27: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 27: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 27: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8284_eps_0.00350', 'timeout', '27.8 (h)', '24.1 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8284_eps_0.00350', 'timeout', '27.8 (h)', 'timeout', 'timeout']
 28: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-28: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-28: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+28: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 28: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 28: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9101_eps_0.00350', '2.6 (h)', '-', '23.8 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9101_eps_0.00350', '2.6 (h)', '-', '1.0 (h)', '4.3 (h)']
 29: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 29: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-29: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 29: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 29: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6004_eps_0.00350', '19.7 (h)', '-', '23.9 (h)', '53.7 (h)', '25.8 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6004_eps_0.00350', '19.7 (h)', '-', '53.7 (h)', '25.8 (h)']
 30: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 30: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-30: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
 30: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
-30: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
+30: verinet score: 11, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_270_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_270_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 31: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 31: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-31: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 31: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 31: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5676_eps_0.00350', 'timeout', '-', '24.2 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5676_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 32: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 32: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-32: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 32: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 32: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_629_eps_0.00350', 'timeout', '-', '24.1 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_629_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 33: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 33: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-33: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 33: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 33: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3140_eps_0.00350', '21.5 (h)', '-', '24.1 (h)', '159.7 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3140_eps_0.00350', '21.5 (h)', '-', '159.7 (h)', 'timeout']
 34: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 34: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-34: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
-34: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
+34: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 34: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_304_eps_0.00350', 'timeout', '-', '23.8 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_304_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 35: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 35: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-35: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 35: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 35: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4587_eps_0.00350', 'timeout', '-', '24.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4587_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 36: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 36: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-36: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 36: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 36: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6689_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6689_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 37: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 37: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-37: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 37: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 37: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7727_eps_0.00350', 'timeout', '27.0 (h)', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7727_eps_0.00350', 'timeout', '27.0 (h)', 'timeout', 'timeout']
 38: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-38: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-38: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+38: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 38: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 38: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2019_eps_0.00350', 'timeout', '-', '24.3 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2019_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 39: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 39: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-39: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 39: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 39: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8311_eps_0.00350', '2.7 (h)', '-', '23.7 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8311_eps_0.00350', '2.7 (h)', '-', '1.0 (h)', '4.3 (h)']
 40: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 40: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-40: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 40: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 40: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2748_eps_0.00350', '2.6 (h)', '27.0 (h)', '23.9 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2748_eps_0.00350', '2.6 (h)', '27.0 (h)', '1.0 (h)', '4.3 (h)']
 41: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 41: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-41: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 41: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 41: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9382_eps_0.00350', '19.9 (h)', '-', '24.0 (h)', '32.0 (h)', '25.5 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9382_eps_0.00350', '19.9 (h)', '-', '32.0 (h)', '25.5 (h)']
 42: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 42: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-42: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
 42: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
-42: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
+42: verinet score: 11, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7486_eps_0.00350', '2.3 (h)', '26.9 (h)', '24.0 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7486_eps_0.00350', '2.3 (h)', '26.9 (h)', '1.0 (h)', '4.3 (h)']
 43: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 43: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-43: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 43: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 43: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3612_eps_0.00350', 'timeout', '27.2 (h)', '25.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3612_eps_0.00350', 'timeout', '27.2 (h)', 'timeout', 'timeout']
 44: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-44: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-44: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+44: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 44: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 44: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5594_eps_0.00350', '8.2 (h)', '26.9 (h)', '23.9 (h)', '6.0 (h)', '4.5 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5594_eps_0.00350', '8.2 (h)', '26.9 (h)', '6.0 (h)', '4.5 (h)']
 45: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
 45: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-45: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 45: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 45: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2724_eps_0.00350', '2.6 (h)', '27.3 (h)', '23.9 (h)', '1.0 (h)', '4.4 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2724_eps_0.00350', '2.6 (h)', '27.3 (h)', '1.0 (h)', '4.4 (h)']
 46: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 46: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-46: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 46: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 46: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6685_eps_0.00350', 'timeout', '-', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6685_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 47: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 47: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-47: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 47: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 47: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 48. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.1324882507324219e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #4 violated:
-[-0.04708529]
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 8.038055989700865e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #4 violated:
-[-0.07542819]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_6283_eps_0.00055.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 9.5367431640625e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #4 violated:
-[-0.07587409]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'correct', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6283_eps_0.00055', '3.0 (v)', '6.1 (v)', '23.9 (h)', '1.0 (v)', '4.5 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6283_eps_0.00055', '3.0 (v)', '6.1 (v)', '1.0 (v)', '4.5 (v)']
 48: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 48: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-48: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 48: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 48: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7327_eps_0.00350', 'timeout', '-', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7327_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 49: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 49: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-49: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 49: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 49: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3100_eps_0.00350', '2.3 (h)', '-', '23.8 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3100_eps_0.00350', '2.3 (h)', '-', '1.0 (h)', '4.3 (h)']
 50: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 50: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-50: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 50: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 50: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3667_eps_0.00350', '19.7 (h)', '27.0 (h)', '24.0 (h)', '17.0 (h)', '5.8 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3667_eps_0.00350', '19.7 (h)', '27.0 (h)', '17.0 (h)', '5.8 (h)']
 51: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
 51: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-51: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 51: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 51: verinet score: 12, is_ver: True, is_fals: False, is_fastest: True
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5696_eps_0.00350', '2.7 (h)', '28.1 (h)', '24.0 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5696_eps_0.00350', '2.7 (h)', '28.1 (h)', '1.0 (h)', '4.3 (h)']
 52: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 52: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-52: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 52: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 52: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9079_eps_0.00350', '24.9 (h)', '-', '24.0 (h)', '189.1 (h)', 'timeout']
-53: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9079_eps_0.00350', '24.9 (h)', '-', '189.1 (h)', 'timeout']
+53: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 53: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-53: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
-53: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
+53: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 53: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9595_eps_0.00350', 'timeout', '27.2 (h)', '24.2 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9595_eps_0.00350', 'timeout', '27.2 (h)', 'timeout', 'timeout']
 54: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
-54: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
-54: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
+54: cgdtest score: 12, is_ver: True, is_fals: False, is_fastest: True
 54: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 54: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4904_eps_0.00350', 'timeout', '-', '24.2 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4904_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 55: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 55: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-55: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 55: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 55: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3518_eps_0.00350', 'timeout', '-', '24.1 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3518_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 56: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 56: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-56: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 56: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 56: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 57. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 8.940696716308594e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #5 violated:
-[-0.08929431]
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 9.911017708752468e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #5 violated:
-[-0.30032667]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_3168_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.3113021850585938e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #5 violated:
-[-0.32098627]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'correct', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3168_eps_0.00350', '3.4 (v)', '5.7 (v)', '23.8 (h)', '1.0 (v)', '4.9 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3168_eps_0.00350', '3.4 (v)', '5.7 (v)', '1.0 (v)', '4.9 (v)']
 57: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 57: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-57: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 57: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 57: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4091_eps_0.00350', '2.7 (h)', '-', '23.8 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4091_eps_0.00350', '2.7 (h)', '-', '1.0 (h)', '4.3 (h)']
 58: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 58: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-58: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 58: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 58: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3803_eps_0.00350', '2.7 (h)', '28.0 (h)', '24.0 (h)', '1.0 (h)', '4.4 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3803_eps_0.00350', '2.7 (h)', '28.0 (h)', '1.0 (h)', '4.4 (h)']
 59: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 59: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-59: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 59: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 59: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4909_eps_0.00350', '22.9 (h)', '-', '24.0 (h)', '37.7 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4909_eps_0.00350', '22.9 (h)', '-', '37.7 (h)', 'timeout']
 60: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
 60: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-60: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
-60: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
+60: mn_bab score: 11, is_ver: True, is_fals: False, is_fastest: False
 60: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_865_eps_0.00350', '22.7 (h)', '26.8 (h)', '24.3 (h)', '132.0 (h)', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_865_eps_0.00350', '22.7 (h)', '26.8 (h)', '132.0 (h)', 'timeout']
 61: alpha_beta_crown score: 12, is_ver: True, is_fals: False, is_fastest: True
-61: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-61: marabou score: 11, is_ver: True, is_fals: False, is_fastest: False
+61: cgdtest score: 11, is_ver: True, is_fals: False, is_fastest: False
 61: mn_bab score: 10, is_ver: True, is_fals: False, is_fastest: False
 61: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9201_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9201_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 62: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 62: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-62: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 62: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 62: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8029_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8029_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 63: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 63: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-63: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 63: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 63: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5702_eps_0.00350', 'timeout', '-', '24.4 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5702_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 64: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 64: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-64: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 64: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 64: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1864_eps_0.00350', '2.7 (h)', '-', '23.7 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1864_eps_0.00350', '2.7 (h)', '-', '1.0 (h)', '4.3 (h)']
 65: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 65: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-65: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 65: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 65: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9937_eps_0.00350', 'timeout', '-', '23.8 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9937_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 66: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 66: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-66: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 66: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 66: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3998_eps_0.00350', 'timeout', '-', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3998_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 67: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 67: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-67: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 67: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 67: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7491_eps_0.00350', 'timeout', '-', '24.0 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7491_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 68: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 68: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-68: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 68: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 68: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8215_eps_0.00350', '2.6 (h)', '27.2 (h)', '23.9 (h)', '1.0 (h)', '4.3 (h)']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8215_eps_0.00350', '2.6 (h)', '27.2 (h)', '1.0 (h)', '4.3 (h)']
 69: alpha_beta_crown score: 11, is_ver: True, is_fals: False, is_fastest: False
 69: cgdtest score: 10, is_ver: True, is_fals: False, is_fastest: False
-69: marabou score: 10, is_ver: True, is_fals: False, is_fastest: False
 69: mn_bab score: 12, is_ver: True, is_fals: False, is_fastest: True
 69: verinet score: 10, is_ver: True, is_fals: False, is_fastest: False
 
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_33_eps_0.00350', 'timeout', '-', '23.9 (h)', 'timeout', 'timeout']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_33_eps_0.00350', 'timeout', '-', 'timeout', 'timeout']
 70: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
 70: cgdtest score: 0, is_ver: False, is_fals: False, is_fastest: False
-70: marabou score: 12, is_ver: True, is_fals: False, is_fastest: True
 70: mn_bab score: 0, is_ver: False, is_fals: False, is_fastest: False
 70: verinet score: 0, is_ver: False, is_fals: False, is_fastest: False
 
-WARNING: multiple results for index 71. Violated: 4 (['alpha_beta_crown', 'cgdtest', 'mn_bab', 'verinet']), Holds: 1 (['marabou'])
-
-checking counterexample for alpha_beta_crown
-Checking ce path: ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../alpha_beta_crown/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
-
-checking counterexample for cgdtest
-Checking ce path: ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
-no_ce: Note: no counter example provided in ../cgdtest/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
-
-checking counterexample for mn_bab
-Checking ce path: ../mn_bab/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 1.092868435970118e-06 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.19382044]
-
-checking counterexample for verinet
-Checking ce path: ../verinet/sri_resnet_b/resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2_cifar10_spec_idx_8136_eps_0.00350.counterexample.gz
-correct: L-inf norm difference between onnx execution and CE file output: 5.960464477539062e-07 (limit: 0.0001)
-Checking if spec was actually violated
-CE input X was inside box #0
-prop #2 violated:
-[-0.26475656]
-were violated counterexamples valid?: {'alpha_beta_crown': 'no_ce', 'cgdtest': 'no_ce', 'mn_bab': 'correct', 'verinet': 'correct'}
-Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8136_eps_0.00350', '3.5 (v)', '5.8 (v)', '23.8 (h)', '1.0 (v)', '4.7 (v)', '*multiple results*']
+Row: ['resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8136_eps_0.00350', '3.5 (v)', '5.8 (v)', '1.0 (v)', '4.7 (v)']
 71: alpha_beta_crown score: 11, is_ver: False, is_fals: True, is_fastest: False
 71: cgdtest score: 10, is_ver: False, is_fals: True, is_fastest: False
-71: marabou score: -100, is_ver: False, is_fals: False, is_fastest: False
 71: mn_bab score: 12, is_ver: False, is_fals: True, is_fastest: True
 71: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 --------------------
 Total Violated: 11
-Total Holds: 61
-Total Unknown: 0
+Total Holds: 35
+Total Unknown: 26
 --------------------
-alpha_beta_crown, cgdtest, marabou, mn_bab, verinet
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1551_eps_0.00129, 2.7 (v), 6.1 (v), 23.9 (h), 1.0 (v), 4.4 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1876_eps_0.00350, timeout, 27.9 (h), 24.5 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2219_eps_0.00228, 3.4 (v), 6.4 (v), 24.0 (h), 1.0 (v), 4.6 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2806_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3684_eps_0.00350, 20.2 (h), -, 24.1 (h), 106.9 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6817_eps_0.00350, 51.2 (h), 26.7 (h), 24.1 (h), 152.2 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5807_eps_0.00350, 46.3 (h), 27.2 (h), 24.3 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5190_eps_0.00350, 20.7 (h), 26.8 (h), 24.1 (h), 143.8 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3882_eps_0.00350, timeout, -, 23.8 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9149_eps_0.00350, 3.4 (v), 6.6 (v), 23.9 (h), 1.0 (v), 4.4 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3197_eps_0.00350, timeout, -, 24.5 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1916_eps_0.00350, timeout, -, 24.3 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6501_eps_0.00350, 8.3 (h), 26.9 (h), 24.1 (h), 6.4 (h), 5.0 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9384_eps_0.00350, timeout, -, 24.1 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_972_eps_0.00350, 3.4 (v), -, 24.0 (h), 1.0 (v), 4.9 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4711_eps_0.00350, 2.7 (h), -, 24.4 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9886_eps_0.00350, timeout, 27.1 (h), 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_411_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4836_eps_0.00350, 19.4 (h), -, 24.0 (h), 23.8 (h), 20.5 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6502_eps_0.00350, timeout, 27.0 (h), 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8356_eps_0.00350, 2.7 (h), 27.2 (h), 24.2 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7280_eps_0.00350, 3.4 (v), 6.1 (v), 23.8 (h), 1.0 (v), 5.3 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2809_eps_0.00350, timeout, -, 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6190_eps_0.00350, 3.5 (v), 6.4 (v), 24.1 (h), 1.0 (v), 5.1 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5209_eps_0.00350, 19.5 (h), 27.1 (h), 24.0 (h), 30.9 (h), 12.9 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8968_eps_0.00350, timeout, -, 24.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8792_eps_0.00350, 3.4 (v), 6.3 (v), 24.0 (h), 1.0 (v), 4.6 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7881_eps_0.00134, 3.1 (v), 5.1 (v), 23.8 (h), 1.0 (v), 4.4 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8284_eps_0.00350, timeout, 27.8 (h), 24.1 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9101_eps_0.00350, 2.6 (h), -, 23.8 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6004_eps_0.00350, 19.7 (h), -, 23.9 (h), 53.7 (h), 25.8 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_270_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5676_eps_0.00350, timeout, -, 24.2 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_629_eps_0.00350, timeout, -, 24.1 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3140_eps_0.00350, 21.5 (h), -, 24.1 (h), 159.7 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_304_eps_0.00350, timeout, -, 23.8 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4587_eps_0.00350, timeout, -, 24.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6689_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7727_eps_0.00350, timeout, 27.0 (h), 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2019_eps_0.00350, timeout, -, 24.3 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8311_eps_0.00350, 2.7 (h), -, 23.7 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2748_eps_0.00350, 2.6 (h), 27.0 (h), 23.9 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9382_eps_0.00350, 19.9 (h), -, 24.0 (h), 32.0 (h), 25.5 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7486_eps_0.00350, 2.3 (h), 26.9 (h), 24.0 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3612_eps_0.00350, timeout, 27.2 (h), 25.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5594_eps_0.00350, 8.2 (h), 26.9 (h), 23.9 (h), 6.0 (h), 4.5 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2724_eps_0.00350, 2.6 (h), 27.3 (h), 23.9 (h), 1.0 (h), 4.4 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6685_eps_0.00350, timeout, -, 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6283_eps_0.00055, 3.0 (v), 6.1 (v), 23.9 (h), 1.0 (v), 4.5 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7327_eps_0.00350, timeout, -, 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3100_eps_0.00350, 2.3 (h), -, 23.8 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3667_eps_0.00350, 19.7 (h), 27.0 (h), 24.0 (h), 17.0 (h), 5.8 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5696_eps_0.00350, 2.7 (h), 28.1 (h), 24.0 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9079_eps_0.00350, 24.9 (h), -, 24.0 (h), 189.1 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9595_eps_0.00350, timeout, 27.2 (h), 24.2 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4904_eps_0.00350, timeout, -, 24.2 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3518_eps_0.00350, timeout, -, 24.1 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3168_eps_0.00350, 3.4 (v), 5.7 (v), 23.8 (h), 1.0 (v), 4.9 (v), *multiple results*
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4091_eps_0.00350, 2.7 (h), -, 23.8 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3803_eps_0.00350, 2.7 (h), 28.0 (h), 24.0 (h), 1.0 (h), 4.4 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4909_eps_0.00350, 22.9 (h), -, 24.0 (h), 37.7 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_865_eps_0.00350, 22.7 (h), 26.8 (h), 24.3 (h), 132.0 (h), timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9201_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8029_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5702_eps_0.00350, timeout, -, 24.4 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1864_eps_0.00350, 2.7 (h), -, 23.7 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9937_eps_0.00350, timeout, -, 23.8 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3998_eps_0.00350, timeout, -, 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7491_eps_0.00350, timeout, -, 24.0 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8215_eps_0.00350, 2.6 (h), 27.2 (h), 23.9 (h), 1.0 (h), 4.3 (h)
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_33_eps_0.00350, timeout, -, 23.9 (h), timeout, timeout
-resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8136_eps_0.00350, 3.5 (v), 5.8 (v), 23.8 (h), 1.0 (v), 4.7 (v), *multiple results*
+alpha_beta_crown, cgdtest, mn_bab, verinet
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1551_eps_0.00129, 2.7 (v), 6.1 (v), 1.0 (v), 4.4 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1876_eps_0.00350, timeout, 27.9 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2219_eps_0.00228, 3.4 (v), 6.4 (v), 1.0 (v), 4.6 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2806_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3684_eps_0.00350, 20.2 (h), -, 106.9 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6817_eps_0.00350, 51.2 (h), 26.7 (h), 152.2 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5807_eps_0.00350, 46.3 (h), 27.2 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5190_eps_0.00350, 20.7 (h), 26.8 (h), 143.8 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3882_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9149_eps_0.00350, 3.4 (v), 6.6 (v), 1.0 (v), 4.4 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3197_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1916_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6501_eps_0.00350, 8.3 (h), 26.9 (h), 6.4 (h), 5.0 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9384_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_972_eps_0.00350, 3.4 (v), -, 1.0 (v), 4.9 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4711_eps_0.00350, 2.7 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9886_eps_0.00350, timeout, 27.1 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_411_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4836_eps_0.00350, 19.4 (h), -, 23.8 (h), 20.5 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6502_eps_0.00350, timeout, 27.0 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8356_eps_0.00350, 2.7 (h), 27.2 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7280_eps_0.00350, 3.4 (v), 6.1 (v), 1.0 (v), 5.3 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2809_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6190_eps_0.00350, 3.5 (v), 6.4 (v), 1.0 (v), 5.1 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5209_eps_0.00350, 19.5 (h), 27.1 (h), 30.9 (h), 12.9 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8968_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8792_eps_0.00350, 3.4 (v), 6.3 (v), 1.0 (v), 4.6 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7881_eps_0.00134, 3.1 (v), 5.1 (v), 1.0 (v), 4.4 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8284_eps_0.00350, timeout, 27.8 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9101_eps_0.00350, 2.6 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6004_eps_0.00350, 19.7 (h), -, 53.7 (h), 25.8 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_270_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5676_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_629_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3140_eps_0.00350, 21.5 (h), -, 159.7 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_304_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4587_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6689_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7727_eps_0.00350, timeout, 27.0 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2019_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8311_eps_0.00350, 2.7 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2748_eps_0.00350, 2.6 (h), 27.0 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9382_eps_0.00350, 19.9 (h), -, 32.0 (h), 25.5 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7486_eps_0.00350, 2.3 (h), 26.9 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3612_eps_0.00350, timeout, 27.2 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5594_eps_0.00350, 8.2 (h), 26.9 (h), 6.0 (h), 4.5 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_2724_eps_0.00350, 2.6 (h), 27.3 (h), 1.0 (h), 4.4 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6685_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_6283_eps_0.00055, 3.0 (v), 6.1 (v), 1.0 (v), 4.5 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7327_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3100_eps_0.00350, 2.3 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3667_eps_0.00350, 19.7 (h), 27.0 (h), 17.0 (h), 5.8 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5696_eps_0.00350, 2.7 (h), 28.1 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9079_eps_0.00350, 24.9 (h), -, 189.1 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9595_eps_0.00350, timeout, 27.2 (h), timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4904_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3518_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3168_eps_0.00350, 3.4 (v), 5.7 (v), 1.0 (v), 4.9 (v)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4091_eps_0.00350, 2.7 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3803_eps_0.00350, 2.7 (h), 28.0 (h), 1.0 (h), 4.4 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_4909_eps_0.00350, 22.9 (h), -, 37.7 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_865_eps_0.00350, 22.7 (h), 26.8 (h), 132.0 (h), timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9201_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8029_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_5702_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_1864_eps_0.00350, 2.7 (h), -, 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_9937_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_3998_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_7491_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8215_eps_0.00350, 2.6 (h), 27.2 (h), 1.0 (h), 4.3 (h)
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_33_eps_0.00350, timeout, -, timeout, timeout
+resnet_3b2_bn_mixup_ssadv_4.0_bs128_lr-1_v2-cifar10_spec_idx_8136_eps_0.00350, 3.5 (v), 5.8 (v), 1.0 (v), 4.7 (v)
 ---------
 Category sri_resnet_b:
-alpha_beta_crown: 432 (100.0%)
-cgdtest: 329 (76.16%)
-marabou: -411 (0%)
-mn_bab: 431 (99.77%)
-verinet: 319 (73.84%)
+alpha_beta_crown: 435 (100.0%)
+cgdtest: 340 (78.16%)
+mn_bab: 435 (100.0%)
+verinet: 321 (73.79%)
 
 Category tllverifybench:
 Category tllverifybench has 32 (from alpha_beta_crown)
@@ -15798,7 +15346,7 @@ Row: ['tllBench_n=2_N=M=40_m=1_instance_4_0-property_N=40_0', '1.6 (v)', '-', '1
 16: peregrinn score: 10, is_ver: False, is_fals: True, is_fastest: False
 16: verinet score: 10, is_ver: False, is_fals: True, is_fastest: False
 
-Row: ['tllBench_n=2_N=M=40_m=1_instance_4_1-property_N=40_1', '1.5 (v)', '1.0 (v)', '1.0 (v)', '1.0 (v)', '242.8 (v)', '1.0 (v)', '2.3 (v)', '6.0 (v)', '3.2 (v)']
+Row: ['tllBench_n=2_N=M=40_m=1_instance_4_1-property_N=40_1', '1.5 (v)', '1.0 (v)', '1.0 (v)', '1.0 (v)', '242.7 (v)', '1.0 (v)', '2.3 (v)', '6.0 (v)', '3.2 (v)']
 17: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
 17: cgdtest score: 12, is_ver: False, is_fals: True, is_fastest: True
 17: debona score: 12, is_ver: False, is_fals: True, is_fastest: True
@@ -15991,7 +15539,7 @@ tllBench_n=2_N=M=32_m=1_instance_3_1-property_N=32_1, 1.0 (v), 1.0 (v), 1.0 (v),
 tllBench_n=2_N=M=32_m=1_instance_3_2-property_N=32_2, 1.0 (v), -, 1.0 (v), 1.0 (v), 94.8 (v), 1.0 (v), 1.0 (v), 2.7 (v), 2.9 (v)
 tllBench_n=2_N=M=32_m=1_instance_3_3-property_N=32_3, 1.0 (v), -, 1.0 (v), 1.0 (v), 96.7 (v), 1.0 (v), 1.0 (v), 2.7 (v), 2.9 (v)
 tllBench_n=2_N=M=40_m=1_instance_4_0-property_N=40_0, 1.6 (v), -, 1.0 (v), 1.0 (v), 252.7 (v), 1.0 (v), 1.9 (v), 6.0 (v), 3.2 (v)
-tllBench_n=2_N=M=40_m=1_instance_4_1-property_N=40_1, 1.5 (v), 1.0 (v), 1.0 (v), 1.0 (v), 242.8 (v), 1.0 (v), 2.3 (v), 6.0 (v), 3.2 (v)
+tllBench_n=2_N=M=40_m=1_instance_4_1-property_N=40_1, 1.5 (v), 1.0 (v), 1.0 (v), 1.0 (v), 242.7 (v), 1.0 (v), 2.3 (v), 6.0 (v), 3.2 (v)
 tllBench_n=2_N=M=40_m=1_instance_4_2-property_N=40_2, 5.9 (h), -, timeout, 1.0 (h), -, 28.0 (h), error, 44.4 (h), 45.5 (h)
 tllBench_n=2_N=M=40_m=1_instance_4_3-property_N=40_3, 5.5 (h), -, timeout, 1.0 (h), -, 26.8 (h), error, 52.1 (h), 59.0 (h)
 tllBench_n=2_N=M=48_m=1_instance_5_0-property_N=48_0, 6.9 (h), -, timeout, 1.0 (h), -, 22.9 (h), error, 96.2 (h), 84.1 (h)
@@ -16218,12 +15766,12 @@ verinet: 60 (34.09%)
 \textbf{\# ~} & \textbf{Tool} & \textbf{Score}\\
 \midrule
 1 & $\alpha$,$\beta$-CROWN & 1274.9 \\
-2 & MN BaB & 1017.3 \\
-3 & Verinet & 892.5 \\
+2 & MN BaB & 1017.5 \\
+3 & Verinet & 892.4 \\
 4 & Nnenum & 534.0 \\
-5 & Cgdtest & 406.4 \\
+5 & Cgdtest & 408.4 \\
 6 & Peregrinn & 399.0 \\
-7 & Marabou & 380.6 \\
+7 & Marabou & 372.2 \\
 8 & Debona & 222.9 \\
 9 & Fastbatllnn & 100.0 \\
 10 & Verapak & 98.2 \\
@@ -16474,7 +16022,6 @@ verinet: 60 (34.09%)
 2 & Cgdtest & 26 & 6 & 14 & 0 & 352 & 98.9\% \\
 3 & MN BaB & 18 & 12 & 19 & 0 & 343 & 96.3\% \\
 4 & Verinet & 12 & 12 & 4 & 0 & 248 & 69.7\% \\
-5 & Marabou & 3 & 0 & 0 & 0 & 30 & 8.4\% \\
 \bottomrule
 \end{tabular}
 }
@@ -16493,11 +16040,10 @@ verinet: 60 (34.09%)
 \toprule
 \textbf{\# ~} & \textbf{Tool} & \textbf{Verified} & \textbf{Falsified} & \textbf{Fastest} & \textbf{Penalty} & \textbf{Score} & \textbf{Percent}\\
 \midrule
-1 & $\alpha$,$\beta$-CROWN & 28 & 11 & 8 & 0 & 432 & 100.0\% \\
-2 & MN BaB & 27 & 11 & 24 & 0 & 431 & 99.8\% \\
-3 & Cgdtest & 22 & 10 & 0 & 0 & 329 & 76.2\% \\
-4 & Verinet & 20 & 11 & 4 & 0 & 319 & 73.8\% \\
-5 & Marabou & 61 & 0 & 36 & 11 & -411 & 0\% \\
+1 & MN BaB & 27 & 11 & 24 & 0 & 435 & 100.0\% \\
+2 & $\alpha$,$\beta$-CROWN & 28 & 11 & 9 & 0 & 435 & 100.0\% \\
+3 & Cgdtest & 22 & 10 & 9 & 0 & 340 & 78.2\% \\
+4 & Verinet & 20 & 11 & 4 & 0 & 321 & 73.8\% \\
 \bottomrule
 \end{tabular}
 }
@@ -16602,8 +16148,8 @@ verinet: 60 (34.09%)
 3 & $\alpha$,$\beta$-CROWN & 13 \\
 4 & Cgdtest & 12 \\
 5 & Nnenum & 9 \\
-6 & Marabou & 8 \\
-7 & Peregrinn & 7 \\
+6 & Peregrinn & 7 \\
+7 & Marabou & 6 \\
 8 & Debona & 5 \\
 9 & Verapak & 3 \\
 10 & Fastbatllnn & 1 \\
@@ -16630,8 +16176,8 @@ verinet: 60 (34.09%)
 2 & MN BaB & 812 \\
 3 & Verinet & 754 \\
 4 & Nnenum & 515 \\
-5 & Marabou & 514 \\
-6 & Peregrinn & 478 \\
+5 & Peregrinn & 478 \\
+6 & Marabou & 450 \\
 7 & Cgdtest & 405 \\
 8 & Debona & 341 \\
 9 & Verapak & 117 \\
@@ -16687,9 +16233,9 @@ verinet: 60 (34.09%)
 1 & $\alpha$,$\beta$-CROWN & 723 \\
 2 & MN BaB & 585 \\
 3 & Verinet & 526 \\
-4 & Marabou & 366 \\
-5 & Nnenum & 319 \\
-6 & Cgdtest & 304 \\
+4 & Nnenum & 319 \\
+5 & Cgdtest & 304 \\
+6 & Marabou & 302 \\
 7 & Peregrinn & 287 \\
 8 & Debona & 203 \\
 9 & Verapak & 111 \\
@@ -16714,8 +16260,8 @@ verinet: 60 (34.09%)
 \textbf{\# ~} & \textbf{Tool} & \textbf{Count}\\
 \midrule
 1 & Cgdtest & 41 \\
-2 & Marabou & 12 \\
-3 & Verapak & 5 \\
+2 & Verapak & 5 \\
+3 & Marabou & 1 \\
 4 & $\alpha$,$\beta$-CROWN & 1 \\
 \bottomrule
 \end{tabular}
@@ -16724,4 +16270,4 @@ verinet: 60 (34.09%)
 \end{table}
 
 
-defaultdict(<class 'int'>, {'cgdtest_incorrect_unsat': 12, 'verapak_incorrect_unsat': 5, 'cgdtest_exec_doesnt_match': 14, 'cgdtest_no_ce': 13, 'alpha_beta_crown_no_ce': 1, 'cgdtest_spec_not_violated': 2, 'marabou_incorrect_unsat': 12})
+defaultdict(<class 'int'>, {'cgdtest_incorrect_unsat': 12, 'verapak_incorrect_unsat': 5, 'cgdtest_exec_doesnt_match': 14, 'cgdtest_no_ce': 13, 'alpha_beta_crown_no_ce': 1, 'cgdtest_spec_not_violated': 2, 'marabou_incorrect_unsat': 1})
