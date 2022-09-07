@@ -90,7 +90,9 @@ def is_correct_counterexample(ce_path, cat, net, prop):
                 with open(vnnlib_filename, 'wb') as fout:
                     fout.write(content)
 
-    assert Path(onnx_filename).is_file()
+    assert Path(onnx_filename).is_file(), f"onnx file '{onnx_filename}' not found. " + \
+        f"After cloning benchmarks did you run setup.sh in {Settings.BENCHMARK_REPO}?"
+    
     assert Path(vnnlib_filename).is_file(), f"vnnlib file not found: {vnnlib_filename}"
 
     ################################################

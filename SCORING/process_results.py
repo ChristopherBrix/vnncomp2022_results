@@ -89,7 +89,7 @@ class ToolResult:
         t -= self.cpu_overhead if cat in self.cpu_benchmarks else self.gpu_overhead
 
         # all results less than 1.0 second are treated the same
-        t = max(1.0, t)
+        t = max(Settings.SCORING_MIN_TIME, t)
 
         return res, t
 
@@ -191,7 +191,7 @@ class ToolResult:
 
         ToolResult.num_categories[self.tool_name] = len(self.category_to_list)
 
-def compare_results(all_tool_names, result_list, single_overhead):
+def compare_results(all_tool_names, result_list, single_overhead, scored):
     """compare results across tools"""
 
     min_percent = 0 # minimum percent for total score
@@ -201,13 +201,12 @@ def compare_results(all_tool_names, result_list, single_overhead):
 
     tool_times = {}
 
-    ### TODO: if you have time later, allow for multiple gnuplot categories
-    # you probably still will need to manually provide plot settings
-    # also: the sorting of tools in gnuplot is based on total score, not category score
-    gnuplot_cat = 'all'
+    gnuplot_tool_cat_times = {}
 
     for tool in all_tool_names:
         tool_times[tool] = []
+
+        gnuplot_tool_cat_times[tool] = defaultdict(list)
 
     for cat in sorted(ToolResult.all_categories):
         print(f"\nCategory {cat}:")
@@ -353,11 +352,13 @@ def compare_results(all_tool_names, result_list, single_overhead):
 
             if result is None:
                 num_unknown += 1
-            else:
-                if gnuplot_cat == 'all' or gnuplot_cat == cat:
-                    for t, tool in zip(row_times, tool_names):
-                        if t is not None:
-                            tool_times[tool].append(t)
+            else:                
+                for t, tool in zip(row_times, tool_names):
+                    if t is not None:
+                        assert t > 0, "time was zero?"
+                        tool_times[tool].append(t)
+                        gnuplot_tool_cat_times[tool][cat].append(t)
+                        gnuplot_tool_cat_times[tool]['all'].append(t)
                 
                 if result == 'V':
                     num_violated += 1
@@ -412,33 +413,10 @@ def compare_results(all_tool_names, result_list, single_overhead):
         print_table_footer(f)
 
     #######
+    write_gnuplot_files(gnuplot_tool_cat_times, sorted_tools)
+    #######
 
     print("--------------------")
-
-    for tool in all_tool_names:
-        times_list = tool_times[tool]
-        times_list.sort()
-
-        with open(Settings.PLOTS_DIR + f"/accumulated-all-{tool}.txt", 'w', encoding='utf-8') as f:
-            for i, t in enumerate(times_list):
-                f.write(f"{t}\t{i+1}\n")
-
-    with open(Settings.PLOTS_DIR + "/generated.gnuplot", 'w', encoding='utf-8') as f:
-        f.write("input_list = \"'")
-
-        for tool in sorted_tools:
-            f.write(f"all-{tool} ")
-
-        f.write("'\"\n\n")
-
-        f.write("pretty_input_list = \"\\\"")
-        for tool in sorted_tools:
-            f.write(f"'{gnuplot_tool_name(tool)}' ")
-
-        f.write("\\\"\"\n")
-
-
-    #######
 
     for cat in sorted(all_cats.keys()):
         cat_score = all_cats[cat]
@@ -696,6 +674,266 @@ def gnuplot_tool_name(tool):
 
     return tool
 
+def write_gnuplot_files(gnuplot_tool_cat_times, sorted_tools):
+    """write files with data for gnuplot cactus plots"""
+
+    for gps in Settings.gnuplot_data:
+        cat = gps.prefix
+        
+        for tool in gnuplot_tool_cat_times.keys():
+            times_list = gnuplot_tool_cat_times[tool][cat]
+            times_list.sort()
+
+            with open(Settings.PLOTS_DIR + f"/accumulated-{cat}-{tool}.txt", 'w', encoding='utf-8') as f:
+                for i, t in enumerate(times_list):
+                    f.write(f"{t}\t{i+1}\n")
+
+    with open(Settings.PLOTS_DIR + "/generated.gnuplot", 'w', encoding='utf-8') as f:
+        #########################
+        # input_list
+        f.write("input_list = \"")
+
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            f.write("'")
+
+            for tool in sorted_tools:
+
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list:
+                    f.write(f"{cat}-{tool} ")
+
+            f.write("' ")
+
+        f.write("\"\n\n")
+
+        #########################
+        # pretty_input_list
+        f.write("pretty_input_list = \"")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            f.write("\\\"")
+
+            # sort tools by category
+
+            for tool in sorted_tools:
+
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list:
+                    f.write(f"'{gnuplot_tool_name(tool)}' ")
+
+            f.write("\\\" ")
+
+        f.write("\"\n\n")
+
+        #########################
+        # tool_index
+
+        f.write("tool_index_list = \"")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            f.write("'")
+
+            # sort tools by category
+
+            for i, tool in enumerate(sorted_tools):
+
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list:
+                    f.write(f"{i} ")
+
+            f.write("' ")
+
+        f.write("\"\n\n")
+        
+        ##########################
+        # title_list
+
+        f.write("title_list = \"")
+
+        for gps in Settings.gnuplot_data:
+            f.write(f"'{gps.title}' ")
+
+        f.write("\"\n\n")
+
+        ##########################
+        # outputs
+
+        f.write("outputs = '")
+
+        for i,  gps in enumerate(Settings.gnuplot_data):
+            f.write(f"{gps.prefix}.pdf ")
+
+        f.write("'\n\n")
+
+        #########################
+        # xmax_plot_list
+
+        f.write("xmax_plot_list = '")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            # sort tools by category
+            max_times = 0
+
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if len(times_list) > max_times:
+                    max_times = len(times_list)
+
+            f.write(f"{1.05 * max_times} ")
+
+        f.write("'\n\n")
+
+        #########################
+        # ymin_str
+
+        # sort tools by category
+        min_time = np.inf
+
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+            
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list and times_list[0] < min_time:
+                    min_time = times_list[0]
+
+
+        f.write(f"ymin_str = '{0.9 * min_time}'")
+
+        f.write("\n\n")
+
+        #########################
+        # timeout_y_list
+
+        f.write("timeout_y_list = '")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            # sort tools by category
+            max_time = 0
+
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list and times_list[-1] > max_time:
+                    max_time = times_list[-1]
+
+            if max_time > 300:
+                f.write("300 ")
+            else:
+                f.write("60 ")
+
+        f.write("'\n\n")
+
+        #########################
+        # timeout_str_list
+
+        f.write("timeout_str_list = \"")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            # sort tools by category
+            max_time = 0
+
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list and times_list[-1] > max_time:
+                    max_time = times_list[-1]
+
+            if max_time > 300:
+                f.write("'Five Minutes' ")
+            else:
+                f.write("'One Minute' ")
+
+        f.write("\"\n\n")
+
+        #########################
+        # timeout_x_list
+
+        f.write("timeout_x_list = '")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            # sort tools by category
+            max_times = 0
+
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if len(times_list) > max_times:
+                    max_times = len(times_list)
+
+            max_times = 1.05 * max_times
+            f.write(f"{1 + 0.01 * max_times} ")
+
+        f.write("'\n\n")
+
+        #########################
+        # ymax_list
+
+        f.write("ymax_list = '")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            # sort tools by category
+            max_time = 0
+
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+
+                if times_list and times_list[-1] > max_time:
+                    max_time = times_list[-1]
+
+            f.write(f"{1.5*max_time} ")
+
+        f.write("'\n\n")
+
+        #########################
+        # key_list
+
+        f.write("key_list = \"")
+        
+        for gps in Settings.gnuplot_data:
+            cat = gps.prefix
+
+            # sort tools by category
+            max_instances = 0
+            max_time = 0
+
+            for tool in sorted_tools:
+                times_list = gnuplot_tool_cat_times[tool][cat]
+                    
+                if len(times_list) > max_instances:
+                    max_instances = len(times_list)
+
+                if times_list and times_list[-1] > max_time:
+                    max_time = times_list[-1]
+
+            xplot_limit = 1.05 * max_instances
+            yplot_limit = 1.5 * max_time
+
+            f.write(f"'{1.05 * xplot_limit} {yplot_limit}' ")
+
+        f.write("\"\n\n")
+
 def main():
     """main entry point"""
 
@@ -755,7 +993,7 @@ def main():
             result_list.append(tr)
 
         # compare results across tools
-        compare_results(tool_list, result_list, single_overhead)
+        compare_results(tool_list, result_list, single_overhead, scored)
 
         if scored:
             print_stats(result_list)
