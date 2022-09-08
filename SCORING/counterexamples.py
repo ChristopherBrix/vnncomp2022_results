@@ -103,7 +103,7 @@ def is_correct_counterexample(ce_path, cat, net, prop):
     
     return res
 
-@cachier(stale_after=datetime.timedelta(days=1))
+@cachier(stale_after=datetime.timedelta(days=7))
 def get_ce_diff(onnx_filename, vnnlib_filename, ce_path, tol):
     """get difference in execution"""
 
@@ -176,7 +176,7 @@ def get_ce_diff(onnx_filename, vnnlib_filename, ce_path, tol):
 
     return rv, msg
 
-@cachier(stale_after=datetime.timedelta(days=1))
+@cachier(stale_after=datetime.timedelta(days=7))
 def is_specification_vio(onnx_filename, vnnlib_filename, x_list, expected_y, tol):
     """check that the spec file was obeyed"""
 

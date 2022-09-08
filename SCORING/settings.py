@@ -18,6 +18,7 @@ class Settings:
     TOOL_LIST_GLOB_INDEX = 1
 
     SCORING_MIN_TIME = 1.0
+    PLOT_MIN_TIME = 0.1
 
     UNSCORED_CATEGORIES = ['acasxu', 'cifar2020']
 
@@ -57,18 +58,23 @@ class Settings:
     STATS_LATEX = "latex/stats.tex"
 
     # gnuplot information
+    PLOT_FOLDER = "cactus" # folder containing the .pdfs
+    
     gnuplot_data = (
         GnuplotSettings('all', 'All Instances'),
         #
+        GnuplotSettings('acasxu', 'ACAS Xu (Unscored)'),
+        GnuplotSettings('cifar2020', 'CIFAR 2020 (Unscored)'),
+        #
         GnuplotSettings('carvana_unet_2022', 'Carvana Unet 2022'),
-        GnuplotSettings('cifar100_tinyimagenet_resnet', 'CIFAR100 TinyImageNet'),
+        GnuplotSettings('cifar100_tinyimagenet_resnet', 'CIFAR100 Tiny ImageNet ResNet'),
         GnuplotSettings('cifar_biasfield', 'CIFAR Biasfield'),
         GnuplotSettings('collins_rul_cnn', 'Collins Rul CNN'),
         GnuplotSettings('mnist_fc', 'MNIST FC'),
         GnuplotSettings('nn4sys', 'NN4SYS'),
         GnuplotSettings('oval21', 'OVAL 21'),
-        GnuplotSettings('reach_prob_density', 'Reach Prob Density'),
-        GnuplotSettings('rl_benchmarks', 'RL Benchmarks'),
+        GnuplotSettings('reach_prob_density', 'Reachability Probability Density'),
+        GnuplotSettings('rl_benchmarks', 'Reinforcement Learning Benchmarks'),
         GnuplotSettings('sri_resnet_a', 'SRI Resnet A'),
         GnuplotSettings('sri_resnet_b', 'SRI Resnet B'),
         GnuplotSettings('tllverifybench', 'Two-Level Lattice Verify Benchmark'),

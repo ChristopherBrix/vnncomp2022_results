@@ -88,8 +88,8 @@ class ToolResult:
 
         t -= self.cpu_overhead if cat in self.cpu_benchmarks else self.gpu_overhead
 
-        # all results less than 1.0 second are treated the same
-        t = max(Settings.SCORING_MIN_TIME, t)
+        # prevent 0 times as this messes up log plots
+        t = max(Settings.PLOT_MIN_TIME, t)
 
         return res, t
 
@@ -191,7 +191,7 @@ class ToolResult:
 
         ToolResult.num_categories[self.tool_name] = len(self.category_to_list)
 
-def compare_results(all_tool_names, result_list, single_overhead, scored):
+def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_overhead, scored):
     """compare results across tools"""
 
     min_percent = 0 # minimum percent for total score
@@ -201,12 +201,8 @@ def compare_results(all_tool_names, result_list, single_overhead, scored):
 
     tool_times = {}
 
-    gnuplot_tool_cat_times = {}
-
     for tool in all_tool_names:
         tool_times[tool] = []
-
-        gnuplot_tool_cat_times[tool] = defaultdict(list)
 
     for cat in sorted(ToolResult.all_categories):
         print(f"\nCategory {cat}:")
@@ -355,7 +351,7 @@ def compare_results(all_tool_names, result_list, single_overhead, scored):
             else:                
                 for t, tool in zip(row_times, tool_names):
                     if t is not None:
-                        assert t > 0, "time was zero?"
+                        #assert t > 0, "time was zero?"
                         tool_times[tool].append(t)
                         gnuplot_tool_cat_times[tool][cat].append(t)
                         gnuplot_tool_cat_times[tool]['all'].append(t)
@@ -412,6 +408,8 @@ def compare_results(all_tool_names, result_list, single_overhead, scored):
 
         print_table_footer(f)
 
+        add_image(f, f'all')
+
     #######
     write_gnuplot_files(gnuplot_tool_cat_times, sorted_tools)
     #######
@@ -453,6 +451,25 @@ def compare_results(all_tool_names, result_list, single_overhead, scored):
                 tee(f, f"{i+1} & {s[1]}")
 
             print_table_footer(f)
+
+            add_image(f, cat)
+
+def add_image(fout, prefix):
+    """add latex code for an image with the given prefix.pdf"""
+
+    title = "Unknown"
+
+    for gps in Settings.gnuplot_data:
+        if gps.prefix == prefix:
+            title = gps.title
+
+    tee(fout, """
+\\begin{figure}[h]
+\\centerline{\\includegraphics[width=\\textwidth]{""" + f"{Settings.PLOT_FOLDER}/{prefix}" + """.pdf}}
+\\caption{Cactus Plot for """ + title + """.}
+\\label{fig:quantPic}
+\\end{figure}
+""")
 
 def tee(fout, line):
     """print to temrinal and a file"""
@@ -574,14 +591,17 @@ def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violat
             
         score = 10
 
-        min_time = min(times)
+        clamped_times = [max(t, Settings.SCORING_MIN_TIME) for t in times]
+        secs = max(secs, Settings.SCORING_MIN_TIME)
+
+        min_time = min(clamped_times)
 
         if secs < min_time + 0.2:
             score += 2
             is_fastest = True
         else:
-            times.remove(min_time)
-            second_time = min(times)
+            clamped_times.remove(min_time)
+            second_time = min(clamped_times)
 
             if secs < second_time + 0.2:
                 score += 1
@@ -807,9 +827,11 @@ def write_gnuplot_files(gnuplot_tool_cat_times, sorted_tools):
             for tool in sorted_tools:
                 times_list = gnuplot_tool_cat_times[tool][cat]
 
-                if times_list and times_list[0] < min_time:
-                    min_time = times_list[0]
+                index = 0
+                if len(times_list) > index and times_list[index] < min_time:
+                    min_time = times_list[index]
 
+        assert min_time > 0
 
         f.write(f"ymin_str = '{0.9 * min_time}'")
 
@@ -984,6 +1006,11 @@ def main():
         #pass
         cpu_benchmarks["ERAN"] = ["acasxu", "eran"]
 
+    gnuplot_tool_cat_times = {} # accumulate for both scored and unscored
+
+    for tool in tool_list:
+        gnuplot_tool_cat_times[tool] = defaultdict(list)
+        
     for scored in [False, True]:
         result_list = []
         ToolResult.reset()
@@ -993,7 +1020,7 @@ def main():
             result_list.append(tr)
 
         # compare results across tools
-        compare_results(tool_list, result_list, single_overhead, scored)
+        compare_results(tool_list, gnuplot_tool_cat_times, result_list, single_overhead, scored)
 
         if scored:
             print_stats(result_list)

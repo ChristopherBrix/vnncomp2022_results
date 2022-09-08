@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.15)  7 SEP 2022 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.15)  8 SEP 2022 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1034,6 +1034,96 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 )
 (./main.aux
 
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+
+
+LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
 LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 
 
@@ -1046,22 +1136,16 @@ LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+LaTeX Warning: Label `fig:quantPic' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+LaTeX Warning: Label `fig:quantPic' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
-
-
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
-
-
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
 
 
 LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
@@ -1070,16 +1154,10 @@ LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+LaTeX Warning: Label `fig:quantPic' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
-
-
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
-
-
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
 
 
 LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
@@ -1088,16 +1166,10 @@ LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
+LaTeX Warning: Label `fig:quantPic' multiply defined.
 
 
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
-
-
-LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
-
-
-LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
 
 
 LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
@@ -1106,16 +1178,34 @@ LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
 
 
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
 LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 
 
 LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
 
 
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
+
+
 LaTeX Warning: Label `tab:cat_{cat}' multiply defined.
 
 
 LaTeX Warning: Label `tab:cat_{cat}@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic' multiply defined.
+
+
+LaTeX Warning: Label `fig:quantPic@cref' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -1231,44 +1321,196 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 13
 7.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) (./total.tex) [1
+) (./total.tex
+<cactus/all.pdf, id=26, 505.89pt x 216.81pt>
+File: cactus/all.pdf Graphic file (type pdf)
+<use cactus/all.pdf>
+Package pdftex.def Info: cactus/all.pdf  used on input line 32.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./scored.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./cactus/all.pdf>] (./
+scored.tex
+<cactus/carvana_unet_2022.pdf, id=68, 505.89pt x 216.81pt>
+File: cactus/carvana_unet_2022.pdf Graphic file (type pdf)
+<use cactus/carvana_unet_2022.pdf>
+Package pdftex.def Info: cactus/carvana_unet_2022.pdf  used on input line 24.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+<cactus/cifar100_tinyimagenet_resnet.pdf, id=69, 505.89pt x 216.81pt>
+File: cactus/cifar100_tinyimagenet_resnet.pdf Graphic file (type pdf)
+<use cactus/cifar100_tinyimagenet_resnet.pdf>
+Package pdftex.def Info: cactus/cifar100_tinyimagenet_resnet.pdf  used on input
+ line 53.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<cactus/cifar_biasfield.pdf, id=70, 505.89pt x 216.81pt>
+File: cactus/cifar_biasfield.pdf Graphic file (type pdf)
+<use cactus/cifar_biasfield.pdf>
+Package pdftex.def Info: cactus/cifar_biasfield.pdf  used on input line 85.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<cactus/collins_rul_cnn.pdf, id=71, 505.89pt x 216.81pt>
+File: cactus/collins_rul_cnn.pdf Graphic file (type pdf)
+<use cactus/collins_rul_cnn.pdf>
+Package pdftex.def Info: cactus/collins_rul_cnn.pdf  used on input line 116.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<cactus/mnist_fc.pdf, id=72, 505.89pt x 216.81pt>
+File: cactus/mnist_fc.pdf Graphic file (type pdf)
+<use cactus/mnist_fc.pdf>
+Package pdftex.def Info: cactus/mnist_fc.pdf  used on input line 150.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<cactus/nn4sys.pdf, id=73, 505.89pt x 216.81pt>
+File: cactus/nn4sys.pdf Graphic file (type pdf)
+<use cactus/nn4sys.pdf>
+Package pdftex.def Info: cactus/nn4sys.pdf  used on input line 182.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [2
+<cactus/oval21.pdf, id=74, 505.89pt x 216.81pt>
+File: cactus/oval21.pdf Graphic file (type pdf)
+<use cactus/oval21.pdf>
+Package pdftex.def Info: cactus/oval21.pdf  used on input line 214.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
 
-] [3] [4] [5] (./unscored.tex) [6
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] (./stats.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<cactus/reach_prob_density.pdf, id=75, 505.89pt x 216.81pt>
+File: cactus/reach_prob_density.pdf Graphic file (type pdf)
+<use cactus/reach_prob_density.pdf>
+Package pdftex.def Info: cactus/reach_prob_density.pdf  used on input line 247.
+
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<cactus/rl_benchmarks.pdf, id=76, 505.89pt x 216.81pt>
+File: cactus/rl_benchmarks.pdf Graphic file (type pdf)
+<use cactus/rl_benchmarks.pdf>
+Package pdftex.def Info: cactus/rl_benchmarks.pdf  used on input line 282.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<cactus/sri_resnet_a.pdf, id=77, 505.89pt x 216.81pt>
+File: cactus/sri_resnet_a.pdf Graphic file (type pdf)
+<use cactus/sri_resnet_a.pdf>
+Package pdftex.def Info: cactus/sri_resnet_a.pdf  used on input line 311.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<cactus/sri_resnet_b.pdf, id=78, 505.89pt x 216.81pt>
+File: cactus/sri_resnet_b.pdf Graphic file (type pdf)
+<use cactus/sri_resnet_b.pdf>
+Package pdftex.def Info: cactus/sri_resnet_b.pdf  used on input line 340.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<cactus/tllverifybench.pdf, id=79, 505.89pt x 216.81pt>
+File: cactus/tllverifybench.pdf Graphic file (type pdf)
+<use cactus/tllverifybench.pdf>
+Package pdftex.def Info: cactus/tllverifybench.pdf  used on input line 374.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<cactus/vggnet16_2022.pdf, id=80, 505.89pt x 216.81pt>
+File: cactus/vggnet16_2022.pdf Graphic file (type pdf)
+<use cactus/vggnet16_2022.pdf>
+Package pdftex.def Info: cactus/vggnet16_2022.pdf  used on input line 404.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [3
+
+ <./cactus/carvana_unet_2022.pdf>] [4 <./cactus/cifar100_tinyimagenet_resnet.pd
+f> <./cactus/cifar_biasfield.pdf
+
+pdfTeX warning: pdflatex (file ./cactus/cifar_biasfield.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>] [5 <./cactus/collins_rul_cnn.pdf>] [6 <./cactus/mnist_fc.pdf> <./cactus/nn4s
+ys.pdf
+
+pdfTeX warning: pdflatex (file ./cactus/nn4sys.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>] [7 <./cactus/oval21.pdf>] [8 <./cactus/reach_prob_density.pdf>] [9 <./cactus
+/rl_benchmarks.pdf> <./cactus/sri_resnet_a.pdf
+
+pdfTeX warning: pdflatex (file ./cactus/sri_resnet_a.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>] [10 <./cactus/sri_resnet_b.pdf> <./cactus/tllverifybench.pdf
+
+pdfTeX warning: pdflatex (file ./cactus/tllverifybench.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [11 <./cactus/vggnet16_2022.pdf>] (./unscored.tex
+<cactus/acasxu.pdf, id=338, 505.89pt x 216.81pt>
+File: cactus/acasxu.pdf Graphic file (type pdf)
+<use cactus/acasxu.pdf>
+Package pdftex.def Info: cactus/acasxu.pdf  used on input line 25.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+<cactus/cifar2020.pdf, id=339, 505.89pt x 216.81pt>
+File: cactus/cifar2020.pdf Graphic file (type pdf)
+<use cactus/cifar2020.pdf>
+Package pdftex.def Info: cactus/cifar2020.pdf  used on input line 57.
+(pdftex.def)             Requested size: 412.56496pt x 176.81602pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [12
+
+ <./cactus/acasxu.pdf>] [13 <./cactus/cifar2020.pdf>] (./stats.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1283,9 +1525,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) 
 AED: lastpage setting LastPage
-[7
+[14
 
-] [8] [9] (./main.aux)
+] [15] [16] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1293,10 +1535,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E4844BF34C3F5916C6035CA6ACD5B44B;441.
  ) 
 Here is how much of TeX's memory you used:
- 37586 strings out of 478287
- 862194 string characters out of 5849289
- 1305601 words of memory out of 5000000
- 55171 multiletter control sequences out of 15000+600000
+ 37726 strings out of 478287
+ 865957 string characters out of 5849289
+ 1308601 words of memory out of 5000000
+ 55271 multiletter control sequences out of 15000+600000
  475914 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,11n,108p,722b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1321,10 +1563,10 @@ onts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main.pdf (9 pages, 174548 bytes).
+Output written on main.pdf (16 pages, 382468 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 131 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 473 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
