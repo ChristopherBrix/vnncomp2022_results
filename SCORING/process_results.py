@@ -4,7 +4,7 @@ Process vnncomp results
 Stanley Bak
 """
 
-from typing import Dict, List
+from typing import Dict, List, Tuple, Union
 
 import glob
 import csv
@@ -191,6 +191,17 @@ class ToolResult:
 
         ToolResult.num_categories[self.tool_name] = len(self.category_to_list)
 
+class LongTableRow:
+    """container object for longtable of results"""
+
+    def __init__(self, cat: str, instance_id: int, result: str, tool_times_scores: Dict[str, Tuple[Union[str, float], int]]):
+        self.cat = cat
+        self.instance_id = instance_id
+
+        assert result in ['sat', 'unsat', '-'], f"result was {result}"
+        self.result = result
+        self.tool_times_scores = tool_times_scores
+
 def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_overhead, scored):
     """compare results across tools"""
 
@@ -200,6 +211,8 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
     all_cats = {}
 
     tool_times = {}
+
+    longtable_data: List[LongTableRow] = []
 
     for tool in all_tool_names:
         tool_times[tool] = []
@@ -290,7 +303,13 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
 
             print()
 
-            if times_holds and times_violated:
+            true_result = "-"
+
+            if times_holds and not times_violated:
+                true_result = 'unsat'
+            elif times_violated and not times_holds:
+                true_result = 'sat'
+            elif times_holds and times_violated:
                 print(f"WARNING: multiple results for index {index}. Violated: {len(times_violated)} " +
                       f"({tools_violated}), Holds: {len(times_holds)} ({tools_holds})")
                 table_row.append('*multiple results*')
@@ -302,12 +321,18 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
                     correct_violations[tool] = res
 
                 print(f"were violated counterexamples valid?: {correct_violations}")
-                
+
+                if np.any(correct_violations):
+                    true_result = 'sat'
+                else:
+                    true_result = 'unsat'
+
             print(f"Row: {table_row}")
 
             row_times = []
             all_times.append(row_times)
             all_results.append(None)
+            tool_times_scores: Dict[str, Tuple[Union[str, float], int]] = {}
             
             for t in participating_tools:
                 res, secs = t.single_result(cat, index)
@@ -321,8 +346,13 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
                 if is_verified or is_falsified:
                     all_results[-1] = 'H' if is_verified else 'V'
                     row_times.append(secs)
+                    
+                    tool_times_scores[t.tool_name] = (secs, score)
                 else:
                     row_times.append(None)
+
+                    if is_error:
+                        tool_times_scores[t.tool_name] = (secs, score)
 
                 if t.tool_name in cat_score:
                     tool_score_tup = cat_score[t.tool_name]
@@ -337,6 +367,9 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
                 tool_score_tup[3] += 1 if is_fastest else 0
                 tool_score_tup[4] += 1 if is_error else 0
                 tool_score_tup = None
+
+            # accumulate long table data
+            longtable_data.append(LongTableRow(cat, index, true_result, tool_times_scores))
 
         print("--------------------")
         num_holds = 0
@@ -454,6 +487,68 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
 
             add_image(f, cat)
 
+    ################
+    # print longtable_data
+            
+    with open(Settings.LONGTABLE_LATEX, 'w', encoding='utf-8') as f:
+        tee(f, f"% Long table of all results\n\n")
+
+        num_tools = len(sorted_tools)
+
+        headers = ("Category", "Id", "Result") + tuple(f"{longtable_tool_name(t)}" for t in sorted_tools)
+
+        caption = "Tools: " + ", ".join([f"{latex_tool_name(t)} (T{i+1})" for i, t in enumerate(sorted_tools)]) 
+
+        print_longtable_header(f, caption,  "tab:all_results", headers)
+
+        for ltd in longtable_data:
+
+            tool_results = ""
+            for tool_index, tool in enumerate(sorted_tools):
+
+                if tool_index > 0:
+                    tool_results += " & "
+                    
+                if tool in ltd.tool_times_scores:
+                    t, score = ltd.tool_times_scores[tool]
+
+                    if isinstance(t, str):
+                        tool_results += t
+                    else:
+                        if score == 12:
+                            color = "blue"
+                        elif score == 11:
+                            color = "black"
+                        elif score == 10:
+                            color = "darkgray"
+                        elif score < 0:
+                            color = "red"
+
+                        if score < 0:
+                            tool_results += f"\\textbf{{\\textcolor{{{color}}}{{{round_time(t)}}}}}"
+                        else:
+                            tool_results += f"\\textcolor{{{color}}}{{{round_time(t)}}}"
+                else:
+                    tool_results += "-"
+
+            pretty_res = f"\\textsc{{{ltd.result}}}" if ltd.result != "-" else "-"
+            
+            tee(f, f"{latex_cat_name(ltd.cat)} & {ltd.instance_id} & {pretty_res} & {tool_results} \\\\")
+
+        print_longtable_footer(f)
+
+def round_time(t):
+    """round time in table"""
+
+    if t >= 100:
+        rv = f"{t:.0f}"
+    elif t < 0.1:
+        rv = "$<$0.1"
+    else:
+        rv = f"{t:.1f}"
+
+    return rv
+
 def add_image(fout, prefix):
     """add latex code for an image with the given prefix.pdf"""
 
@@ -497,6 +592,29 @@ def print_table_header(f, title, label, columns, align=None):
     #\textbf{\# ~} & \textbf{Tool} & \textbf{Score}  \\
     tee(f, '\\midrule')
 
+def print_longtable_header(f, title, label, columns, align=None):
+    """print latex table header"""
+
+    bold_columns = ["\\textbf{" + c + "}" for c in columns]
+
+    if align is None:
+        align = 'l' * len(columns)
+    else:
+        assert len(columns) == len(align)
+
+    tee(f, '''\\begin{center}
+{\\setlength{\\tabcolsep}{1pt}
+\\scriptsize
+\\begin{longtable}{@{}''' + align + '''@{}}''')
+    
+    tee(f, '\\caption{\\footnotesize ' + title + '} \\label{' + label + '} \\\\')
+    #tee(f, '\\caption{\\footnotesize ' + title + '} \\\\')
+    tee(f, '\\toprule')
+    tee(f, ' & '.join(bold_columns) + " \\\\")
+    #\textbf{\# ~} & \textbf{Tool} & \textbf{Score}  \\
+    tee(f, '\\midrule')
+    tee(f, '\\endhead')
+
 def print_table_footer(f):
     """print latex table footer"""
 
@@ -505,6 +623,15 @@ def print_table_footer(f):
 }
 \\end{center}
 \\end{table}\n\n''')
+
+def print_longtable_footer(f):
+    """print latex longtable footer"""
+
+    tee(f, '''\\bottomrule
+\end{longtable}
+}
+\end{center}\n\n''')
+
 
 def get_score(tool_name, res, secs, rand_gen_succeded, times_holds, times_violated, ce_results):
     """Get the score for the given result
@@ -656,7 +783,42 @@ def print_stats(result_list):
 
             print_table_footer(f)
 
-    print(ToolResult.toolerror_counts)            
+    print(ToolResult.toolerror_counts)
+
+def latex_cat_name(cat):
+    """get latex version of category name"""
+
+    subs = Settings.CAT_NAME_SUBS_LATEX
+    found = False
+
+    for old, new in subs:
+        if cat == old:
+            cat = new
+            found = True
+            break
+
+    if not found:
+        cat = cat.replace("_", " ")
+
+    return cat
+
+def longtable_tool_name(tool):
+    """get latex version of tool name"""
+
+    subs = Settings.TOOL_NAME_SUBS_LONGTABLE
+
+    found = False
+
+    for old, new in subs:
+        if tool == old:
+            tool = new
+            found = True
+            break
+
+    #if not found:
+    #    tool = tool.capitalize()
+
+    return tool
 
 def latex_tool_name(tool):
     """get latex version of tool name"""

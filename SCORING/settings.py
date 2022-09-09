@@ -26,13 +26,33 @@ class Settings:
     COUNTEREXAMPLE_TOL = 1e-4
 
     TOOL_NAME_SUBS_LATEX = [
-            ('alpha_beta_crown', '$\\alpha$,$\\beta$-CROWN'),
+            ('alpha_beta_crown', '$\\alpha$,$\\beta$ Crown'),
             ('mn_bab', 'MN BaB')
+            ]
+
+    TOOL_NAME_SUBS_LONGTABLE = [
+            ('alpha_beta_crown', '$\\alpha$,$\\beta$-C'),
+            ('mn_bab', 'MnB'),
+            ('peregrinn', 'Pereg'),
+            ('fastbatllnn', 'FastBaT'),
+            ('verapak', 'Verap'),
+            ('nnenum', 'nnen'),
+            ('verinet', 'Verin'),
+            ('averinn', 'Averi'),
+            ('marabou', 'Marab'),
+            ('debona', 'Debon'),
+            ('cgdtest', 'CGD')
             ]
 
     TOOL_NAME_SUBS_GNUPLOT = [
         ('alpha_beta_crown', 'AB-CROWN'),
         ('mn_bab', 'MN BaB')
+        ]
+
+    CAT_NAME_SUBS_LATEX = [
+        ('carvana_unet_2022', 'carvana 2022'),
+        ('cifar100_tinyimagenet_resnet', 'cifar100 tiny'),
+        ('reach_prob_density', 'reach prob den')
         ]
 
     SKIP_TOOLS = [] #['marabou', 'verapak', 'cgdtest']
@@ -56,6 +76,7 @@ class Settings:
     SCORED_LATEX = "latex/scored.tex"
     UNSCORED_LATEX = "latex/unscored.tex"
     STATS_LATEX = "latex/stats.tex"
+    LONGTABLE_LATEX = "latex/longtable.tex"
 
     # gnuplot information
     PLOT_FOLDER = "cactus" # folder containing the .pdfs
