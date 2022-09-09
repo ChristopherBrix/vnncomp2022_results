@@ -11,3 +11,6 @@ TAGS
 __pycache__
 *.mypy_cache
 .coverage
+*/plots/*.pdf
+accumulated*.txt
+*/cactus/*.pdf
