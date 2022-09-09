@@ -816,26 +816,35 @@ def write_gnuplot_files(gnuplot_tool_cat_times, sorted_tools):
         f.write("'\n\n")
 
         #########################
-        # ymin_str
+        # ymin_list
 
-        # sort tools by category
-        min_time = np.inf
+        f.write(f"ymin_list = '")
+        count = 10
 
         for gps in Settings.gnuplot_data:
             cat = gps.prefix
+
+            all_times = []
             
             for tool in sorted_tools:
-                times_list = gnuplot_tool_cat_times[tool][cat]
+                all_times += gnuplot_tool_cat_times[tool][cat]
 
-                index = 0
-                if len(times_list) > index and times_list[index] < min_time:
-                    min_time = times_list[index]
+            all_times = np.array(all_times)
+            
+            if np.sum(all_times < 0.1) > count:
+                min_time = 0.8 * 0.01
+            elif np.sum(all_times < 1.0) > count:
+                min_time = 0.8 * 0.1
+            else:
+                min_time = 0.8 * 1.0
+
+            f.write(f"{round(min_time, 4)} ")
 
         assert min_time > 0
 
-        f.write(f"ymin_str = '{0.9 * min_time}'")
 
-        f.write("\n\n")
+
+        f.write("'\n\n")
 
         #########################
         # timeout_y_list
@@ -949,7 +958,7 @@ def write_gnuplot_files(gnuplot_tool_cat_times, sorted_tools):
                 if times_list and times_list[-1] > max_time:
                     max_time = times_list[-1]
 
-            xplot_limit = 1.05 * max_instances
+            xplot_limit = 1.07 * max_instances
             yplot_limit = 1.5 * max_time
 
             f.write(f"'{1.05 * xplot_limit} {yplot_limit}' ")

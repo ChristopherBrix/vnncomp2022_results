@@ -18,7 +18,7 @@ class Settings:
     TOOL_LIST_GLOB_INDEX = 1
 
     SCORING_MIN_TIME = 1.0
-    PLOT_MIN_TIME = 0.1
+    PLOT_MIN_TIME = 0 #0.01
 
     UNSCORED_CATEGORIES = ['acasxu', 'cifar2020']
 

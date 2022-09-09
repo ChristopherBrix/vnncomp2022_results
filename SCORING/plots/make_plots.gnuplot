@@ -45,6 +45,7 @@ pretty_input_str = word(pretty_input_list, index)
 num_inputs = words(input_str)
 title_str = word(title_list, index)
 
+ymin_str = word(ymin_list, index)
 ymax_str = word(ymax_list, index)
 xmax_plot_str = word(xmax_plot_list, index)
 
