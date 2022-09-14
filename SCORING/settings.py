@@ -50,9 +50,9 @@ class Settings:
         ]
 
     CAT_NAME_SUBS_LATEX = [
-        ('carvana_unet_2022', 'carvana 2022'),
-        ('cifar100_tinyimagenet_resnet', 'cifar100 tiny'),
-        ('reach_prob_density', 'reach prob den')
+        ('carvana_unet_2022', 'Carvana 2022'),
+        ('cifar100_tinyimagenet_resnet', 'Cifar100 Tiny'),
+        ('reach_prob_density', 'Reach Prob Den~')
         ]
 
     SKIP_TOOLS = [] #['marabou', 'verapak', 'cgdtest']

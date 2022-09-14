@@ -497,11 +497,21 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
 
         headers = ("Category", "Id", "Result") + tuple(f"{longtable_tool_name(t)}" for t in sorted_tools)
 
-        caption = "Tools: " + ", ".join([f"{latex_tool_name(t)} (T{i+1})" for i, t in enumerate(sorted_tools)]) 
+        caption = "Instance Runtimes. Fastest times are \\textcolor{blue}{blue}. "
+        caption += "Second fastest are \\textcolor{second}{green}. Penalties are red crosses (" +\
+          f"\\textbf{{\\textcolor{{red}}{{\\ding{{55}}}}}}" + ")."
 
         print_longtable_header(f, caption,  "tab:all_results", headers)
 
+        last_cat = None
+
         for ltd in longtable_data:
+
+            if ltd.cat != last_cat:
+                if last_cat != None:
+                    tee(f, "\\midrule")
+                    
+                last_cat = ltd.cat
 
             tool_results = ""
             for tool_index, tool in enumerate(sorted_tools):
@@ -518,20 +528,22 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
                         if score == 12:
                             color = "blue"
                         elif score == 11:
-                            color = "black"
+                            # \definecolor{second}{HTML}{3C8031}
+                            color = "second"
                         elif score == 10:
                             color = "darkgray"
                         elif score < 0:
                             color = "red"
 
                         if score < 0:
-                            tool_results += f"\\textbf{{\\textcolor{{{color}}}{{{round_time(t)}}}}}"
+                            # \ding{55} is from package pifont
+                            tool_results += f"~~\\textbf{{\\textcolor{{{color}}}{{\\ding{{55}}}}}}"
                         else:
                             tool_results += f"\\textcolor{{{color}}}{{{round_time(t)}}}"
                 else:
                     tool_results += "-"
 
-            pretty_res = f"\\textsc{{{ltd.result}}}" if ltd.result != "-" else "-"
+            pretty_res = f"~\\textsc{{{ltd.result}}}" if ltd.result != "-" else "~?"
             
             tee(f, f"{latex_cat_name(ltd.cat)} & {ltd.instance_id} & {pretty_res} & {tool_results} \\\\")
 
@@ -540,12 +552,14 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
 def round_time(t):
     """round time in table"""
 
-    if t >= 100:
+    if t >= 99.9:
         rv = f"{t:.0f}"
-    elif t < 0.1:
-        rv = "$<$0.1"
-    else:
+    elif t < 0.01:
+        rv = "$<$0.01"
+    elif t >= 10:
         rv = f"{t:.1f}"
+    else:
+        rv = f"{t:.2f}"
 
     return rv
 
@@ -799,6 +813,7 @@ def latex_cat_name(cat):
 
     if not found:
         cat = cat.replace("_", " ")
+        cat = ' '.join(e.capitalize() for e in cat.split())
 
     return cat
 
@@ -1202,5 +1217,5 @@ def main():
 if __name__ == "__main__":
     #from counterexamples import get_ce_diff
     #get_ce_diff.clear_cache()
-    #exit(1)
+
     main()
