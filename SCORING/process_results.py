@@ -322,7 +322,7 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
 
                 print(f"were violated counterexamples valid?: {correct_violations}")
 
-                if np.any(correct_violations):
+                if np.any(correct_violations == CounterexampleResult.CORRECT): ### HERE !!
                     true_result = 'sat'
                 else:
                     true_result = 'unsat'
@@ -543,7 +543,14 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
                 else:
                     tool_results += "-"
 
-            pretty_res = f"~\\textsc{{{ltd.result}}}" if ltd.result != "-" else "~?"
+            true_result = ltd.result
+
+            # override true result manually
+            for prefix, index, new_result in Settings.OVERRIDE_RESULTS:
+                if ltd.cat.startswith(prefix) and ltd.instance_id == index:
+                    true_result = new_result
+            
+            pretty_res = f"~\\textsc{{{true_result}}}" if ltd.result != "-" else "~?"
             
             tee(f, f"{latex_cat_name(ltd.cat)} & {ltd.instance_id} & {pretty_res} & {tool_results} \\\\")
 

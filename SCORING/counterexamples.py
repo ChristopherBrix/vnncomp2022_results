@@ -51,8 +51,7 @@ class CounterexampleResult:
     SPEC_NOT_VIOLATED = "spec_not_violated"
 
 def is_correct_counterexample(ce_path, cat, net, prop):
-    """is the counterexample correct? returns a 
-
+    """is the counterexample correct? returns an element of CounterexampleResult 
     """
 
     print(f"Checking ce path: {ce_path}")

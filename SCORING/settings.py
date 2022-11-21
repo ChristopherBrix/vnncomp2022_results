@@ -71,6 +71,10 @@ class Settings:
                          ('error_nonmaximal', 'unknown'),
                          ]
 
+    # list of triples to override result if manually determined incorrect:
+    # (cat_prefix, index, desired_result)
+    OVERRIDE_RESULTS = [('collins', 20, 'sat*')]
+
     # latex output files
     TOTAL_SCORE_LATEX = "latex/total.tex"
     SCORED_LATEX = "latex/scored.tex"
