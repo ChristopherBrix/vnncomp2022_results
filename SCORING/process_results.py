@@ -322,12 +322,13 @@ def compare_results(all_tool_names, gnuplot_tool_cat_times, result_list, single_
 
                 print(f"were violated counterexamples valid?: {correct_violations}")
 
-                if np.any(correct_violations == CounterexampleResult.CORRECT): ### HERE !!
+                if np.any([x == CounterexampleResult.CORRECT for x in correct_violations.values()]): ### HERE !!
                     true_result = 'sat'
                 else:
                     true_result = 'unsat'
 
             print(f"Row: {table_row}")
+            print(f"True Result: {true_result}")
 
             row_times = []
             all_times.append(row_times)
